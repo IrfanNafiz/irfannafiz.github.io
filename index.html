@@ -22,15 +22,15 @@
                 <p class="name" style="text-align: center;">
                   Irfan Nafiz Shahan
                 </p>
-                <p>Hello! I'm an electrical engineering student with interests in Computer Vision, Autonomous Vehicles, Space Systems and Robotics.
+                <p>Hello! I'm an electrical engineering student with interests in Computer Vision, Autonomous Vehicles, Robotics and Space Systems.
                 </p>
                 <p>
-                  I work closely with  <a href="https://mizanul.mit.edu/">Mizanul Chowdhury</a>, (MIT Lincoln Lab and MIT SPHERES Scientist), on SmallSat Systems in the <a href="https://EDITLATER/">FrontierSatellite</a> project, and create robotic simulations systems and VMs that aid in STEM robotics education for JAXA's <a href="https://jaxa.krpc.jp/">Kibo Robot Programming Challenge</a> in <a href="https://stemx365.org/2023/12/03/krpc-2-2/">STEMX365</a>.
+                  I work with  <a href="https://mizanul.mit.edu/">Mizanul Chowdhury</a>, (MIT Lincoln Lab and MIT SPHERES Scientist), on SmallSat Systems in the <a href="https://EDITLATER/">FrontierSatellite</a> project, and create robotic simulations systems and VMs that aid in STEM robotics education for JAXA's <a href="https://jaxa.krpc.jp/">Kibo Robot Programming Challenge</a> in <a href="https://stemx365.org/2023/12/03/krpc-2-2/">STEMX365</a>.
                 </p>
                 <p> 
                   Currently in my senior year at <a href="https://www.sust.edu/">SUST</a>, Bangladesh, I am being advised by my dept. head, <a href="https://www.sust.edu/department/eee/faculty/mrased-eee@sust.edu">Dr. Md. Rasedujjaman</a> (PhD. Aix-Marseille Université and Institut Fresnel), on my bachelor thesis "CARLASnowScenes" developing robust autonomous vehicle computer vision networks navigating in adverse weather conditions.
                 </p>
-                <p>In my free time I enjoy teaching, hacking, guitar, fine arts and astronomy. I also take joy in making VR games!</p>
+                <p>In my free time I enjoy badminton, body-building, guitar, and fine-arts. I also take joy in making VR games!</p>
                 <p style="text-align:center">
                   <a href="mailto:irfannafizislive@gmail.com">Email</a> &nbsp;/&nbsp;
                   <a href="data/IrfanNafiz-CV.pdf">CV</a> &nbsp;/&nbsp;
@@ -40,12 +40,12 @@
                   <a href="">Scholarships</a>
 
                 </p>
-                <p style="text-align:center">
+                <!-- <p style="text-align:center">
                   <a href="">Fine Art Gallery</a> &nbsp;/&nbsp;
                   <a href="">Projects</a> &nbsp;/&nbsp;
                   <a href="">Music</a> 
 
-                </p>
+                </p> -->
               </td>
               <td style="padding:2.5%;width:40%;max-width:40%">
                 <a href="images/IrfanNafiz2.png"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/IrfanNafiz2.png" class="hoverZoomLink"></a>
@@ -57,37 +57,46 @@
               <td style="padding:20px;width:100%;vertical-align:middle">
                 <h2>Research Interests</h2>
                 <p>
-                  I'm interested in computer vision, autonomous vehicles, robotics, and smallsats. Mostly I work extensively on making robust neural networks for autonomous vehicles in adverse weather. Furthermore I'm looking to make robust smallsat systems at a low price for space democratization. 
+                  I'm interested in computer vision, autonomous vehicles, robotics, and smallsats. Mostly I work extensively on making robust neural networks for autonomous vehicles in adverse weather. Furthermore I try to make smallsat systems affordable for space democratization. 
                   
-                  Some papers and projects are <span class="highlight">highlighted</span>.
+                  Some papers and projects are <span class="highlight">highlighted</span> below.
                 </p>
               </td>
             </tr>
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
-
-    <tr onmouseout="ever_stop()" onmouseover="ever_start()">
+            <p>
+              <h3>Ongoing Papers</h3>
+            </p>
+    <tr onmouseout="css_stop()" onmouseover="css_start()">
       <td style="padding:20px;width:25%;vertical-align:middle">
-        <div class="one">
+        <!-- <div class="one">
           <div class="two" id='ever_image'>
-					  <img src='images/ever_after.png' width=100%>
+					  <img src='data/images/CSS/scene1.png' width=100%>
 					</div>
-          <img src='images/ever_before.png' width=100%>
+          <img src='data/images/CSS/css.mp4' width=100%>
+        </div> -->
+        <div class="one">
+          <div class="two" id='css_image'><video  width=100% muted autoplay loop>
+          <source src="data/images/CSS/css.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video></div>
+          <img src='data/images/CSS/scene1.png' width=100%>
         </div>
         <script type="text/javascript">
-          function ever_start() {
-            document.getElementById('ever_image').style.opacity = "1";
+          function css_start() {
+            document.getElementById('css_image').style.opacity = "1";
           }
 
-          function ever_stop() {
-            document.getElementById('ever_image').style.opacity = "0";
+          function css_stop() {
+            document.getElementById('css_image').style.opacity = "0";
           }
-          ever_stop()
+          css_stop()
         </script>
       </td>
       <td style="padding:20px;width:75%;vertical-align:middle">
-        <a href="https://ever.github.io/">
+        <!-- <a href="https://ever.github.io/"> -->
 			<span class="papertitle">CARLASnowScenes: Towards Solving Adverse Weather Driving – An analysis and approach to Synthetic Snow Road Scenes for Autonomous Driving
       </span>
         </a>
@@ -96,14 +105,108 @@
         <a href="https://www.linkedin.com/in/pulok-ahmed-476177292/">Pulok Ahmed Auvi</a>,
         <a href="https://www.sust.edu/department/eee/faculty/mrased-eee@sust.edu">Md. Rasedujjaman</a>
 				<br>
-        <em>arXiv</em>, 2024
+        <!-- <em>arXiv</em>, 2024
         <br>
         <a href="https://half-potato.gitlab.io/posts/ever/">project page</a>
         /
         <a href="https://arxiv.org/abs/2410.01804">arXiv</a>
-        <p></p>
+        <p></p> -->
         <p>
-				Creates synthetic, dynamic snow weather for autonomous vehicle training and testing in adverse weather conditions. Yields better results than real-world data.
+				Creating synthetic, dynamic snow weather for autonomous vehicle training and testing in adverse weather conditions. Aimed at bridging the sim2real gap for snow weather autonomous driving.
+        </p>
+      </td>
+    </tr>
+
+    <tr onmouseout="ibraille_stop()" onmouseover="ibraille_start()">
+      <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='ibraille_video'>
+            <video  width=100% muted autoplay loop>
+              <source src="data/images/ibraille/ibraille.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="three" id='ibraille_image'>
+            <img src='data/images/ibraille/mouse_full.png' width=100%>
+          </div>
+        </div>
+        <script type="text/javascript">
+          function ibraille_start() {
+            document.getElementById('ibraille_video').style.opacity = "1";
+            document.getElementById('ibraille_image').style.opacity = "0";
+          }
+
+          function ibraille_stop() {
+            document.getElementById('ibraille_video').style.opacity = "0";
+            document.getElementById('ibraille_image').style.opacity = "1";
+          }
+          ibraille_stop()
+        </script>
+      </td>
+      <td style="padding:20px;width:75%;vertical-align:middle">
+        <!-- <a href="https://ever.github.io/"> -->
+			<span class="papertitle">IBraille: A Cost Effective Braille Display for the Visually Impaired
+      </span>
+        </a>
+        <br>
+				<strong>Irfan Nafiz Shahan</strong>, 
+        Al-Mubin Nabil, 
+        MM Abdul Karim, 
+        P. Dey, 
+        A. Paul, 
+        T. Choudhury
+        <!-- <a href="https://www.linkedin.com/in/pulok-ahmed-476177292/">Pulok Ahmed Auvi</a>,
+        <a href="https://www.sust.edu/department/eee/faculty/mrased-eee@sust.edu">Md. Rasedujjaman</a> -->
+				<br>
+        <!-- <em>arXiv</em>, 2024
+        <br>
+        <a href="https://half-potato.gitlab.io/posts/ever/">project page</a>
+        /
+        <a href="https://arxiv.org/abs/2410.01804">arXiv</a>
+        <p></p> -->
+        <p>
+				A braille display built from first principles, utilizing off the shelf available materials and a novel design - leading ot a cost reduction of 400x than that of commercial displays. Recieved 10,000 USD funding from Bangladesh ICT Division our of 1000+ industry and academic teams.
+        </p>
+      </td>
+    </tr>
+
+    <tr onmouseout="sustsat_stop()" onmouseover="sustsat_start()">
+      <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id=sustsat_image'>
+					  <img src='data/images/sustsat/sustsat.png' width=100%>
+					</div>
+          <img src='data/images/sustsat/sustsat.pn' width=100%>
+        </div>
+        <script type="text/javascript">
+          function sustsat_start() {
+            document.getElementById('sustsat_image').style.opacity = "1";
+          }
+
+          function sustsat_stop() {
+            document.getElementById('sustsat_image').style.opacity = "0";
+          }
+          sustsat_stop()
+        </script>
+      </td>
+      <td style="padding:20px;width:75%;vertical-align:middle">
+        <!-- <a href="https://ever.github.io/"> -->
+			<span class="papertitle">SUSTsat-1: A Low Cost, High Efficiency Raspberry Pi based Multifunctional SmallSat
+      </span>
+        </a>
+        <br>
+				<strong>Irfan Nafiz Shahan</strong>,
+        <a href="https://www.linkedin.com/in/pulok-ahmed-476177292/">Pulok Ahmed Auvi</a>,
+        <!-- <a href="https://www.sust.edu/department/eee/faculty/mrased-eee@sust.edu">Md. Rasedujjaman</a> -->
+				<br>
+        <!-- <em>arXiv</em>, 2024
+        <br>
+        <a href="https://half-potato.gitlab.io/posts/ever/">project page</a>
+        /
+        <a href="https://arxiv.org/abs/2410.01804">arXiv</a>
+        <p></p> -->
+        <p>
+				SUST's very first amateur cubesat, built for FSK, POCSAG and SSTV transmission of an assortment of sensor data. 
         </p>
       </td>
     </tr>
@@ -128,7 +231,7 @@
         </script>
       </td>
       <td style="padding:20px;width:75%;vertical-align:middle">
-        <a href="https://ever.github.io/">
+        <!-- <a href="https://ever.github.io/"> -->
 			<span class="papertitle">A Survey on Autonomous Vehicle Perception in Adverse Weather Conditions
       </span>
         </a>
@@ -137,14 +240,14 @@
         <a href="https://www.linkedin.com/in/pulok-ahmed-476177292/">Pulok Ahmed Auvi</a>,
         <a href="https://www.sust.edu/department/eee/faculty/mrased-eee@sust.edu">Md. Rasedujjaman</a>
 				<br>
-        <em>arXiv</em>, 2024
+        <!-- <em>arXiv</em>, 2024
         <br>
         <a href="https://half-potato.gitlab.io/posts/ever/">project page</a>
         /
         <a href="https://arxiv.org/abs/2410.01804">arXiv</a>
-        <p></p>
+        <p></p> -->
         <p>
-				A comprehensive survey paper, showing the use of synthetic data for autonomous vehicle perception in adverse weather conditions. Furthermore it points out the challenges and future directions.
+				A comprehensive survey paper, showcasing use of synthetic data for autonomous vehicle perception in adverse weather conditions.
         </p>
       </td>
     </tr>
@@ -153,9 +256,9 @@
       <td style="padding:20px;width:25%;vertical-align:middle">
         <div class="one">
           <div class="two" id='ever_image'>
-					  <img src='images/ever_after.png' width=100%>
+					  <img src='data/images/RFID/rfid_box1.png' width=100%>
 					</div>
-          <img src='images/ever_before.png' width=100%>
+          <img src='data/images/RFID/rfid_box1.png' width=100%>
         </div>
         <script type="text/javascript">
           function ever_start() {
@@ -169,151 +272,234 @@
         </script>
       </td>
       <td style="padding:20px;width:75%;vertical-align:middle">
-        <a href="https://ever.github.io/">
-			<span class="papertitle">A Secure, Cost Effective Approach to RFID Attendance Systems for Large Institutions
+        <!-- <a href="https://ever.github.io/"> -->
+			<span class="papertitle">A Secure, Cost Effective Approach to RFID Data Logging for Large Institutions
       </span>
         </a>
         <br>
-				<strong>Irfan Nafiz Shahan</strong>,
-        <a href="https://www.sust.edu/department/eee/faculty/mrased-eee@sust.edu">Md. Rasedujjaman</a>
+				<a href="https://www.sust.edu/department/eee/faculty/mrased-eee@sust.edu">Md. Rasedujjaman</a>,
+        <strong>Irfan Nafiz Shahan</strong>,
+        N. Rakhaine,
+        I. Ahmed
 				<br>
-        <em>arXiv</em>, 2024
+        <!-- <em>arXiv</em>, 2024
         <br>
         <a href="https://half-potato.gitlab.io/posts/ever/">project page</a>
         /
         <a href="https://arxiv.org/abs/2410.01804">arXiv</a>
-        <p></p>
+        <p></p> -->
         <p>
-				A from scratch RFID attendance device that is secure, cost effective and scalable for large institutions. It compares existing information security systems, showcasing current device advantages and limitations.
+				A ground up RFID data logging system that is secure, cost effective and scalable for large institutions with internal server architecture. We compare and consider existing information security systems, showcasing current device advantages and limitations.
         </p>
       </td>
     </tr>
 
-    <tr onmouseout="ever_stop()" onmouseover="ever_start()">
+    <tr onmouseout="tr_stop()" onmouseover="tr_start()">
       <td style="padding:20px;width:25%;vertical-align:middle">
         <div class="one">
-          <div class="two" id='ever_image'>
-					  <img src='images/ever_after.png' width=100%>
+          <div class="two" id='tr_image'>
+					  <img src='data/images/TR/tr_data.png' width=100%>
 					</div>
-          <img src='images/ever_before.png' width=100%>
+          <img src='data/images/TR/tr1.png' width=100%>
         </div>
         <script type="text/javascript">
-          function ever_start() {
-            document.getElementById('ever_image').style.opacity = "1";
+          function tr_start() {
+            document.getElementById('tr_image').style.opacity = "1";
           }
 
-          function ever_stop() {
-            document.getElementById('ever_image').style.opacity = "0";
+          function tr_stop() {
+            document.getElementById('tr_image').style.opacity = "0";
           }
-          ever_stop()
+          tr_stop()
         </script>
       </td>
       <td style="padding:20px;width:75%;vertical-align:middle">
-        <a href="https://ever.github.io/">
-			<span class="papertitle">TinyRecycler: A low-cost smart trash segregation system for developing countries utilizing tiny ML
+        <!-- <a href="https://ever.github.io/"> -->
+			<span class="papertitle">TinyRecycler: A low-cost smart trash segregation system utilizing tiny ML for developing countries 
       </span>
         </a>
         <br>
 				<strong>Irfan Nafiz Shahan</strong>,
         <a href="https://www.linkedin.com/in/pulok-ahmed-476177292/">Pulok Ahmed Auvi</a>,
-        Sagor,
-        Shakil,
-        <a href="https://www.sust.edu/department/eee/faculty/mrased-eee@sust.edu">Md. Rasedujjaman</a>
-				<br>
-        <em>arXiv</em>, 2024
+        <br>
+        <!-- <em>arXiv</em>, 2024
         <br>
         <a href="https://half-potato.gitlab.io/posts/ever/">project page</a>
         /
         <a href="https://arxiv.org/abs/2410.01804">arXiv</a>
-        <p></p>
+        <p></p> -->
         <p>
-				A comprehensive survey paper, showing the use of synthetic data for autonomous vehicle perception in adverse weather conditions. Furthermore it points out the challenges and future directions.
+				We propose a prototype for a low-investment trash segregation mechanism that uses embedded machine learning using tensorflow lite for microcontrollers. The system is designed to be low cost, low power and scalable using IoT architectures for developing countries.
         </p>
       </td>
     </tr>
 
-    <tr onmouseout="ever_stop()" onmouseover="ever_start()">
+
+
+    <!-- <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody> -->
+      <tr>
+        <td>
+          <h2>Other Projects</h2>
+        </td>
+      </tr>
+    <!-- </tbody></table> -->
+
+    <tr onmouseout="krpc_stop()" onmouseover="krpc_start()">
       <td style="padding:20px;width:25%;vertical-align:middle">
         <div class="one">
-          <div class="two" id='ever_image'>
-					  <img src='images/ever_after.png' width=100%>
-					</div>
-          <img src='images/ever_before.png' width=100%>
+          <div class="two" id='krpc_video'>
+            <video  width=100% muted autoplay loop>
+              <source src="data/images/krpc/krpc.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="three" id='krpc_image'>
+            <img src='data/images/ibraille/mouse_full.png' width=100%>
+          </div>
         </div>
-        <script type="text/javascript">
-          function ever_start() {
-            document.getElementById('ever_image').style.opacity = "1";
+        <!-- <script type="text/javascript">
+          function krpc_start() {
+            document.getElementById('krpc_video').style.opacity = "1";
+            document.getElementById('krpc_image').style.opacity = "0";
           }
 
-          function ever_stop() {
-            document.getElementById('ever_image').style.opacity = "0";
+          function ibraille_stop() {
+            document.getElementById('krpc_video').style.opacity = "0";
+            document.getElementById('krpc_image').style.opacity = "1";
           }
-          ever_stop()
-        </script>
+          ibraille_stop()
+        </script> -->
       </td>
       <td style="padding:20px;width:75%;vertical-align:middle">
-        <a href="https://ever.github.io/">
-			<span class="papertitle">IBraille: A Cost Effective Braille Display for the Visually Impaired
+        <!-- <a href="https://ever.github.io/"> -->
+			<span class="papertitle">A ROS based simulation of NASA’s Astrobee for unmanned space robot used for repairs during an ammonia leak on the ISS
       </span>
         </a>
         <br>
-				<strong>Irfan Nafiz Shahan</strong>,
+				<strong>Irfan Nafiz Shahan</strong>, 
+        Al-Mubin Nabil, 
+        A. Abrar, 
+        A. Hossain, 
+        S. Sakib, 
         <!-- <a href="https://www.linkedin.com/in/pulok-ahmed-476177292/">Pulok Ahmed Auvi</a>,
         <a href="https://www.sust.edu/department/eee/faculty/mrased-eee@sust.edu">Md. Rasedujjaman</a> -->
 				<br>
-        <em>arXiv</em>, 2024
+        <!-- <em>arXiv</em>, 2024
         <br>
         <a href="https://half-potato.gitlab.io/posts/ever/">project page</a>
         /
         <a href="https://arxiv.org/abs/2410.01804">arXiv</a>
-        <p></p>
+        <p></p> -->
         <p>
-				A braille display built from first principles, utilizing off the shelf available materials and a novel design - leading ot a cost reduction of 400x that commercial displays. Recieved 10,000 USD funding from Bangladesh ICT Division our of 1000+ industry and academic teams.
+          Shortest Path Raytracing Algorithm (Floyd-Warshall algorithm) with Keep in Zone (KIZ) and Keep out Zone (KOZ) padding was used to navigate autonomously in a simulated ISS environment - repairing simulated ammonia leaks.
         </p>
       </td>
     </tr>
 
-    <tr onmouseout="ever_stop()" onmouseover="ever_start()">
+    <tr onmouseout="nsac22_stop()" onmouseover="nsac22_start()">
       <td style="padding:20px;width:25%;vertical-align:middle">
         <div class="one">
-          <div class="two" id='ever_image'>
-					  <img src='images/ever_after.png' width=100%>
-					</div>
-          <img src='images/ever_before.png' width=100%>
+          <div class="two" id='nsac22_video'>
+            <video  width=100% muted autoplay loop>
+              <source src="data/images/icarus/nsac22.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="three" id='nsac22_image'>
+            <img src='data/images/icarus/nsac22_image.png' width=100%>
+          </div>
         </div>
         <script type="text/javascript">
-          function ever_start() {
-            document.getElementById('ever_image').style.opacity = "1";
+          function nsac22_start() {
+            document.getElementById('nsac22_video').style.opacity = "1";
+            document.getElementById('nsac22_image').style.opacity = "0";
           }
 
-          function ever_stop() {
-            document.getElementById('ever_image').style.opacity = "0";
+          function nsac22_stop() {
+            document.getElementById('nsac22_video').style.opacity = "0";
+            document.getElementById('nsac22_image').style.opacity = "1";
           }
-          ever_stop()
+          nsac22_stop()
         </script>
       </td>
       <td style="padding:20px;width:75%;vertical-align:middle">
-        <a href="https://ever.github.io/">
-			<span class="papertitle">SUSTsat-1: A Low Cost, High Efficiency Pi-based Multifunctional SmallSat
+        <!-- <a href="https://ever.github.io/"> -->
+			<span class="papertitle">Project Icarus - A VR Experience of the Parker Solar Probe
       </span>
         </a>
         <br>
-				<strong>Irfan Nafiz Shahan</strong>,
+				<strong>Irfan Nafiz Shahan</strong>, 
+        Al-Mubin Nabil, 
+        A. Hossain, 
+        S. Sakib, 
+        S. Rahman,
+        F. Reefat
         <!-- <a href="https://www.linkedin.com/in/pulok-ahmed-476177292/">Pulok Ahmed Auvi</a>,
         <a href="https://www.sust.edu/department/eee/faculty/mrased-eee@sust.edu">Md. Rasedujjaman</a> -->
 				<br>
-        <em>arXiv</em>, 2024
+        <!-- <em>arXiv</em>, 2024
         <br>
         <a href="https://half-potato.gitlab.io/posts/ever/">project page</a>
         /
         <a href="https://arxiv.org/abs/2410.01804">arXiv</a>
-        <p></p>
+        <p></p> -->
         <p>
-				SUST's very first amateur cubesat, built for FSK, POCSAG and SSTV transmission of an assortment of sensor data. 
+          Shortest Path Raytracing Algorithm (Floyd-Warshall algorithm) with Keep in Zone (KIZ) and Keep out Zone (KOZ) padding was used to navigate autonomously in a simulated ISS environment - repairing simulated ammonia leaks.
         </p>
       </td>
     </tr>
 
+    <tr onmouseout="nsac23_stop()" onmouseover="nsac23_start()">
+      <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='nsac23_video'>
+            <video  width=100% muted autoplay loop>
+              <source src="data/images/perseverence/nsac23.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="three" id='nsac23_image'>
+            <img src='data/images/perseverence/nsac23_image2.png' width=100%>
+          </div>
+        </div>
+        <script type="text/javascript">
+          function nsac23_start() {
+            document.getElementById('nsac23_video').style.opacity = "1";
+            document.getElementById('nsac23_image').style.opacity = "0";
+          }
+
+          function nsac23_stop() {
+            document.getElementById('nsac23_video').style.opacity = "0";
+            document.getElementById('nsac23_image').style.opacity = "1";
+          }
+          nsac23_stop()
+        </script>
+      </td>
+      <td style="padding:20px;width:75%;vertical-align:middle">
+        <!-- <a href="https://ever.github.io/"> -->
+			<span class="papertitle">Perseverance Re-imagined - A VR Experience of the Perseverance Mars Rover
+      </span>
+        </a>
+        <br>
+				<strong>Irfan Nafiz Shahan</strong>, 
+        A. Hossain, 
+        Al-Mubin Nabil, 
+        S. Sakib, 
+        B. Choudhury
+        <!-- <a href="https://www.linkedin.com/in/pulok-ahmed-476177292/">Pulok Ahmed Auvi</a>,
+        <a href="https://www.sust.edu/department/eee/faculty/mrased-eee@sust.edu">Md. Rasedujjaman</a> -->
+				<br>
+        <!-- <em>arXiv</em>, 2024
+        <br>
+        <a href="https://half-potato.gitlab.io/posts/ever/">project page</a>
+        /
+        <a href="https://arxiv.org/abs/2410.01804">arXiv</a>
+        <p></p> -->
+        <p>
+          A VR Based Recreation Perseverance Rover Launch, Landing and Deployment in Mars Terrain developed on Unity Engine
+        </p>
+      </td>
+    </tr>
 
     <!-- <tr onmouseout="cat3d_stop()" onmouseover="cat3d_start()" bgcolor="#ffffd0">
       <td style="padding:20px;width:25%;vertical-align:middle">
@@ -518,35 +704,38 @@
                 <h2>Invited Talks<br></h2>
               </td>
               <td width="75%" valign="center">
-                Studio-X: 
+                - NSDC Bi-Annual Meeting May 2024
                 <br>
-                <a href="https://cvpr2023.thecvf.com/Conferences/2023/Organizers">Demo Chair, CVPR 2023</a>
+                - NSDC Bi-Annual Meeting Nov 2023
                 <br>
-                <a href="https://cvpr2022.thecvf.com/area-chairs">Area Chair, CVPR 2022</a>
+                - “Meet Team I-Braille – An Experience Sharing Session” by STUDIO XI, Dept. of Architecture, SUST, 2021
+ 
+                
+                <!-- <a href="http://cvpr2021.thecvf.com/area-chairs">Area Chair & Award Committee Member, CVPR 2021</a> -->
                 <br>
-                <a href="http://cvpr2021.thecvf.com/area-chairs">Area Chair & Award Committee Member, CVPR 2021</a>
+                <!-- <a href="http://cvpr2019.thecvf.com/area_chairs">Area Chair, CVPR 2019</a> -->
                 <br>
-                <a href="http://cvpr2019.thecvf.com/area_chairs">Area Chair, CVPR 2019</a>
-                <br>
-                <a href="http://cvpr2018.thecvf.com/organizers/area_chairs">Area Chair, CVPR 2018</a>
+                <!-- <a href="http://cvpr2018.thecvf.com/organizers/area_chairs">Area Chair, CVPR 2018</a> -->
               </td>
             </tr>
             <tr>
-              <td style="padding:20px;width:25%;vertical-align:middle">
-                <img src="images/cs188.jpg" alt="cs188">
+              <td align="center" style="padding:20px;width:25%;vertical-align:middle">
+                <h2>Professional Service<br></h2>
+              <!-- <td style="padding:20px;width:25%;vertical-align:middle"> -->
+                <!-- <img src="images/cs188.jpg" alt="cs188"> -->
               </td>
               <td width="75%" valign="center">
-                <a href="http://inst.eecs.berkeley.edu/~cs188/sp11/announcements.html">Graduate Student Instructor, CS188 Spring 2011</a>
+                <a href="https://htu.edu/steme-conference-hosted-by-huston-tillotson-university-drew-participants-from-around-the-globe/">Technical Student Asst. in International Science, Technology, Engineering, Mathematics and Education Conference 2023, Huston-Tillotson University, TX, USA</a>
                 <br>
-                <a href="http://inst.eecs.berkeley.edu/~cs188/fa10/announcements.html">Graduate Student Instructor, CS188 Fall 2010</a>
+                <!-- <a href="http://inst.eecs.berkeley.edu/~cs188/fa10/announcements.html">Graduate Student Instructor, CS188 Fall 2010</a>
                 <br>
-                <a href="http://aima.cs.berkeley.edu/">Figures, "Artificial Intelligence: A Modern Approach", 3rd Edition</a>
+                <a href="http://aima.cs.berkeley.edu/">Figures, "Artificial Intelligence: A Modern Approach", 3rd Edition</a> -->
               </td>
             </tr>
             
 
             <tr>
-              <td align="center" style="padding:20px;width:25%;vertical-align:middle">
+              <!-- <td align="center" style="padding:20px;width:25%;vertical-align:middle">
                 <h2>Basically <br> Blog Posts</h2>
               </td>
               <td width="75%" valign="middle">
@@ -557,7 +746,7 @@
                 <a href="https://arxiv.org/abs/1704.07483">Continuously Differentiable Exponential Linear Units</a>
                 <br>
                 <a href="https://jonbarron.info/data/cvpr2023_llm_workshop_annotated.pdf">Scholars & Big Models: How Can Academics Adapt?</a>
-              </td>
+              </td> -->
             </tr>
             
             
