@@ -17,834 +17,527 @@
     <meta name="author" content="Irfan Nafiz">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="components.css">    
+    <style>
+      .container {
+        width: 100%;
+        max-width: 800px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .hero-section {
+        width: 100%;
+        display: flex;
+        gap: 2.5%;
+        flex-wrap: wrap;
+      }
+
+      .hero-content {
+        flex: 1;
+        min-width: 250px;
+        padding: 2.5%;
+      }
+
+      .hero-image {
+        flex: 0 0 40%;
+        padding: 2.5%;
+      }
+
+      .hero-image img {
+        width: 100%;
+        max-width: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+
+      .project-item {
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+        flex-wrap: wrap;
+      }
+
+      .project-image {
+        width: 25%;
+        min-width: 160px;
+        flex-shrink: 0;
+      }
+
+      .project-content {
+        flex: 1;
+        min-width: 300px;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        max-height: 150px;
+      }
+
+      .section-header {
+        padding: 20px;
+      }
+
+      .miscellaneous-section {
+        width: 100%;
+      }
+
+      .misc-item {
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+      }
+
+      .misc-title {
+        width: 25%;
+        min-width: 160px;
+        text-align: center;
+        flex-shrink: 0;
+      }
+
+      .misc-content {
+        width: 75%;
+        flex: 1;
+      }
+
+      .footer-section {
+        padding: 20px;
+        text-align: right;
+        font-size: small;
+      }
+
+      .project-links {
+        margin-top: 8px;
+        font-size: 12px;
+      }
+
+      .project-links a {
+        margin-right: 15px;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .project-links a:hover {
+        text-decoration: underline;
+      }
+
+      .project-item:hover .project-content {
+        max-height: 500px;
+        overflow: visible;
+      }
+
+      .project-description-full {
+        display: none;
+      }
+
+      .project-item:hover .project-description-full {
+        display: block;
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 1px solid #e0e0e0;
+      }
+
+      @media (max-width: 768px) {
+        .hero-section {
+          flex-direction: column;
+        }
+
+        .hero-image {
+          flex: 1;
+          width: 100%;
+        }
+
+        .project-item {
+          flex-direction: column;
+        }
+
+        .project-image {
+          width: 100%;
+        }
+
+        .project-content {
+          width: 100%;
+        }
+
+        .misc-item {
+          flex-direction: column;
+        }
+
+        .misc-title {
+          width: 100%;
+          text-align: center;
+        }
+
+        .misc-content {
+          width: 100%;
+        }
+      }
+    </style>
   </head>
 
   <body>
-    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-      <tr style="padding:0px">
-        <td style="padding:0px">
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr style="padding:0px">
-              <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <p class="name" style="text-align: center;">
-                  Irfan Nafiz Shahan
-                </p>
-                <p>Hello! I'm an electrical engineering graduate from <a href="https://www.sust.edu/">SUST</a> with interests in Computer Vision, Robotics and Wearables.
-                </p>
-                <p>
-                  I enjoy tackling complex open ended problems by combining algorithms with practical hardware solutions, from 3D perception and point cloud processing to wearable assistive technologies.  
-                </p>
-                <p>
-                  <h2><strong>Currently Serving As:</strong></h2>
-                  <strong>Research Assistant, EEE, SUST:</strong> Working under the supervision of Dr. Md. Rasedujjaman.   <br><br>
-                  <strong>Executive and Educator, <a href="https://stemx365.org/2023/12/03/krpc-2-2/">STEMX365</a>:</strong> Supported student experiments through JAXA's <a href="https://jaxa.krpc.jp/">Kibo Robot Programming Challenge</a> and <a href="https://humans-in-space.jaxa.jp/en/biz-lab/kuoa/tryzerog/">Asian Try Zero Gravity (ATZG)</a> under 
-                  <a href="https://mizanul.mit.edu/" target="_blank" rel="noopener noreferrer">Mizanul Chowdhury (MIT)</a>.
-                </p>
-                <!-- <p>
-                  I work with  <a href="https://mizanul.mit.edu/">Mizanul Chowdhury</a>, (MIT Lincoln Lab and MIT SPHERES Scientist), on SmallSat Systems in the <a href="https://EDITLATER/">FrontierSatellite</a> (stealth startup) project, and create robotic simulations and VMs that aid in STEM robotics education for JAXA's <a href="https://jaxa.krpc.jp/">Kibo Robot Programming Challenge</a> in <a href="https://stemx365.org/2023/12/03/krpc-2-2/">STEMX365</a>.
-                </p> -->
-                
-                <!-- <p>In my free time I enjoy badminton, body-building, guitar, and fine-arts. I also take joy in making VR games!</p> -->
-                <p style="text-align:center">
-                  <a href="mailto:irfannafizislive@gmail.com">Email</a> &nbsp;/&nbsp;
-                  <a href="data\CV_IrfanNafizShahan.pdf">CV</a> &nbsp;/&nbsp;
-                  <a href="https://scholar.google.com/citations?hl=en&view_op=list_works&gmla=AL3_ziiU19tz5cFcYaM-E0gqjnUq2CDiovoAaM75hebB-B0msJr0r1rDIHmGbORg-JfEAYlgwRqbQVRnmjn6bw&user=dyStXy0AAAAJ">Google Scholar</a> &nbsp;/&nbsp;
-                  <a href="https://github.com/irfannafiz/">Github</a> &nbsp;/&nbsp;
-                  <a href="https://www.linkedin.com/in/irfannafizshahan/">LinkedIn</a>
-
-                </p>
-                <!-- <p style="text-align:center">
-                  <a href="">Fine Art Gallery</a> &nbsp;/&nbsp;
-                  <a href="">Projects</a> &nbsp;/&nbsp;
-                  <a href="">Music</a> 
-
-                </p> -->
-              </td>
-              <td style="padding:2.5%;width:40%;max-width:40%">
-                <a href="images/IrfanNafiz4.png"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/IrfanNafiz4.png" class="hoverZoomLink"></a>
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-              <tr>
-              <td style="padding:20px;width:100%;vertical-align:middle">
-                <!-- <h2>Research Interests</h2>
-                <p>
-                  I'm interested in computer vision, autonomous vehicles, robotics, and smallsats. Mostly I work extensively on making robust neural networks for autonomous vehicles in adverse weather. Furthermore I try to make smallsat systems affordable for space democratization. 
-                  
-                  Some papers and projects are <span class="highlight">highlighted</span> below.
-                </p> -->
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-
-            <p>
-              <h3>Ongoing Papers</h3>
-            </p>
-
-<tr onmouseout="iqa_stop()" onmouseover="iqa_start()">
-  <td style="padding:20px;width:25%;vertical-align:middle">
-    <div class="one">
-      <div class="two" id='iqa_image'>
-        <img src='data/images/iqa/iqa2.png' width=100%>
+    <div class="container">
+      <div class="hero-section">
+        <div class="hero-content">
+          <p class="name" style="text-align: center;">
+            Irfan Nafiz Shahan
+          </p>
+          <p>Hello! I'm an electrical engineering graduate from <a href="https://www.sust.edu/">SUST</a> with interests in Computer Vision, Robotics and Wearables.
+          </p>
+          <p>
+            I enjoy tackling complex open ended problems by combining algorithms with practical hardware solutions, from 3D perception and point cloud processing to wearable assistive technologies.  
+          </p>
+          <h2><strong>Currently Serving As:</strong></h2>
+          <p>
+            <strong>Research Assistant, EEE, SUST:</strong> Working under the supervision of <a href="https://www.sust.edu/departments/eee/faculty/mrased-eee@sust.edu">Dr. Md. Rasedujjaman</a>, Shahjalal University of Science and Technology.   <br> 
+            <strong>Researcher:</strong> LiDAR research under the supervision of <a href="https://www.umtri.umich.edu/people/arpan-kusari/">Dr. Arpan Kusari</a>, University of Michigan. <br><br> 
+            <strong>Executive and Educator, <a href="https://stemx365.org/2023/12/03/krpc-2-2/">STEMX365</a>:</strong> Supported student experiments through JAXA's <a href="https://jaxa.krpc.jp/">Kibo Robot Programming Challenge</a> and <a href="https://humans-in-space.jaxa.jp/en/biz-lab/kuoa/tryzerog/">Asian Try Zero Gravity (ATZG)</a> under 
+            <a href="https://mizanul.mit.edu/" target="_blank" rel="noopener noreferrer">Mizanul Chowdhury (MIT)</a>.
+          </p>
+          <p style="text-align:center">
+            <a href="mailto:irfannafizislive@gmail.com">Email</a> &nbsp;/&nbsp;
+            <a href="data/CV_IrfanNafizShahan.pdf">CV</a> &nbsp;/&nbsp;
+            <a href="https://scholar.google.com/citations?hl=en&view_op=list_works&gmla=AL3_ziiU19tz5cFcYaM-E0gqjnUq2CDiovoAaM75hebB-B0msJr0r1rDIHmGbORg-JfEAYlgwRqbQVRnmjn6bw&user=dyStXy0AAAAJ">Google Scholar</a> &nbsp;/&nbsp;
+            <a href="https://github.com/irfannafiz/">Github</a> &nbsp;/&nbsp;
+            <a href="https://www.linkedin.com/in/irfannafizshahan/">LinkedIn</a>
+          </p>
+        </div>
+        <div class="hero-image">
+          <a href="images/IrfanNafiz4.png"><img alt="profile photo" src="images/IrfanNafiz4.png" class="hoverZoomLink"></a>
+        </div>
       </div>
-      <img src='data/images/iqa/iqa1.png' width=100%>
-    </div>
-    <script type="text/javascript">
-      function iqa_start() {
-        document.getElementById('iqa_image').style.opacity = "1";
-      }
 
-      function iqa_stop() {
-        document.getElementById('iqa_image').style.opacity = "0";
-      }
-      iqa_stop()
-    </script>
-  </td>
-  <td style="padding:20px;width:75%;vertical-align:middle">
-    <span class="papertitle">Holistic Robustness Evaluation for NR-IQA Models under MOS-Stratified Perturbations</span>
-    <br>
-    R. Hassan,
-    <a href="https://www.linkedin.com/in/al-mubin-nabil-a43553197/">A. Nabil</a>,
-    <strong>I. Shahan</strong>,
-    I. Rahman
-    <br>
-    <p></p>
-    <p>
-      Conducted a <strong>comprehensive robustness evaluation of no-reference image quality assessment (NR-IQA) models</strong> under MOS-stratified perturbations. Developed metrics and testing strategies to measure performance across varying image distortions and subjective quality strata. Demonstrated insights on model stability and reliability for real-world applications in computer vision and multimedia analytics.
-    </p>
-  </td>
-</tr>
+      <div class="section-header"></div>
 
-
-<tr onmouseout="lidar_stop()" onmouseover="lidar_start()">
-  <td style="padding:20px;width:25%;vertical-align:middle">
-    <div class="one">
-      <div class="two" id='lidar_image'>
-        <img src='data/images/lidar/lidar2.png' width=100%>
+      <div style="padding: 20px;">
+        <h3>Project Portfolio</h3>
       </div>
-      <img src='data/images/lidar/lidar1.png' width=100%>
+      <section id="category-assistive" class="project-category">
+        <div style="padding: 20px;"><h2>Assistive Devices and Wearables</h2></div>
+        <div id="projects-assistive"></div>
+      </section>
+
+      <section id="category-cv-autonomous" class="project-category">
+        <div style="padding: 20px;"><h2>Computer Vision and Autonomous Vehicles</h2></div>
+        <div id="projects-cv"></div>
+      </section>
+
+      <section id="category-embedded" class="project-category">
+        <div style="padding: 20px;"><h2>Embedded Systems and Robotics</h2></div>
+        <div id="projects-embedded"></div>
+      </section>
+
+      <section id="category-vr" class="project-category">
+        <div style="padding: 20px;"><h2>Virtual Reality and Simulations</h2></div>
+        <div id="projects-vr"></div>
+      </section>
+
+      <section id="category-misc-projects" class="project-category">
+        <div style="padding: 20px;"><h2>Miscellaneous Projects</h2></div>
+        <div id="projects-misc"></div>
+      </section>
+
+      <div class="miscellaneous-section">
+        <div style="padding: 20px;">
+          <h2>Miscellaneous</h2>
+        </div>
+
+        <div class="misc-item">
+          <div class="misc-title">
+            <h3>Invited Talks</h3>
+          </div>
+          <div class="misc-content">
+            - NSDC Bi-Annual Meeting May 2024
+            <br>
+            - NSDC Bi-Annual Meeting Nov 2023
+            <br>
+            - "Meet Team I-Braille – An Experience Sharing Session" by STUDIO XI, Dept. of Architecture, SUST, 2021
+          </div>
+        </div>
+
+        <div class="misc-item">
+          <div class="misc-title">
+            <h3>Professional Service</h3>
+          </div>
+          <div class="misc-content">
+            <a href="https://htu.edu/steme-conference-hosted-by-huston-tillotson-university-drew-participants-from-around-the-globe/">Technical Student Asst. in International Science, Technology, Engineering, Mathematics and Education Conference 2023, Huston-Tillotson University, TX, USA</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <p style="text-align:right;font-size:small;">
+          Feel free to steal this website's <a href="https://github.com/jonbarron/jonbarron_website">source code</a>. <strong>Do not</strong> scrape the HTML from this page itself, as it includes analytics tags that you do not want on your own website &mdash; use the github code instead. Also, consider using <a href="https://leonidk.com/">Leonid Keselman</a>'s <a href="https://github.com/leonidk/new_website">Jekyll fork</a> of this page.
+        </p>
+      </div>
     </div>
+
     <script type="text/javascript">
-      function lidar_start() {
-        document.getElementById('lidar_image').style.opacity = "1";
+      // Project template system - categorized
+      const projects = {
+        assistive: [
+          {
+            id: 'ibraille',
+            title: 'IBraille: A Cost Effective Braille Display for the Visually Impaired',
+            authors: 'Irfan Nafiz Shahan, Al-Mubin Nabil, MM Abdul Karim, P. Dey, A. Paul, T. Choudhury',
+            image: 'data/images/ibraille/mouse_full.png',
+            imageHover: 'data/images/ibraille/ibraille.mp4',
+            isVideo: true,
+            summary: 'Cost-effective braille display built from first principles with 400x cost reduction.',
+            description: 'A braille display built from first principles, utilizing off the shelf available materials and a novel design - leading to a cost reduction of 400x than that of commercial displays. Received 10,000 USD funding from Bangladesh ICT Division through a rigorous 4-stage selection process among 1000+ industry and academic teams.\nRole: Lead on design and implementation; actuator testing and prototyping.\nInteresting/Innovative: Ultra-low-cost mechanical design + OCR and Bengali->Braille pipeline for affordable accessibility.',
+            links: [
+              { text: 'Video', url: 'https://youtu.be/zLcugmqH1eI' },
+              { text: 'Poster', url: 'https://drive.google.com/file/d/1M7lurM46UO5TReKo-ptPx65gR0cr4zWJ/view?usp=sharing' }
+            ]
+          },
+          {
+            id: 'signtalk',
+            title: 'SignTalk: A TinyML Inertial Glove for Sign Language Translation',
+            authors: 'Irfan Nafiz Shahan, Team SignTalk',
+            image: 'images/placeholder.svg',
+            imageHover: 'images/placeholder.svg',
+            summary: 'TinyML-based inertial glove to translate sign language to text/speech.',
+            description: 'Role: Concept, implementation and evaluation of embedded TinyML pipeline for sign-to-text translation.\nInteresting / Innovative: Lightweight inference on wearable IMU data; designed for local deployment in disability-support settings.',
+            links: [ { text: 'Poster (CV)', url: 'data/CV_IrfanNafizShahan.pdf' } ]
+          }
+        ],
+
+        cv_autonomous: [
+          {
+            id: 'iqa',
+            title: 'Holistic Robustness Evaluation for NR-IQA Models under MOS-Stratified Perturbations',
+            authors: 'R. Hassan, A. Nabil, I. Shahan, I. Rahman',
+            image: 'data/images/iqa/iqa1.png',
+            imageHover: 'data/images/iqa/iqa2.png',
+            summary: 'Comprehensive robustness evaluation of no-reference image quality assessment (NR-IQA) models.',
+            description: 'Conducted a comprehensive robustness evaluation of no-reference image quality assessment (NR-IQA) models under MOS-stratified perturbations. Developed metrics and testing strategies to measure performance across varying image distortions and subjective quality strata. Demonstrated insights on model stability and reliability for real-world applications in computer vision and multimedia analytics.\nRole: Implementation and evaluation.\nInteresting/Innovative: MOS-stratified perturbation analysis for robustness.',
+            links: []
+          },
+          {
+            id: 'lidar',
+            title: 'LiDAR Point Generation without Raycasting in Simulation',
+            authors: 'Irfan Nafiz Shahan, A. Nabil, A. Kusari',
+            image: 'data/images/lidar/lidar1.png',
+            imageHover: 'data/images/lidar/lidar2.png',
+            summary: 'Raycasting-free LiDAR point generation pipeline using spherical projection and GPU shaders.',
+            description: 'Developed a raycasting-free LiDAR point generation pipeline using spherical projection and GPU vertex–raster shaders. Implemented geometry-based LiDAR point generation with mesh and vector computation, enabling high-speed simulation for static and dynamic environments. Built the computational geometry logic for vertex and raster shaders, achieving accurate point cloud generation for autonomous driving and synthetic sensor datasets.\nRole: Concept and implementation of simulation pipeline.\nInteresting/Innovative: Raycasting-free generation using GPU shaders for high-speed synthetic LiDAR.',
+            links: []
+          },
+          {
+            id: 'css',
+            title: 'CARLASnowScenes: Towards Solving Adverse Weather Driving',
+            authors: 'Irfan Nafiz Shahan, Pulok Ahmed Auvi, Md. Rasedujjaman',
+            image: 'data/images/CSS/scene1.png',
+            imageHover: 'data/images/CSS/css.mp4',
+            isVideo: true,
+            summary: 'Synthetic snow weather for autonomous vehicle training and testing.',
+            description: 'Creating synthetic, dynamic snow weather for autonomous vehicle training and testing in adverse weather conditions. Aimed at bridging the sim2real gap for snow weather autonomous driving.\nRole: Thesis concept, implementation and dataset creation.\nInteresting/Innovative: Implemented accumulation and snowfall shaders for CARLA; produced deterministic large-scale snow dataset.',
+            links: [ { text: 'Poster (CV)', url: 'data/CV_IrfanNafizShahan.pdf' } ]
+          },
+          {
+            id: 'speakerid',
+            title: 'Towards Speaker Identification with Minimal Dataset',
+            authors: 'Irfan Nafiz Shahan',
+            image: 'images/placeholder.svg',
+            imageHover: 'images/placeholder.svg',
+            summary: 'Lightweight 1D-model approaches for speaker identification on constrained hardware.',
+            description: 'Role: Concept and implementation of 1D CNN-based speaker identification with constrained resources.\nInteresting / Innovative: Focused on minimal dataset training and resource-efficient model design suitable for edge devices.',
+            links: [ { text: 'CV (details)', url: 'data/CV_IrfanNafizShahan.pdf' } ]
+          }
+        ],
+
+        embedded_robotics: [
+          {
+            id: 'sustsat',
+            title: 'SUSTsat-1: A Low Cost, High Efficiency Raspberry Pi based Multifunctional SmallSat',
+            authors: 'Irfan Nafiz Shahan, Pulok Ahmed Auvi',
+            image: 'data/images/sustsat/sustsat.png',
+            imageHover: 'data/images/sustsat/sustsat.png',
+            summary: 'SUST\'s first amateur cubesat for FSK, POCSAG and SSTV transmission.',
+            description: 'SUST\'s very first amateur cubesat, built for FSK, POCSAG and SSTV transmission of an assortment of sensor data.\nRole: Hardware and systems integration for payload and communications.\nInteresting/Innovative: Low-cost Raspberry Pi-based multifunctional payload for amateur satellite telemetry and experiments.',
+            links: []
+          },
+          {
+            id: 'rfid',
+            title: 'A Secure, Cost Effective Approach to RFID Data Logging for Large Institutions',
+            authors: 'Md. Rasedujjaman, Irfan Nafiz Shahan, N. Rakhaine, I. Ahmed',
+            image: 'data/images/RFID/rfid_box1.png',
+            imageHover: 'data/images/RFID/rfid_box1.png',
+            summary: 'Secure and scalable RFID data logging system with internal server architecture.',
+            description: 'A ground up RFID data logging system that is secure, cost effective and scalable for large institutions with internal server architecture. We compare and consider existing information security systems, showcasing current device advantages and limitations.\nRole: System design and implementation.\nInteresting/Innovative: Internal server architecture for privacy and scalability in institutional settings.',
+            links: []
+          },
+          {
+            id: 'tr',
+            title: 'TinyRecycler: A low-cost smart trash segregation system utilizing tiny ML',
+            authors: 'Irfan Nafiz Shahan, Pulok Ahmed Auvi',
+            image: 'data/images/TR/tr1.png',
+            imageHover: 'data/images/TR/tr_data.png',
+            summary: 'Low-investment trash segregation using embedded machine learning for developing countries.',
+            description: 'We propose a prototype for a low-investment trash segregation mechanism that uses embedded machine learning using tensorflow lite for microcontrollers. The system is designed to be low cost, low power and scalable using IoT architectures for developing countries.\nRole: Dataset collection, model compression and embedded deployment.\nInteresting/Innovative: TinyML model optimizations to run on low-memory microcontrollers for real-world waste sorting.',
+            links: []
+          },
+          {
+            id: 'krpc',
+            title: 'A ROS based simulation of NASA\'s Astrobee for ISS ammonia leak repairs',
+            authors: 'Irfan Nafiz Shahan, Al-Mubin Nabil, A. Abrar, A. Hossain, S. Sakib',
+            image: 'data/images/ibraille/mouse_full.png',
+            imageHover: 'data/images/krpc/krpc.mp4',
+            isVideo: true,
+            summary: 'Autonomous space robot navigation using Floyd-Warshall algorithm.',
+            description: 'Shortest Path Raytracing Algorithm (Floyd-Warshall algorithm) with Keep in Zone (KIZ) and Keep out Zone (KOZ) padding was used to navigate autonomously in a simulated ISS environment - repairing simulated ammonia leaks.\nRole: Autonomy stack development and simulation deployment.\nInteresting/Innovative: Integrating classical shortest-path algorithms into ROS-based ISS simulation for maintenance tasks.',
+            links: []
+          }
+          ,
+          {
+            id: 'attendance_iot',
+            title: 'Scalable Embedded IoT Device for Secure RFID & Fingerprint Attendance',
+            authors: 'Irfan Nafiz Shahan, Pulok Ahmed Auvi',
+            image: 'images/placeholder.svg',
+            imageHover: 'images/placeholder.svg',
+            summary: 'Raspberry Pi based embedded IoT attendance and logging system for institutions.',
+            description: 'Role: Design and implementation (hardware + firmware) of a secure, low-cost attendance logging system.\nInteresting / Innovative: Combined RFID with fingerprint for multi-factor local logging and internal server architecture for privacy.',
+            links: [ { text: 'CV (details)', url: 'data/CV_IrfanNafizShahan.pdf' } ]
+          }
+        ],
+
+        vr_simulations: [
+          {
+            id: 'nsac22',
+            title: 'Project Icarus - A VR Experience of the Parker Solar Probe',
+            authors: 'Irfan Nafiz Shahan, Al-Mubin Nabil, A. Hossain, S. Sakib, S. Rahman, F. Reefat',
+            image: 'data/images/icarus/nsac22_image.png',
+            imageHover: 'data/images/icarus/nsac22.mp4',
+            isVideo: true,
+            summary: 'Virtual Reality N-Body Simulator Experience of the Parker Solar Probe.',
+            description: 'A Virtual Reality N-Body Simulator Experience made with Unity Engine, detailing the journey of the Parker Solar Probe.\nRole: Lead developer and simulation integrator.\nInteresting/Innovative: Educational VR experience combining N-body physics with immersive storytelling.',
+            links: []
+          },
+          {
+            id: 'nsac23',
+            title: 'Perseverance Re-imagined - A VR Experience of the Perseverance Mars Rover',
+            authors: 'Irfan Nafiz Shahan, A. Hossain, Al-Mubin Nabil, S. Sakib, B. Choudhury',
+            image: 'data/images/perseverence/nsac23_image2.png',
+            imageHover: 'data/images/perseverence/nsac23.mp4',
+            isVideo: true,
+            summary: 'VR Recreation of Perseverance Rover Launch, Landing and Deployment.',
+            description: 'A VR Based Recreation Perseverance Rover Launch, Landing and Deployment in Mars Terrain developed on Unity Engine.\nRole: Developer and content lead.\nInteresting/Innovative: Recreating complex mission phases in VR for outreach and educational demonstration.',
+            links: []
+          }
+        ],
+
+        miscellaneous: [
+          {
+            id: 'dengue_ts',
+            title: 'Expeditions on Time-Series ML Architectures for Dengue Outbreak Prediction',
+            authors: 'Irfan Nafiz Shahan, Supervisor: Dr. Pabel Shahrear',
+            image: 'images/placeholder.svg',
+            imageHover: 'images/placeholder.svg',
+            summary: 'Time-series ML work for epidemiological forecasting in Bangladesh.',
+            description: 'Role: Implementation and evaluation of time-series ML models for dengue outbreak prediction.\nInteresting / Innovative: Applied ML architectures to public-health datasets with feature engineering for seasonal effects.',
+            links: [ { text: 'CV (details)', url: 'data/CV_IrfanNafizShahan.pdf' } ]
+          }
+        ]
+      };
+
+      // Create hover effect function
+      function createHoverEffect(elementId, imageId, imageUrl, isVideo = false) {
+        const imageDiv = document.getElementById(imageId);
+        if (!imageDiv) return;
+
+        if (isVideo) {
+          imageDiv.innerHTML = `<video width=100% muted autoplay loop><source src="${imageUrl}" type="video/mp4">Your browser does not support the video tag.</video>`;
+        } else {
+          imageDiv.innerHTML = `<img src="${imageUrl}" width=100%>`;
+        }
+
+        imageDiv.style.opacity = "0";
       }
 
-      function lidar_stop() {
-        document.getElementById('lidar_image').style.opacity = "0";
+      // Handle project hover effects
+      function setupProjectHoverEffect(projectItem, imageId) {
+        const imageDiv = projectItem.querySelector(`#${imageId}`);
+        if (!imageDiv) return;
+
+        projectItem.addEventListener('mouseenter', () => {
+          imageDiv.style.opacity = "1";
+        });
+
+        projectItem.addEventListener('mouseleave', () => {
+          imageDiv.style.opacity = "0";
+        });
       }
-      lidar_stop()
+
+      // Render project item
+      function renderProject(project) {
+        const hoverImageId = `${project.id}_image`;
+        
+        let linksHtml = '';
+        if (project.links && project.links.length > 0) {
+          linksHtml = '<div class="project-links">';
+          project.links.forEach((link, index) => {
+            linksHtml += `<a href="${link.url}" target="_blank">${link.text}</a>`;
+          });
+          linksHtml += '</div>';
+        }
+
+        const html = `
+        <div class="project-item" data-project-id="${project.id}">
+          <div class="project-image">
+            <div class="one">
+              <div class="two" id="${hoverImageId}"></div>
+              <img src="${project.image || 'images/placeholder.svg'}" width=100%>
+            </div>
+          </div>
+          <div class="project-content">
+            <span class="papertitle">${project.title}</span>
+            <br>
+            <strong>${project.authors}</strong>
+            <br>
+            ${linksHtml}
+            <p>${project.summary}</p>
+            <div class="project-description-full">
+              <p>${project.description}</p>
+            </div>
+          </div>
+        </div>`;
+        
+        return { html, project };
+      }
+
+      // Render a category into a container
+      function renderCategory(containerId, projectsArray) {
+        const container = document.getElementById(containerId);
+        if (!container) return;
+        let html = '';
+        projectsArray.forEach(project => {
+          const result = renderProject(project);
+          html += result.html;
+        });
+        container.innerHTML = html;
+
+        // Initialize hover effects for rendered projects
+        projectsArray.forEach(project => {
+          const hoverImageId = `${project.id}_image`;
+          createHoverEffect(project.id, hoverImageId, project.imageHover, project.isVideo);
+          const projectItem = container.querySelector(`[data-project-id="${project.id}"]`);
+          if (projectItem) {
+            setupProjectHoverEffect(projectItem, hoverImageId);
+          }
+        });
+      }
+
+      // Render all categories
+      function renderAllProjects() {
+        renderCategory('projects-assistive', projects.assistive);
+        renderCategory('projects-cv', projects.cv_autonomous);
+        renderCategory('projects-embedded', projects.embedded_robotics);
+        renderCategory('projects-vr', projects.vr_simulations);
+        renderCategory('projects-misc', projects.miscellaneous);
+      }
+
+      // Initialize on page load
+      document.addEventListener('DOMContentLoaded', renderAllProjects);
     </script>
-  </td>
-  <td style="padding:20px;width:75%;vertical-align:middle">
-    <span class="papertitle">LiDAR Point Generation without Raycasting in Simulation</span>
-    <br>
-    <strong>Irfan Nafiz Shahan</strong>,
-    <a href="https://www.linkedin.com/in/al-mubin-nabil-a43553197/">A. Nabil</a>,
-    <a href="https://www.umtri.umich.edu/people/arpan-kusari/">A. Kusari</a>
-    <br>
-    <p></p>
-    <p>
-      Developed a <strong>raycasting-free LiDAR point generation pipeline</strong> using spherical projection and GPU vertex–raster shaders. Implemented geometry-based LiDAR point generation with mesh and vector computation, enabling high-speed simulation for static and dynamic environments. Built the computational geometry logic for vertex and raster shaders, achieving accurate point cloud generation for autonomous driving and synthetic sensor datasets.
-    </p>
-  </td>
-</tr>
-
-
-    <tr onmouseout="css_stop()" onmouseover="css_start()">
-      <td style="padding:20px;width:25%;vertical-align:middle">
-        <!-- <div class="one">
-          <div class="two" id='ever_image'>
-					  <img src='data/images/CSS/scene1.png' width=100%>
-					</div>
-          <img src='data/images/CSS/css.mp4' width=100%>
-        </div> -->
-        <div class="one">
-          <div class="two" id='css_image'><video  width=100% muted autoplay loop>
-          <source src="data/images/CSS/css.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-          </video></div>
-          <img src='data/images/CSS/scene1.png' width=100%>
-        </div>
-        <script type="text/javascript">
-          function css_start() {
-            document.getElementById('css_image').style.opacity = "1";
-          }
-
-          function css_stop() {
-            document.getElementById('css_image').style.opacity = "0";
-          }
-          css_stop()
-        </script>
-      </td>
-      <td style="padding:20px;width:75%;vertical-align:middle">
-        <!-- <a href="https://youtu.be/zLcugmqH1eI"> -->
-			<span class="papertitle">CARLASnowScenes: Towards Solving Adverse Weather Driving – An analysis and approach to Synthetic Snow Road Scenes for Autonomous Driving
-      </span>
-        </a>
-        <br>
-				<strong>Irfan Nafiz Shahan</strong>,
-        <a href="https://www.linkedin.com/in/pulok-ahmed-476177292/">Pulok Ahmed Auvi</a>,
-        <a href="https://www.sust.edu/department/eee/faculty/mrased-eee@sust.edu">Md. Rasedujjaman</a>
-				<br>
-        <!-- <em>arXiv</em>, 2024
-        <br>
-        <a href="https://youtu.be/zLcugmqH1eI">Video</a>
-        /
-        <a href="https://drive.google.com/file/d/1M7lurM46UO5TReKo-ptPx65gR0cr4zWJ/view?usp=sharing">Poster</a> -->
-        <p></p>
-        <p>
-				Creating synthetic, dynamic snow weather for autonomous vehicle training and testing in adverse weather conditions. Aimed at bridging the sim2real gap for snow weather autonomous driving.
-        </p>
-      </td>
-    </tr>
-
-    <tr onmouseout="ibraille_stop()" onmouseover="ibraille_start()">
-      <td style="padding:20px;width:25%;vertical-align:middle">
-        <div class="one">
-          <div class="two" id='ibraille_video'>
-            <video  width=100% muted autoplay loop>
-              <source src="data/images/ibraille/ibraille.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <div class="three" id='ibraille_image'>
-            <img src='data/images/ibraille/mouse_full.png' width=100%>
-          </div>
-        </div>
-        <script type="text/javascript">
-          function ibraille_start() {
-            document.getElementById('ibraille_video').style.opacity = "1";
-            document.getElementById('ibraille_image').style.opacity = "0";
-          }
-
-          function ibraille_stop() {
-            document.getElementById('ibraille_video').style.opacity = "0";
-            document.getElementById('ibraille_image').style.opacity = "1";
-          }
-          ibraille_stop()
-        </script>
-      </td>
-      <td style="padding:20px;width:75%;vertical-align:middle">
-        <a href="https://youtu.be/zLcugmqH1eI">
-          <span class="papertitle">IBraille: A Cost Effective Braille Display for the Visually Impaired
-      </span>
-        </a>
-        <br>
-				<strong>Irfan Nafiz Shahan</strong>, 
-        Al-Mubin Nabil, 
-        MM Abdul Karim, 
-        P. Dey, 
-        A. Paul, 
-        T. Choudhury
-        <!-- <a href="https://www.linkedin.com/in/pulok-ahmed-476177292/">Pulok Ahmed Auvi</a>,
-        <a href="https://www.sust.edu/department/eee/faculty/mrased-eee@sust.edu">Md. Rasedujjaman</a> -->
-				<br>
-        <a href="https://youtu.be/zLcugmqH1eI">Video</a>
-        /
-        <a href="https://drive.google.com/file/d/1M7lurM46UO5TReKo-ptPx65gR0cr4zWJ/view?usp=sharing">Poster</a>
-        <p>
-				A braille display built from first principles, utilizing off the shelf available materials and a novel design - leading ot a cost reduction of 400x than that of commercial displays. Recieved 10,000 USD funding from Bangladesh ICT Division through a rigorous 4-stage selection process among 1000+ industry and academic teams.
-        </p>
-      </td>
-    </tr>
-
-    <tr onmouseout="sustsat_stop()" onmouseover="sustsat_start()">
-      <td style="padding:20px;width:25%;vertical-align:middle">
-        <div class="one">
-          <div class="two" id=sustsat_image'>
-					  <img src='data/images/sustsat/sustsat.png' width=100%>
-					</div>
-          <img src='data/images/sustsat/sustsat.pn' width=100%>
-        </div>
-        <script type="text/javascript">
-          function sustsat_start() {
-            document.getElementById('sustsat_image').style.opacity = "1";
-          }
-
-          function sustsat_stop() {
-            document.getElementById('sustsat_image').style.opacity = "0";
-          }
-          sustsat_stop()
-        </script>
-      </td>
-      <td style="padding:20px;width:75%;vertical-align:middle">
-        <!-- <a href="https://ever.github.io/"> -->
-			<span class="papertitle">SUSTsat-1: A Low Cost, High Efficiency Raspberry Pi based Multifunctional SmallSat
-      </span>
-        </a>
-        <br>
-				<strong>Irfan Nafiz Shahan</strong>,
-        <a href="https://www.linkedin.com/in/pulok-ahmed-476177292/">Pulok Ahmed Auvi</a>,
-        <!-- <a href="https://www.sust.edu/department/eee/faculty/mrased-eee@sust.edu">Md. Rasedujjaman</a> -->
-				<br>
-        <!-- <em>arXiv</em>, 2024
-        <br>
-        <a href="https://half-potato.gitlab.io/posts/ever/">project page</a>
-        /
-        <a href="https://arxiv.org/abs/2410.01804">arXiv</a>
-        <p></p> -->
-        <p>
-				SUST's very first amateur cubesat, built for FSK, POCSAG and SSTV transmission of an assortment of sensor data. 
-        </p>
-      </td>
-    </tr>
-
-    <!-- <tr onmouseout="ever_stop()" onmouseover="ever_start()">
-      <td style="padding:20px;width:25%;vertical-align:middle">
-        <div class="one">
-          <div class="two" id='ever_image'>
-					  <img src='images/ever_after.png' width=100%>
-					</div>
-          <img src='images/ever_before.png' width=100%>
-        </div>
-        <script type="text/javascript">
-          function ever_start() {
-            document.getElementById('ever_image').style.opacity = "1";
-          }
-
-          function ever_stop() {
-            document.getElementById('ever_image').style.opacity = "0";
-          }
-          ever_stop()
-        </script>
-      </td>
-      <td style="padding:20px;width:75%;vertical-align:middle">
-        <a href="https://ever.github.io/"> 
-			<span class="papertitle">A Survey on Autonomous Vehicle Perception in Adverse Weather Conditions
-      </span>
-        </a>
-        <br>
-				<strong>Irfan Nafiz Shahan</strong>,
-        <a href="https://www.linkedin.com/in/pulok-ahmed-476177292/">Pulok Ahmed Auvi</a>,
-        <a href="https://www.sust.edu/department/eee/faculty/mrased-eee@sust.edu">Md. Rasedujjaman</a>
-				<br>
-        <em>arXiv</em>, 2024
-        <br>
-        <a href="https://half-potato.gitlab.io/posts/ever/">project page</a>
-        /
-        <a href="https://arxiv.org/abs/2410.01804">arXiv</a>
-        <p></p>
-        <p>
-				A comprehensive survey paper, showcasing use of synthetic data for autonomous vehicle perception in adverse weather conditions.
-        </p>
-      </td>
-    </tr> -->
-
-    <tr onmouseout="ever_stop()" onmouseover="ever_start()">
-      <td style="padding:20px;width:25%;vertical-align:middle">
-        <div class="one">
-          <div class="two" id='ever_image'>
-					  <img src='data/images/RFID/rfid_box1.png' width=100%>
-					</div>
-          <img src='data/images/RFID/rfid_box1.png' width=100%>
-        </div>
-        <script type="text/javascript">
-          function ever_start() {
-            document.getElementById('ever_image').style.opacity = "1";
-          }
-
-          function ever_stop() {
-            document.getElementById('ever_image').style.opacity = "0";
-          }
-          ever_stop()
-        </script>
-      </td>
-      <td style="padding:20px;width:75%;vertical-align:middle">
-        <!-- <a href="https://ever.github.io/"> -->
-			<span class="papertitle">A Secure, Cost Effective Approach to RFID Data Logging for Large Institutions
-      </span>
-        </a>
-        <br>
-				<a href="https://www.sust.edu/department/eee/faculty/mrased-eee@sust.edu">Md. Rasedujjaman</a>,
-        <strong>Irfan Nafiz Shahan</strong>,
-        N. Rakhaine,
-        I. Ahmed
-				<br>
-        <!-- <em>arXiv</em>, 2024
-        <br>
-        <a href="https://half-potato.gitlab.io/posts/ever/">project page</a>
-        /
-        <a href="https://arxiv.org/abs/2410.01804">arXiv</a>
-        <p></p> -->
-        <p>
-				A ground up RFID data logging system that is secure, cost effective and scalable for large institutions with internal server architecture. We compare and consider existing information security systems, showcasing current device advantages and limitations.
-        </p>
-      </td>
-    </tr>
-
-    <tr onmouseout="tr_stop()" onmouseover="tr_start()">
-      <td style="padding:20px;width:25%;vertical-align:middle">
-        <div class="one">
-          <div class="two" id='tr_image'>
-					  <img src='data/images/TR/tr_data.png' width=100%>
-					</div>
-          <img src='data/images/TR/tr1.png' width=100%>
-        </div>
-        <script type="text/javascript">
-          function tr_start() {
-            document.getElementById('tr_image').style.opacity = "1";
-          }
-
-          function tr_stop() {
-            document.getElementById('tr_image').style.opacity = "0";
-          }
-          tr_stop()
-        </script>
-      </td>
-      <td style="padding:20px;width:75%;vertical-align:middle">
-        <!-- <a href="https://ever.github.io/"> -->
-			<span class="papertitle">TinyRecycler: A low-cost smart trash segregation system utilizing tiny ML for developing countries 
-      </span>
-        </a>
-        <br>
-				<strong>Irfan Nafiz Shahan</strong>,
-        <a href="https://www.linkedin.com/in/pulok-ahmed-476177292/">Pulok Ahmed Auvi</a>,
-        <br>
-        <!-- <em>arXiv</em>, 2024
-        <br>
-        <a href="https://half-potato.gitlab.io/posts/ever/">project page</a>
-        /
-        <a href="https://arxiv.org/abs/2410.01804">arXiv</a>
-        <p></p> -->
-        <p>
-				We propose a prototype for a low-investment trash segregation mechanism that uses embedded machine learning using tensorflow lite for microcontrollers. The system is designed to be low cost, low power and scalable using IoT architectures for developing countries.
-        </p>
-      </td>
-    </tr>
-
-
-
-    <!-- <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody> -->
-      <tr>
-        <td>
-          <h2>Other Projects</h2>
-        </td>
-      </tr>
-    <!-- </tbody></table> -->
-
-    <tr onmouseout="krpc_stop()" onmouseover="krpc_start()">
-      <td style="padding:20px;width:25%;vertical-align:middle">
-        <div class="one">
-          <div class="two" id='krpc_video'>
-            <video  width=100% muted autoplay loop>
-              <source src="data/images/krpc/krpc.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <div class="three" id='krpc_image'>
-            <img src='data/images/ibraille/mouse_full.png' width=100%>
-          </div>
-        </div>
-        <!-- <script type="text/javascript">
-          function krpc_start() {
-            document.getElementById('krpc_video').style.opacity = "1";
-            document.getElementById('krpc_image').style.opacity = "0";
-          }
-
-          function ibraille_stop() {
-            document.getElementById('krpc_video').style.opacity = "0";
-            document.getElementById('krpc_image').style.opacity = "1";
-          }
-          ibraille_stop()
-        </script> -->
-      </td>
-      <td style="padding:20px;width:75%;vertical-align:middle">
-        <!-- <a href="https://ever.github.io/"> -->
-			<span class="papertitle">A ROS based simulation of NASA’s Astrobee for unmanned space robot used for repairs during an ammonia leak on the ISS
-      </span>
-        </a>
-        <br>
-				<strong>Irfan Nafiz Shahan</strong>, 
-        Al-Mubin Nabil, 
-        A. Abrar, 
-        A. Hossain, 
-        S. Sakib, 
-        <!-- <a href="https://www.linkedin.com/in/pulok-ahmed-476177292/">Pulok Ahmed Auvi</a>,
-        <a href="https://www.sust.edu/department/eee/faculty/mrased-eee@sust.edu">Md. Rasedujjaman</a> -->
-				<br>
-        <!-- <em>arXiv</em>, 2024
-        <br>
-        <a href="https://half-potato.gitlab.io/posts/ever/">project page</a>
-        /
-        <a href="https://arxiv.org/abs/2410.01804">arXiv</a>
-        <p></p> -->
-        <p>
-          Shortest Path Raytracing Algorithm (Floyd-Warshall algorithm) with Keep in Zone (KIZ) and Keep out Zone (KOZ) padding was used to navigate autonomously in a simulated ISS environment - repairing simulated ammonia leaks.
-        </p>
-      </td>
-    </tr>
-
-    <tr onmouseout="nsac22_stop()" onmouseover="nsac22_start()">
-      <td style="padding:20px;width:25%;vertical-align:middle">
-        <div class="one">
-          <div class="two" id='nsac22_video'>
-            <video  width=100% muted autoplay loop>
-              <source src="data/images/icarus/nsac22.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <div class="three" id='nsac22_image'>
-            <img src='data/images/icarus/nsac22_image.png' width=100%>
-          </div>
-        </div>
-        <script type="text/javascript">
-          function nsac22_start() {
-            document.getElementById('nsac22_video').style.opacity = "1";
-            document.getElementById('nsac22_image').style.opacity = "0";
-          }
-
-          function nsac22_stop() {
-            document.getElementById('nsac22_video').style.opacity = "0";
-            document.getElementById('nsac22_image').style.opacity = "1";
-          }
-          nsac22_stop()
-        </script>
-      </td>
-      <td style="padding:20px;width:75%;vertical-align:middle">
-        <!-- <a href="https://ever.github.io/"> -->
-			<span class="papertitle">Project Icarus - A VR Experience of the Parker Solar Probe
-      </span>
-        </a>
-        <br>
-				<strong>Irfan Nafiz Shahan</strong>, 
-        Al-Mubin Nabil, 
-        A. Hossain, 
-        S. Sakib, 
-        S. Rahman,
-        F. Reefat
-        <!-- <a href="https://www.linkedin.com/in/pulok-ahmed-476177292/">Pulok Ahmed Auvi</a>,
-        <a href="https://www.sust.edu/department/eee/faculty/mrased-eee@sust.edu">Md. Rasedujjaman</a> -->
-				<br>
-        <!-- <em>arXiv</em>, 2024
-        <br>
-        <a href="https://half-potato.gitlab.io/posts/ever/">project page</a>
-        /
-        <a href="https://arxiv.org/abs/2410.01804">arXiv</a>
-        <p></p> -->
-        <p>
-          A Virtual Reality N-Body Simulator Experience made with Unity Engine, detailing the journey of the Parker Solar Probe. 
-        </p>
-      </td>
-    </tr>
-
-    <tr onmouseout="nsac23_stop()" onmouseover="nsac23_start()">
-      <td style="padding:20px;width:25%;vertical-align:middle">
-        <div class="one">
-          <div class="two" id='nsac23_video'>
-            <video  width=100% muted autoplay loop>
-              <source src="data/images/perseverence/nsac23.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <div class="three" id='nsac23_image'>
-            <img src='data/images/perseverence/nsac23_image2.png' width=100%>
-          </div>
-        </div>
-        <script type="text/javascript">
-          function nsac23_start() {
-            document.getElementById('nsac23_video').style.opacity = "1";
-            document.getElementById('nsac23_image').style.opacity = "0";
-          }
-
-          function nsac23_stop() {
-            document.getElementById('nsac23_video').style.opacity = "0";
-            document.getElementById('nsac23_image').style.opacity = "1";
-          }
-          nsac23_stop()
-        </script>
-      </td>
-      <td style="padding:20px;width:75%;vertical-align:middle">
-        <!-- <a href="https://ever.github.io/"> -->
-			<span class="papertitle">Perseverance Re-imagined - A VR Experience of the Perseverance Mars Rover
-      </span>
-        </a>
-        <br>
-				<strong>Irfan Nafiz Shahan</strong>, 
-        A. Hossain, 
-        Al-Mubin Nabil, 
-        S. Sakib, 
-        B. Choudhury
-        <!-- <a href="https://www.linkedin.com/in/pulok-ahmed-476177292/">Pulok Ahmed Auvi</a>,
-        <a href="https://www.sust.edu/department/eee/faculty/mrased-eee@sust.edu">Md. Rasedujjaman</a> -->
-				<br>
-        <!-- <em>arXiv</em>, 2024
-        <br>
-        <a href="https://half-potato.gitlab.io/posts/ever/">project page</a>
-        /
-        <a href="https://arxiv.org/abs/2410.01804">arXiv</a>
-        <p></p> -->
-        <p>
-          A VR Based Recreation Perseverance Rover Launch, Landing and Deployment in Mars Terrain developed on Unity Engine
-        </p>
-      </td>
-    </tr>
-
-    <!-- <tr onmouseout="cat3d_stop()" onmouseover="cat3d_start()" bgcolor="#ffffd0">
-      <td style="padding:20px;width:25%;vertical-align:middle">
-        <div class="one">
-          <div class="two" id='cat3d_image'><video  width=100% height=100% muted autoplay loop>
-          <source src="images/cat3d.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-          </video></div>
-          <img src='images/cat3d.jpg' width="160">
-        </div>
-        <script type="text/javascript">
-          function cat3d_start() {
-            document.getElementById('cat3d_image').style.opacity = "1";
-          }
-
-          function cat3d_stop() {
-            document.getElementById('cat3d_image').style.opacity = "0";
-          }
-          cat3d_stop()
-        </script>
-      </td>
-      <td style="padding:20px;width:75%;vertical-align:middle">
-        <a href="https://cat3d.github.io/">
-			<span class="papertitle">CAT3D: Create Anything in 3D with Multi-View Diffusion Models
-</span>
-        </a>
-        <br>
-				<a href="https://ruiqigao.github.io/">Ruiqi Gao</a>*,
-        <a href="https://holynski.org/">Aleksander Holynski</a>*, 
-        <a href="https://henzler.github.io/">Philipp Henzler</a>,
-        <a href="https://github.com/ArthurBrussee">Arthur Brussee</a>, 
-				<a href="http://ricardomartinbrualla.com/">Ricardo Martin Brualla</a>, 
-        <a href="https://pratulsrinivasan.github.io/">Pratul P. Srinivasan</a>,
-				<strong>Jonathan T. Barron</strong>,
-        <a href="https://poolio.github.io/">Ben Poole</a>*
-
-        <br>
-        <em>NeurIPS</em>, 2024 &nbsp <font color="red"><strong>(Oral Presentation)</strong></font>
-        <br>
-        <a href="https://cat3d.github.io/">project page</a>
-        /
-        <a href="https://arxiv.org/abs/2405.10314">arXiv</a>
-        <p></p>
-        <p>
-				A single model built around diffusion and NeRF that does text-to-3D, image-to-3D, and few-view reconstruction, trains in 1 minute, and renders at 60FPS in a browser.
-        </p>
-      </td>
-    </tr>
-
-
-    <tr onmouseout="nerfcasting_stop()" onmouseover="nerfcasting_start()">
-      <td style="padding:20px;width:25%;vertical-align:middle">
-        <div class="one">
-          <div class="two" id='nerfcasting_image'><video  width=100% muted autoplay loop>
-          <source src="images/nerfcasting.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-          </video></div>
-          <img src='images/nerfcasting.jpg' width=100%>
-        </div>
-        <script type="text/javascript">
-          function nerfcasting_start() {
-            document.getElementById('nerfcasting_image').style.opacity = "1";
-          }
-
-          function nerfcasting_stop() {
-            document.getElementById('nerfcasting_image').style.opacity = "0";
-          }
-          nerfcasting_stop()
-        </script>
-      </td>
-      <td style="padding:20px;width:75%;vertical-align:middle">
-        <a href="https://nerf-casting.github.io/">
-          <span class="papertitle">NeRF-Casting: Improved View-Dependent Appearance with Consistent Reflections</span>
-        </a>
-        <br>
-				
-        <a href="https://dorverbin.github.io/">Dor Verbin</a>,
-        <a href="https://pratulsrinivasan.github.io/">Pratul Srinivasan</a>,
-				<a href="https://phogzone.com/">Peter Hedman</a>,
-				<a href="https://benattal.github.io/">Benjamin Attal</a>, <br>
-				<a href="https://bmild.github.io/">Ben Mildenhall</a>,
-				<a href="https://szeliski.org/RichardSzeliski.htm">Richard Szeliski</a>,
-				<strong>Jonathan T. Barron</strong>
-        <br>
-        <em>SIGGRAPH Asia</em>, 2024
-        <br>
-        <a href="https://nerf-casting.github.io/">project page</a>
-        /
-        <a href="https://arxiv.org/abs/2405.14871">arXiv</a>
-        <p></p>
-        <p>
-        Carefully casting reflection rays lets us synthesize photorealistic specularities in real-world scenes.
-        </p>
-      </td>
-    </tr>
-
-
-    <tr onmouseout="flash_cache_stop()" onmouseover="flash_cache_start()">
-      <td style="padding:20px;width:25%;vertical-align:middle">
-        <div class="one">
-          <div class="two" id='flash_cache_image'><video  width=100% muted autoplay loop>
-          <source src="images/flash_cache.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-          </video></div>
-          <img src='images/flash_cache.jpg' width=100%>
-        </div>
-        <script type="text/javascript">
-          function flash_cache_start() {
-            document.getElementById('flash_cache_image').style.opacity = "1";
-          }
-
-          function flash_cache_stop() {
-            document.getElementById('flash_cache_image').style.opacity = "0";
-          }
-          flash_cache_stop()
-        </script>
-      </td>
-      <td style="padding:20px;width:75%;vertical-align:middle">
-        <a href="https://benattal.github.io/flash-cache/">
-          <span class="papertitle">Flash Cache: Reducing Bias in Radiance Cache Based Inverse Rendering</span>
-        </a>
-        <br>
-				<a href="https://benattal.github.io/">Benjamin Attal</a>,
-        <a href="https://dorverbin.github.io/">Dor Verbin</a>,
-        <a href="https://bmild.github.io/">Ben Mildenhall</a>,
-        <a href="https://phogzone.com/">Peter Hedman</a>, <br>
-				<strong>Jonathan T. Barron</strong>,
-        <a href="https://www.cs.cmu.edu/~motoole2/">Matthew O'Toole</a>,
-        <a href="https://pratulsrinivasan.github.io/">Pratul P. Srinivasan</a>
-        <br>
-        <em>ECCV</em>, 2024 &nbsp <font color="red"><strong>(Oral Presentation)</strong></font>
-        <br>
-        <a href="https://benattal.github.io/flash-cache/">project page</a>
-        /
-        <a href="TODO">arXiv</a>
-        <p></p>
-        <p>
-          A more physically-accurate inverse rendering system based on radiance caching for recovering geometry, materials, and lighting from RGB images of an object or scene.
-        </p>
-      </td>
-    </tr>
-
-
-
-    <tr onmouseout="nuvo_stop()" onmouseover="nuvo_start()">
-      <td style="padding:20px;width:25%;vertical-align:middle">
-        <div class="one">
-          <div class="two" id='nuvo_image'><video  width=100% muted autoplay loop>
-          <source src="images/nuvo.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-          </video></div>
-          <img src='images/nuvo.jpg' width=100%>
-        </div>
-        <script type="text/javascript">
-          function nuvo_start() {
-            document.getElementById('nuvo_image').style.opacity = "1";
-          }
-
-          function nuvo_stop() {
-            document.getElementById('nuvo_image').style.opacity = "0";
-          }
-          nuvo_stop()
-        </script>
-      </td>
-      <td style="padding:20px;width:75%;vertical-align:middle">
-        <a href="https://pratulsrinivasan.github.io/nuvo/">
-          <span class="papertitle">Nuvo: Neural UV Mapping for Unruly 3D Representations</span>
-        </a>
-        <br>
-        <a href="https://pratulsrinivasan.github.io/">Pratul Srinivasan</a>,
-        <a href="http://stephangarbin.com/">Stephan J. Garbin</a>,
-        <a href="https://dorverbin.github.io/">Dor Verbin</a>,
-		<strong>Jonathan T. Barron</strong>,
-        <a href="https://bmild.github.io/">Ben Mildenhall</a>
-        <br>
-        <em>ECCV</em>, 2024
-        <br>
-        <a href="https://pratulsrinivasan.github.io/nuvo/">project page</a>
-        /
-        <a href="https://www.youtube.com/watch?v=hmJiOSTDQZI">video</a>
-        /
-        <a href="http://arxiv.org/abs/2312.05283">arXiv</a>
-        <p></p>
-        <p>
-        Neural fields let you recover editable UV mappings for the challenging geometries produced by NeRF-like models.
-        </p>
-      </td>
-    </tr> -->
-
-          
-          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
-            <tr>
-              <td>
-                <h2>Miscellaneous</h2>
-              </td>
-            </tr>
-          </tbody></table>
-          <table width="100%" align="center" border="0" cellpadding="20"><tbody>
-            
-            <tr>
-              <td align="center" style="padding:20px;width:25%;vertical-align:middle">
-                <h2>Invited Talks<br></h2>
-              </td>
-              <td width="75%" valign="center">
-                - NSDC Bi-Annual Meeting May 2024
-                <br>
-                - NSDC Bi-Annual Meeting Nov 2023
-                <br>
-                - “Meet Team I-Braille – An Experience Sharing Session” by STUDIO XI, Dept. of Architecture, SUST, 2021
- 
-                
-                <!-- <a href="http://cvpr2021.thecvf.com/area-chairs">Area Chair & Award Committee Member, CVPR 2021</a> -->
-                <br>
-                <!-- <a href="http://cvpr2019.thecvf.com/area_chairs">Area Chair, CVPR 2019</a> -->
-                <br>
-                <!-- <a href="http://cvpr2018.thecvf.com/organizers/area_chairs">Area Chair, CVPR 2018</a> -->
-              </td>
-            </tr>
-            <tr>
-              <td align="center" style="padding:20px;width:25%;vertical-align:middle">
-                <h2>Professional Service<br></h2>
-              <!-- <td style="padding:20px;width:25%;vertical-align:middle"> -->
-                <!-- <img src="images/cs188.jpg" alt="cs188"> -->
-              </td>
-              <td width="75%" valign="center">
-                <a href="https://htu.edu/steme-conference-hosted-by-huston-tillotson-university-drew-participants-from-around-the-globe/">Technical Student Asst. in International Science, Technology, Engineering, Mathematics and Education Conference 2023, Huston-Tillotson University, TX, USA</a>
-                <br>
-                <!-- <a href="http://inst.eecs.berkeley.edu/~cs188/fa10/announcements.html">Graduate Student Instructor, CS188 Fall 2010</a>
-                <br>
-                <a href="http://aima.cs.berkeley.edu/">Figures, "Artificial Intelligence: A Modern Approach", 3rd Edition</a> -->
-              </td>
-            </tr>
-            
-
-            <tr>
-              <!-- <td align="center" style="padding:20px;width:25%;vertical-align:middle">
-                <h2>Basically <br> Blog Posts</h2>
-              </td>
-              <td width="75%" valign="middle">
-                <a href="https://arxiv.org/abs/2112.11687">Squareplus: A Softplus-Like Algebraic Rectifier</a>
-                <br>
-                <a href="https://arxiv.org/abs/2010.09714">A Convenient Generalization of Schlick's Bias and Gain Functions</a>
-                <br>
-                <a href="https://arxiv.org/abs/1704.07483">Continuously Differentiable Exponential Linear Units</a>
-                <br>
-                <a href="https://jonbarron.info/data/cvpr2023_llm_workshop_annotated.pdf">Scholars & Big Models: How Can Academics Adapt?</a>
-              </td> -->
-            </tr>
-            
-            
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:0px">
-                <br>
-                <p style="text-align:right;font-size:small;">
-                  Feel free to steal this website's <a href="https://github.com/jonbarron/jonbarron_website">source code</a>. <strong>Do not</strong> scrape the HTML from this page itself, as it includes analytics tags that you do not want on your own website &mdash; use the github code instead. Also, consider using <a href="https://leonidk.com/">Leonid Keselman</a>'s <a href="https://github.com/leonidk/new_website">Jekyll fork</a> of this page.
-                </p>
-              </td>
-            </tr>
-          </tbody></table>
-        </td>
-      </tr>
-    </table>
   </body>
 </html>

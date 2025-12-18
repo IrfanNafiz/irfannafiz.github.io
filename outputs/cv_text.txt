@@ -1,0 +1,210 @@
+Irfan Nafiz Shahan  
+Sylhet, Bangladesh  
+    Website  |       LinkedIn  |      Google Scholar  |      Github  |      YouTube  |     Email  
+EDUCATION  
+Shahjalal University of Science and Technology (SUST) , Sylhet, Bangladesh  2025  
+Bachelor of Science ( Hons. ) in Electrical and Electronic Engineering  3.86/4.00  
+Thesis Title:  CARLASnowScenes: Towards Solving Adverse Weather Autonomous Driving  
+Supervisor:  Dr. Md. Rasedujjaman  
+Honors:  Ranked 1st out of 83 (Highest Honor)  
+ 2 x SUST STEM Scholarship (Merit)  Recipient   
+PUBLICATIONS  
+Preprints:  
+• Shahan I., Auvi M., Rasedujjaman M.  “CARLASnowScenes: Towards Adverse Weather Autonomous Driving” 
+BSc. Thesis , Shahjalal University of Science and Technology  [Ref] 
+• Shahan, I, Hossain, A, Sakib, S., Nabil, A.  “A Real -Time DETR Approach to Road Object Detection for 
+Autonomous Vehicles. ” arXiv [ Ref] 
+• Shahan I., Auvi M. “Towards Speaker Identification with Minimal Dataset and Constrained Resources using 1D  
+Convolution Neural Network s” arXiv [ Ref] 
+Manuscripts  (In Preparation)  
+• Hassan, R., Nabil, A., Shahan, I.,  Rahman, I. “Holistic Robustness Evaluation for NR -IQA Models under MOS -
+Stratified Perturbations”   
+• Shahan, I. , Nabil, A., Kusari, A. “LiDAR Point Generation without Raycasting in Simulation”   
+• Shahan I., Auvi M., Rasedujjaman M. “CARLASnowScenes: Towards Solving Adverse Weather Driving – An 
+Analysis and Approach to Synthetic Snow Road Scenes for Autonomous Driving ”  
+• Rasedujjaman M., Shahan I. , Rakhaine N., Rahman I. “A Scalable Embedded IoT Device for Secure RFID and 
+Fingerprint Attendance Management”  [Target: Journal]  
+Poster  Presentations:  
+• Shahan, I., Ahmed, M., Supty, S., Sarker, R.,  “A Cost -effective TinyML Assistive Device for Sign Language 
+Interpretation” Rice360 GLHT Design Competition 2025 [ Ref] 
+• Mowaz M.,  Shahan, I., Nabil, A., Dey, P., Paul, A., Chowdhury, T.   “I-Braille: An Affordable Internet -of-
+Things based Braille Display” IC4IR 2021  [Ref] 
+ 
+RESEARCH  AND PROJECT  EXPERIENCE  
+Researcher, TMRI, University of Michigan  Mar 2025 – Present  
+Supervisor: Dr. Arpan Kusari  Michigan, US  
+Developed a raycasting -free LiDAR point generation pipeline using spherical projection and GPU vertex –raster 
+shaders.  
+• Implemented a geometry -based LiDAR point generation method using mesh and vector computation  
+• Built the computational geometry logic for vertex and raster shaders in a GPU rendering pipeline   
+Team Supervisor and Educator , STEMX -365 May 2024 – Present  
+Project Coordinator : Mizanul Haq Chowdhury, (MIT Space Systems Lab)   Tokyo, Japan  
+JAXA organized Kibo -Astrobee ISS Robot Programming Challenge  (KRPC)  [Ref] 
+• Built the autonomy stack for Astrobee inside ISS ROS module for waypoint navigation avoiding obstacles  
+• Implemented Bash scripts and compatibility fixes for students for use in different hardware specifications  
+• Troubleshoot  OpenGL nested virtualization with containerized Docker simulations  in multiple OS platforms  
+
+Researcher, EEE, SUST  Jan 2025 – Present  
+Undergraduate Project  Sylhet, Bangladesh  
+Supervisor: Dr. Md. Rasedujjaman  
+Project Title: A Scalable Embedded IoT Device for Secure RFID and Fingerprint Attendance Management  
+• Designed the device using Fusion360, tested structural and thermal stability.  
+• Designed secure on -device authentication and local data logging architecture for institutional deployment . 
+Researcher, EEE, SUST     2024 – 2025  
+Undergraduate Thesis  Sylhet, Bangladesh  
+Supervisor : Dr. Md. Rasedujjaman  
+Project Title: CARLASnowScenes: Development of Synthetic Snow Weather Data for Autonomous Driving  
+• Implemented missing snow weather shaders (accumulation and snowfall) into CARLA simulator U nreal Engine   
+• Created a large -scale deterministic synthetic snow weather dataset for autonomous driving evaluation  
+• Compared benchmarks of SOTA vision models with CARLASnowScenes dataset  
+Team Leader, Team SignTalk, SUST  Oct 2024 – Aug 2025  
+Undergraduate Project  Texas, US  
+Supervisors: Dr. Farzana Hussain (HTU) and Dr. Nancy Griesinger (TSU)  
+Project Title: SignTalk – A TinyML Based Inertial Glove for Sign Language Translation  [Ref]  
+• Performed local surveys on disability schools and institutions on the difficulties of Bengali mute community  
+• Developed a TinyML model for inference on 5 6 -DOF inertial measurements units for different sign movements.  
+Researcher, EEE, SUST  Aug 202 4 – Jan 202 5 
+Undergraduate Project  Sylhet Bangladesh  
+Project Title: TinyRecycler: A TinyML based  Smart Trash Segregator  [Ref] 
+• Built a custom minimal dataset of 250+ images containing 5 recyclable objects  
+• Reduced SRAM usage to 85kB, for deployment on low cost edge embedded nano BLE device s. 
+Researcher, EEE, SUST  Aug 202 4 – Jan 202 5 
+Undergraduate Project  Sylhet Bangladesh  
+Project Title: SUSTsat -1 - A Raspberry Pi based Multifunctional SmallSat with Payload and Telemetry  [Ref] 
+• Utilize d POCSAG, SSTV and FSK for instrumentation and camera data  telemetry  
+• Ground up electrical, software and mechanical design , with custom buck -boost module for BMS  
+• SDR based ground station, utilizes an RTL -SDR to decode telemetry  
+Researc her, MAT, SUST  Sep 2022 – July 2023  
+Supervisor: Dr. Pabel Shahrear  
+Project Title: Expeditions on Time -Series ML Architectures for Dengue Outbreak Prediction  in Bangladesh  
+(Data Provided by Institute of Epidemiology Disease Control And Research (IEDCR), Bangladesh)  
+• Experimented on accuracy of statistical and TSDNNs on predicting dengue outbreak in Bangladesh  
+• Models were benchmarked - LSTMs, Bi -LSTMs, FFN, ARIMA and SARIMA  
+Team Leader, Team ICARUS, SUST  Aug 2022 – Oct 2023  
+NASA Space Apps Challenge  Project s Dhaka, Bangladesh  
+Supervisor: Dr. Forhad Rabbi  
+• Developed an N-Body Space Simulator and Orbital Trajectory VR Simulation using Unity Engine.  [Ref] 
+• Utilized NASA data to create a VR Perseverance Rover Launch, Landing and Deployment in Mars Terrain [Ref] 
+Team Lea der and Researcher , SUST  Mar 2021 – Dec 2022  
+Supervis or: Dr. M. Jahirul Islam  
+Project Title: Development of Affordable Braille Display for the Visually and Auditory Impaired in Developing 
+Countries  [Ref] 
+• Designed device 3D model using Fusion360, iterated for ergonomics for optimal hand grip  on braille device  
+• Conducted testing on piezoelectric and mechanical actuators  for braille cell design  
+• Developed OCR model for Bengali -to-Braille conversion for documents using Raspberry Pi 3B  
+ 
+SCHOLARSHIPS  AND  GRANTS  (14,000+ USD)  
+2025  Funding 3,000 USD  Youth Innovation Challenge by Startup Bangladesh Limited   
+2024  SUST STEM “Professor Guaranga  Deb Roy Memorial Scholarship” (Merit) [Ref] 
+2023  SUST STEM Scholarship 2023 Recipient (Merit) [Ref] 
+2021  Grant Funding 10,000 USD | Top 10 Most Innovative Engineering Projects [ Ref] 
+ 
+PROFESSIONAL  EXPERIENCE  
+Executive and Educator  May 2024 – Present  
+STEMX -365 Massachusetts,  US 
+Project Coordinator: Mizanul H. Chowdhury  (MIT Space Systems Lab )  
+• Lead development for nested virtual machine simulation deployment  using  ROS, Docker and Android Studio  
+• Develop robust automation and online platform for ISS Astrobee  Simulation for training purposes  
+• Mentor prospective students on ATZG, autonomous NASA Astrobee and core astronomy and robotics concepts  
+Teaching Ass istant  Feb 202 4 – Present  
+Department of Electrical and Electronics Engineering, SUST  Sylhet, Bangladesh  
+Courses:  Digital Signal Processing I  (Theory and Lab)  
+ Signals and Linear Systems,  
+ Electronics II Lab  
+Industrial Trainee  Nov 2024 - Dec 2024  
+Technical Institute for Chemical Industries  Dhaka, Bangladesh  
+Key Achievement: Ranked 1st out of 60 trainees [Dec 19th 2024]  
+• PLC Design and Verification  
+• Distributed Control Systems (DCS)  
+• Factory Automation with SCADA  
+Judge   2023  
+HerWill , “The Data Forge” Natural Language Processing Contest 2023 [ Ref] USA  
+ 
+Technical Assistant   2023  
+ISTEME Conference 2023 [ Ref] Huston -Tillotson University, TX, US  
+LEADERSHIP  EXPERIENCES  
+Founder  and President  Jul 2023 – Present  
+NSDC SUST, Columbia University, NEBD  Hub New York, US  
+• Pioneered a 2-month long event event “DATADRIVE 1.0  A Speedrun to Advanced Machine Learning ”  
+• Collaborated HerWILL  Inc. (US)  to provide workshops on NLP and Semantic Analysis  
+ATZG Bangladesh Lead, STEMX -365 Dec 2024 – Present  
+Project Coordinator: Mizanul  Haq Chowdhury, (MIT Space Systems Lab)   Tokyo, Japan  
+JAXA  organized Asian Try Zero Gravity Challenge (ATZG)  
+• Mentored and assisted students on ATZG project submissions with space engineering and sciences.  
+• Ensured to be a mode of communication with JAXA ATZG team for validation of student work.  
+ 
+Director of Robotics  Jul 2021 – June 2025  
+RoboSUST , SUST  Sylhet, Bangladesh  
+• Led multiple robotics teams to startup and national robotics contests  
+• Conducted educational workshops of robotics and engineering fundamentals  
+ 
+Vice Chair | IEEE SUST Student Branch  Jan 2023 – June 2025  
+EEE, SUST  Sylhet, Bangladesh  
+• Promoted several conferences (BECITHON 2024, ICCIT 2024, RAAICon 2024 ) 
+• Served as an advisor on contests such as Robo Tech Olympiad 2024  
+ 
+Co-Founder, CTF Lead  Jan 2022 – Jan 2024  
+NMOSS Independent Cybersecurity Research Group , SUST  [Webpage ] Sylhet, Bangladesh  
+• Led a Cyber  Security Competition  and Workshop  “Introduction to CTFs 1.0”  
+• Ranked 14th in 2022 throughout Bangladesh in ctftime.org [ctftime ] 
+ 
+INVITED TALKS  
+2024  National Student Data Corps Bi-Annual Meeting , Columbia   New York, US  
+2023  National Student Data Corps Bi-Annual Meeting , Columbia  New York, US  
+2021  “Meet Team I -Braille – An Experience Sharing Session ”  Dept. of Arch, , SUST , Bangladesh  
+ 
+STUDENT SUPERVISION  
+2024  Coach , Team Invicta  CERN, A Beamline for Schools  (BL4S)  
+  “Effect on Quantum Particles on  Microcomputers” | Shortlisted [ Ref][Cert] 
+2023  Mentor and Educator  JAXA Asian Try Zero Gravity Challenge  
+“Finding the Shape of Magnetic Field Lines  in Microgravity ” Experiment  performed  in ISS [ Ref] 
+ 
+WORKSHOPS  
+2025   Instructor | Arduino Programming, RoboSUST Introduction to Robotics Workshop  
+2024  Instructor | Engineering Advanced LFRs, RoboSUST Training of Trainers    
+2024  Instructor | DataDrive 1.0 , NSDC SUST  
+2024  Instructor  | PyChamp 2.0, 5 -day Workshop on Beginner to Advanced Python Programming  
+2023  Instructor | “ Cyber 101: Beginner’s Guide to CTFs”, NMOSS Research Group  
+2022  Instructor | “Cryptography, Forensics and Hardware Hacking” NMOSS Research Group   
+AWARDS AND HONORS  
+International:  
+2025  DEI Award | Rice University Rice360 Global Health Design Competition  (1000 USD)  [Ref] 
+2023  2nd Runner Up | KRPC 2023 organized by JAXA [ Ref][Video ] 
+2023  Global Top 3% [Rank 179th], 2nd in Bangladesh Region | CyberApocalypse 2023 CTF [ Ref] 
+2022  Ranked 235 | Google CTF  
+2022  Champion, Global Nominee | NASA Space Apps Challenge 2022 [Ref] 
+2021  Gold Medal  | International Astronomy and Astrophysics Competition (IAAC) [ Ref] 
+National:  
+2024  1st | Industry Training, TICI, Bangladesh   
+2024  6th | DL Enigma 2024 Autonomous Driving Road Vehicle Detection [ Ref] 
+2022  Runner Up | RoboSUST Senior Project Hunt  
+2021  Champion | IC4IR  2021  Idea Contest  [Ref][Video ] 
+2021  Finalist | BIKIRON Sustainable Energy Innovation Challenge 2021  
+2019  16th | Bangladesh Physics Olympiad (Category C) 
+2018  2nd Runner Up | Bangladesh Physics Olympiad (Category B ) 
+SYNERGISTIC  ACTIVITIES  
+Radio Guitarist   Sylhet  Radio, Sylhet  
+Volunteer  Kid’s  Campus Pre -school, Sylhet  
+REFERENCES  
+1. Dr. Arpan Kusari,  
+Research Faculty, UMTRI 
+Research Supervisor  
+Ann Arbor, Michigan, US  
+Contact:  kusari@umich.edu   
+2. Dr. Md. Rasedujjaman,  
+Assoc iate Professor,  EEE, SUST  
+Course Coordinator, Research Supervisor  
+Sylhet, Bangladesh  
+Contact: mrased@sust.edu  
+ 3. Dr. Farzana Hussain,  
+Professor and Chair, Dept of Mathematics, HTU  
+Research Supervisor,  
+Austin, TX, US  
+Contact: fhussain@htu.edu  
+4. Mr. Mizanul Haq Choudhury,  
+Technical Expert, MIT Engineering  Systems Lab  
+STEMX -365 Project Coordinator,  
+Massachusetts, US  
+Contact: mizanul@mit.edu  
+ 
+ 
