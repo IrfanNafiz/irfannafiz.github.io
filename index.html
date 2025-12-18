@@ -124,6 +124,16 @@
       const projects = {
         assistive: [
           {
+            id: 'signtalk',
+            title: 'SignTalk: A TinyML Inertial Glove for Sign Language Translation',
+            authors: 'Irfan Nafiz Shahan, Team SignTalk',
+            image: 'images/placeholder.svg',
+            imageHover: 'images/placeholder.svg',
+            summary: 'TinyML-based inertial glove to translate sign language to text/speech.',
+            description: 'Role: Concept, implementation and evaluation of embedded TinyML pipeline for sign-to-text translation.\n Interesting / Innovative: Lightweight inference on wearable IMU data; designed for local deployment in disability-support settings.',
+            links: [ { text: 'Poster (CV)', url: 'data/CV_IrfanNafizShahan.pdf' } ]
+          },
+          {
             id: 'ibraille',
             title: 'IBraille: A Cost Effective Braille Display for the Visually Impaired',
             authors: 'Irfan Nafiz Shahan, Al-Mubin Nabil, MM Abdul Karim, P. Dey, A. Paul, T. Choudhury',
@@ -136,16 +146,6 @@
               { text: 'Video', url: 'https://youtu.be/zLcugmqH1eI' },
               { text: 'Poster', url: 'https://drive.google.com/file/d/1M7lurM46UO5TReKo-ptPx65gR0cr4zWJ/view?usp=sharing' }
             ]
-          },
-          {
-            id: 'signtalk',
-            title: 'SignTalk: A TinyML Inertial Glove for Sign Language Translation',
-            authors: 'Irfan Nafiz Shahan, Team SignTalk',
-            image: 'images/placeholder.svg',
-            imageHover: 'images/placeholder.svg',
-            summary: 'TinyML-based inertial glove to translate sign language to text/speech.',
-            description: 'Role: Concept, implementation and evaluation of embedded TinyML pipeline for sign-to-text translation.\nInteresting / Innovative: Lightweight inference on wearable IMU data; designed for local deployment in disability-support settings.',
-            links: [ { text: 'Poster (CV)', url: 'data/CV_IrfanNafizShahan.pdf' } ]
           }
         ],
 
@@ -243,7 +243,7 @@
             image: 'images/placeholder.svg',
             imageHover: 'images/placeholder.svg',
             summary: 'Raspberry Pi based embedded IoT attendance and logging system for institutions.',
-            description: 'Role: Design and implementation (hardware + firmware) of a secure, low-cost attendance logging system.\nInteresting / Innovative: Combined RFID with fingerprint for multi-factor local logging and internal server architecture for privacy.',
+            description: 'Role: Design and implementation (hardware + firmware) of a secure, low-cost attendance logging system.\n Interesting / Innovative: Combined RFID with fingerprint for multi-factor local logging and internal server architecture for privacy.',
             links: [ { text: 'CV (details)', url: 'data/CV_IrfanNafizShahan.pdf' } ]
           }
         ],
@@ -257,7 +257,7 @@
             imageHover: 'data/images/icarus/nsac22.mp4',
             isVideo: true,
             summary: 'Virtual Reality N-Body Simulator Experience of the Parker Solar Probe.',
-            description: 'A Virtual Reality N-Body Simulator Experience made with Unity Engine, detailing the journey of the Parker Solar Probe.\nRole: Lead developer and simulation integrator.\nInteresting/Innovative: Educational VR experience combining N-body physics with immersive storytelling.',
+            description: 'A Virtual Reality N-Body Simulator Experience made with Unity Engine, detailing the journey of the Parker Solar Probe.\nRole: Lead developer and simulation integrator.\n Interesting/Innovative: Educational VR experience combining N-body physics with immersive storytelling.',
             links: []
           },
           {
@@ -344,7 +344,7 @@
             ${linksHtml}
             <p>${project.summary}</p>
             <div class="project-description-full">
-              <p>${project.description}</p>
+              <p>${project.description.replace(/\n/g, '<br>')}</p>
             </div>
           </div>
         </div>`;
