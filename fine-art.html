@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z9EYDP3095"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-Z9EYDP3095');
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Fine Art - Irfan Nafiz Shahan</title>
+
+    <meta name="author" content="Irfan Nafiz">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="components.css">    
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="hero-section">
+        <div class="hero-content">
+          <p class="name" style="text-align: center;">
+            Fine Art Portfolio
+          </p>
+          <p style="text-align: center; font-style: italic; color: #666;">
+            A collection of visual artworks exploring various mediums and themes.
+          </p>
+          <p style="text-align: center; margin-top: 20px;">
+            <a href="index.html">← Back to Main Portfolio</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="section-header"></div>
+
+      <div style="padding: 20px;">
+        <h3>Artworks</h3>
+      </div>
+
+      <div id="artworks-container"></div>
+
+      <div class="footer-section">
+        <p style="text-align:right;font-size:small;">
+          <a href="index.html">← Back to Main Portfolio</a>
+        </p>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      // Fine art collection
+      const artworks = [
+        {
+          id: 'art1',
+          title: 'Untitled #1',
+          image: 'images/placeholder.svg',
+          imageHover: 'images/placeholder.svg',
+          description: 'A captivating piece exploring the interplay of light and form.',
+          medium: 'Oil on Canvas',
+          size: '24" x 36"',
+          year: 2023,
+          materials: 'Oil paint, Canvas',
+          youtubeUrl: 'https://www.youtube.com/embed/VIDEO_ID_HERE'
+        }
+        // Add more artworks here
+      ];
+
+      // Render artwork item
+      function renderArtwork(artwork) {
+        const hoverImageId = `${artwork.id}_image`;
+        
+        const videoPlayer = artwork.youtubeUrl && !artwork.youtubeUrl.includes('VIDEO_ID_HERE') ? `
+          <div class="video-container">
+            <iframe width="100%" height="315" src="${artwork.youtubeUrl}" 
+              title="YouTube video player" frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen></iframe>
+          </div>
+        ` : '';
+        
+        const html = `
+        <div class="art-item" data-art-id="${artwork.id}">
+          <div class="art-image">
+            <div class="one">
+              <div class="two" id="${hoverImageId}"></div>
+              <img src="${artwork.image || 'images/placeholder.svg'}" width=100%>
+            </div>
+          </div>
+          <div class="art-content">
+            <span class="papertitle">${artwork.title}</span>
+            <br>
+            <strong>${artwork.year}</strong>
+            <p>${artwork.description}</p>
+            ${videoPlayer}
+            <div class="art-details">
+              <p><strong>Medium:</strong> ${artwork.medium}</p>
+              <p><strong>Size:</strong> ${artwork.size}</p>
+              <p><strong>Materials:</strong> ${artwork.materials}</p>
+            </div>
+          </div>
+        </div>`;
+        
+        return { html, artwork };
+      }
+
+      // Render all artworks
+      function renderAllArtworks() {
+        const container = document.getElementById('artworks-container');
+        let html = '';
+        artworks.forEach(artwork => {
+          const result = renderArtwork(artwork);
+          html += result.html;
+        });
+        container.innerHTML = html;
+
+        // Initialize hover effects
+        artworks.forEach(artwork => {
+          const hoverImageId = `${artwork.id}_image`;
+          const imageDiv = document.getElementById(hoverImageId);
+          if (imageDiv) {
+            imageDiv.innerHTML = `<img src="${artwork.imageHover}" width=100%>`;
+            imageDiv.style.opacity = "0";
+          }
+          
+          const artItem = container.querySelector(`[data-art-id="${artwork.id}"]`);
+          if (artItem && imageDiv) {
+            artItem.addEventListener('mouseenter', () => {
+              imageDiv.style.opacity = "1";
+            });
+            artItem.addEventListener('mouseleave', () => {
+              imageDiv.style.opacity = "0";
+            });
+          }
+        });
+      }
+
+      // Initialize on page load
+      document.addEventListener('DOMContentLoaded', renderAllArtworks);
+    </script>
+  </body>
+</html>
