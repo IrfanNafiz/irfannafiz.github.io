@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Instrumental Music - Irfan Nafiz Shahan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="components.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="hero-section">
+        <div class="hero-content">
+          <p class="name" style="text-align:center;">Instrumental Music</p>
+          <p style="text-align:center;color:#666;font-style:italic;">Selected instrumentals and recordings. Click a cover to view full image; use the audio controls to play.</p>
+          <p style="text-align:center;margin-top:18px;"><a href="index.html">← Back to Main Portfolio</a></p>
+        </div>
+      </div>
+
+      <div style="padding:20px;"><h3>Recordings</h3></div>
+
+      <div id="music-container"></div>
+
+      <div id="imageModal" class="image-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:9999;align-items:center;justify-content:center;padding:20px;">
+        <button id="imageModalClose" aria-label="Close image" style="position:absolute;right:18px;top:18px;background:transparent;border:none;color:#fff;font-size:28px;cursor:pointer;">✕</button>
+        <div id="imageModalInner" style="max-width:1200px;width:100%;max-height:95vh;overflow:auto;display:flex;align-items:center;justify-content:center;"></div>
+      </div>
+
+      <div class="footer-section">
+        <p style="text-align:right;font-size:small;"><a href="index.html">← Back to Main Portfolio</a></p>
+      </div>
+    </div>
+
+    <script>
+      const musicPieces = [
+        {
+          id: 'm1',
+          title: 'Moonlight Reverie',
+          year: 2021,
+          image: 'data/music/moonlight_cover.jpg',
+          thumb: 'data/music/thumbs/moonlight_800.jpg',
+          audio: 'data/music/moonlight_reverie_320.mp3',
+          duration: '3:24',
+          description: 'Solo piano piece exploring nocturnal textures.'
+        },
+        {
+          id: 'm2',
+          title: 'Rain on Tin Roofs',
+          year: 2022,
+          image: 'data/music/rain_cover.jpg',
+          thumb: 'data/music/thumbs/rain_800.jpg',
+          audio: 'data/music/rain_on_tin_320.mp3',
+          duration: '4:02',
+          description: 'Ambient guitar loop with subtle field recordings.'
+        }
+      ];
+
+      function renderPiece(p) {
+        const full = p.image || p.thumb || 'images/placeholder.svg';
+        const thumb = p.thumb || p.image || 'images/placeholder.svg';
+        return `
+        <div class="art-item fullwidth music-item" data-music-id="${p.id}">
+          <div class="art-image">
+            <div class="one">
+              <a class="art-view" href="${full}" data-full="${full}" role="button" tabindex="0" aria-label="View full cover for ${p.title}">
+                <img src="${thumb}" loading="lazy" alt="${p.title} cover">
+              </a>
+            </div>
+          </div>
+          <div class="art-content music-content">
+            <span class="papertitle">${p.title}</span><br>
+            <strong>${p.year} • ${p.duration}</strong>
+            <p>${p.description || ''}</p>
+            <div class="audio-container">
+              <audio controls preload="none" src="${p.audio}">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+        </div>`;
+      }
+
+      function openImageModal(src, title) {
+        const modal = document.getElementById('imageModal');
+        const modalInner = document.getElementById('imageModalInner');
+        if (!modal || !modalInner) return;
+        modalInner.innerHTML = '';
+        const img = document.createElement('img');
+        img.src = src; img.alt = title || 'Cover image';
+        img.style.maxWidth = '100%'; img.style.maxHeight = '95vh'; img.style.display = 'block'; img.loading = 'eager';
+        modalInner.appendChild(img);
+        modal.style.display = 'flex'; document.body.style.overflow = 'hidden';
+      }
+
+      function closeImageModal() {
+        const modal = document.getElementById('imageModal');
+        const modalInner = document.getElementById('imageModalInner');
+        if (!modal || !modalInner) return;
+        modal.style.display = 'none'; modalInner.innerHTML = ''; document.body.style.overflow = '';
+      }
+
+      function renderAll() {
+        const container = document.getElementById('music-container');
+        container.innerHTML = musicPieces.map(renderPiece).join('\n');
+
+        container.querySelectorAll('.art-view').forEach(link => {
+          link.addEventListener('click', (e) => { e.preventDefault(); openImageModal(link.dataset.full, link.getAttribute('aria-label')); });
+          link.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openImageModal(link.dataset.full, link.getAttribute('aria-label')); } });
+        });
+
+        const modalClose = document.getElementById('imageModalClose');
+        if (modalClose) modalClose.addEventListener('click', closeImageModal);
+        const modal = document.getElementById('imageModal');
+        if (modal) modal.addEventListener('click', (e) => { if (e.target === modal) closeImageModal(); });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeImageModal(); });
+      }
+
+      document.addEventListener('DOMContentLoaded', renderAll);
+    </script>
+  </body>
+</html>
