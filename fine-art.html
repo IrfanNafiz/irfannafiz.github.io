@@ -32,19 +32,29 @@
           <p style="text-align: center; font-style: italic; color: #666;">
             A collection of visual artworks exploring various mediums and themes.
           </p>
-          <p style="text-align: center; margin-top: 20px;">
+          <p style="text-align: center; font-style: italic; color: #666;">
+            (Click on images to view full resolution with zoom)
+          </p><p style="text-align: center; margin-top: 20px;">
             <a href="index.html">← Back to Main Portfolio</a>
           </p>
+
+
         </div>
       </div>
 
       <div class="section-header"></div>
 
-      <div style="padding: 20px;">
-        <h3>Artworks</h3>
+      <div style="padding: 20px; text-align: center;">
+        <h2>Possession of Abilities Series</h2>
       </div>
 
       <div id="artworks-container"></div>
+
+      <!-- Image modal overlay -->
+      <div id="imageModal" class="image-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:9999;align-items:center;justify-content:center;padding:20px;">
+        <button id="imageModalClose" aria-label="Close image" style="position:absolute;right:18px;top:18px;background:transparent;border:none;color:#fff;font-size:28px;cursor:pointer;">✕</button>
+        <div id="imageModalInner" style="max-width:1200px;width:100%;max-height:95vh;overflow:auto;display:flex;align-items:center;justify-content:center;"></div>
+      </div>
 
       <div class="footer-section">
         <p style="text-align:right;font-size:small;">
@@ -56,25 +66,51 @@
     <script type="text/javascript">
       // Fine art collection
       const artworks = [
+        // {
+        //   id: 'art1',
+        //   title: 'Untitled #1',
+        //   image: 'data/art/igcse/p1.jpg',
+        //   description: 'A captivating piece exploring the interplay of light and form.',
+        //   medium: 'Mixed Media',
+        //   size: '16.5" x 23.4"',
+        //   year: 2017,
+        //   materials: 'Coffee, Pencil, Pastel, Pencil Sketch, Charcoal, Handmade Paper',
+        //   youtubeUrl: 'https://www.youtube.com/embed/VIDEO_ID_HERE'
+        // },
         {
-          id: 'art1',
-          title: 'Untitled #1',
-          image: 'images/placeholder.svg',
-          imageHover: 'images/placeholder.svg',
-          description: 'A captivating piece exploring the interplay of light and form.',
-          medium: 'Oil on Canvas',
-          size: '24" x 36"',
-          year: 2023,
-          materials: 'Oil paint, Canvas',
-          youtubeUrl: 'https://www.youtube.com/embed/VIDEO_ID_HERE'
-        }
+          id: 'poa_p1',
+          title: 'Possession of Abilities - Piece 1 - "Explorations"',
+          image: 'data/arts/igcse/p1.jpg',
+          description: 'An exploratory piece for my topic "Possession of Abilities". This artwork delves into the concept of inherent talents and the journey of self-discovery through abstract forms and dynamic compositions. It also served as a foundation for me to experiment with different techniques and medias, setting the stage for subsequent pieces in the series.',
+          medium: 'Mixed Media',
+          size: '16.5" x 23.4"',
+          materials: 'Coffee, Acrylic, Masking Tape, Pastel, Pencil Sketch, Prismacolor, Charcoal, Handmade Paper',
+        },
+        {
+          id: 'poa_p2',
+          title: 'Possession of Abilities - Piece 2 "Reflections"',
+          image: 'data/arts/igcse/p2.jpg',
+          description: 'In this second piece of my "Possession of Abilities" series, I explore the theme of self-reflection and the duality of our talents. The artwork portrays the multifaceted nature of abilities and the internal dialogue we have about our strengths and weaknesses. Through the use of contrasting colors and textures, I aimed to convey the complexity of self-perception and the continuous evolution of our skills. The background of photographs stuck on a concrete wall represents memories and experiences that shape our abilities over time.',
+          medium: 'Mixed Media',
+          size: '16.5" x 23.4"',
+          materials: 'Prismacolor, Acrylic, Gouache, Poster Color, Watercolor, Handmade Paper',
+        },
+        {
+          id: 'poa_p3',
+          title: 'Possession of Abilities - Piece 3 "Winds of Change"',
+          image: 'data/arts/igcse/p3.png',
+          description: 'This is the third and final piece of my "Possession of Abilities" series. I argue about the transformative power of abilities and critical thinking. The quote "Then we came forth to rebehold the stars" from Dante Alighieri\'s "Divine Comedy - The Inferno" serves as a metaphor for enlightenment and the pursuit of knowledge. The universe is a conversation of duality. Good and evil, light and dark. Growth and destruction, development and exclusion. I argue that the light is in the hands of the beholder. That a child\'s face reflects their upbringing. A child growing up with the proper care and effection will bring light and hope to a world. Contrarily, with time, laughters of children will be lost to the inherent chaos of the world. \n Each and every painting in the previous pieces are used in some way to form this final piece, as a symbolic nod to the consequences of our actions as humans.',
+          medium: 'Mixed Media',
+          size: '16.5" x 23.4"',
+          materials: 'Prismacolor, Acrylic, Pencil Sketch, Poster Color, Watercolor, Handmade Paper',
+        },
         // Add more artworks here
       ];
 
-      // Render artwork item
+      // Render artwork item (full-width image, details below). Clicking image opens modal with full-resolution image.
       function renderArtwork(artwork) {
-        const hoverImageId = `${artwork.id}_image`;
-        
+        const thumb = artwork.thumb || artwork.image || 'images/placeholder.svg';
+        const full = artwork.image || thumb;
         const videoPlayer = artwork.youtubeUrl && !artwork.youtubeUrl.includes('VIDEO_ID_HERE') ? `
           <div class="video-container">
             <iframe width="100%" height="315" src="${artwork.youtubeUrl}" 
@@ -83,29 +119,30 @@
               allowfullscreen></iframe>
           </div>
         ` : '';
-        
+
         const html = `
-        <div class="art-item" data-art-id="${artwork.id}">
+        <div class="art-item fullwidth" data-art-id="${artwork.id}">
           <div class="art-image">
             <div class="one">
-              <div class="two" id="${hoverImageId}"></div>
-              <img src="${artwork.image || 'images/placeholder.svg'}" width=100%>
+              <a class="art-view" href="${full}" data-full="${full}" target="_blank" rel="noopener noreferrer" role="button" tabindex="0" aria-label="View full image for ${artwork.title}">
+                <img src="${thumb}" loading="lazy" alt="${artwork.title}">
+              </a>
             </div>
           </div>
           <div class="art-content">
             <span class="papertitle">${artwork.title}</span>
             <br>
-            <strong>${artwork.year}</strong>
-            <p>${artwork.description}</p>
+            <strong>${artwork.year || ''}</strong>
+            <p>${artwork.description || ''}</p>
             ${videoPlayer}
             <div class="art-details">
-              <p><strong>Medium:</strong> ${artwork.medium}</p>
-              <p><strong>Size:</strong> ${artwork.size}</p>
-              <p><strong>Materials:</strong> ${artwork.materials}</p>
+              <p><strong>Medium:</strong> ${artwork.medium || ''}</p>
+              <p><strong>Size:</strong> ${artwork.size || ''}</p>
+              <p><strong>Materials:</strong> ${artwork.materials || ''}</p>
             </div>
           </div>
         </div>`;
-        
+
         return { html, artwork };
       }
 
@@ -119,25 +156,88 @@
         });
         container.innerHTML = html;
 
-        // Initialize hover effects
-        artworks.forEach(artwork => {
-          const hoverImageId = `${artwork.id}_image`;
-          const imageDiv = document.getElementById(hoverImageId);
-          if (imageDiv) {
-            imageDiv.innerHTML = `<img src="${artwork.imageHover}" width=100%>`;
-            imageDiv.style.opacity = "0";
-          }
-          
-          const artItem = container.querySelector(`[data-art-id="${artwork.id}"]`);
-          if (artItem && imageDiv) {
-            artItem.addEventListener('mouseenter', () => {
-              imageDiv.style.opacity = "1";
-            });
-            artItem.addEventListener('mouseleave', () => {
-              imageDiv.style.opacity = "0";
-            });
-          }
+        // Attach click handler to open full image in modal and support keyboard
+        container.querySelectorAll('.art-view').forEach(link => {
+          link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const src = link.getAttribute('data-full');
+            openImageModal(src, link.getAttribute('aria-label') || 'Artwork');
+          });
+          link.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              const src = link.getAttribute('data-full');
+              openImageModal(src, link.getAttribute('aria-label') || 'Artwork');
+            }
+          });
         });
+
+        // Modal close handlers
+        const modal = document.getElementById('imageModal');
+        const modalInner = document.getElementById('imageModalInner');
+        const modalClose = document.getElementById('imageModalClose');
+        
+        // Zoom state for the image modal
+        let zoomState = { isZoomed: false, zoomLevel: 1, clickXPercent: 50, clickYPercent: 50 };
+        
+        function openImageModal(src, title) {
+          if (!modal || !modalInner) return;
+          modalInner.innerHTML = '';
+          
+          // Reset zoom state
+          zoomState = { isZoomed: false, zoomLevel: 1, clickXPercent: 50, clickYPercent: 50 };
+          
+          const img = document.createElement('img');
+          img.src = src;
+          img.alt = title || 'Artwork image';
+          img.style.maxWidth = '100%';
+          img.style.maxHeight = '95vh';
+          img.style.display = 'block';
+          img.loading = 'eager';
+          img.style.cursor = 'zoom-in';
+          img.style.transition = 'transform 0.3s ease';
+          
+          // Click handler for zoom in/out
+          img.addEventListener('click', (e) => {
+            const rect = img.getBoundingClientRect();
+            
+            if (zoomState.isZoomed) {
+              // Zoom out - keep the same transform origin for smooth zoom out
+              zoomState.isZoomed = false;
+              zoomState.zoomLevel = 1;
+              img.style.cursor = 'zoom-in';
+            } else {
+              // Zoom in to clicked point (3x zoom)
+              zoomState.isZoomed = true;
+              zoomState.zoomLevel = 3;
+              
+              // Calculate click position as percentage of image (0-100%)
+              zoomState.clickXPercent = ((e.clientX - rect.left) / rect.width) * 100;
+              zoomState.clickYPercent = ((e.clientY - rect.top) / rect.height) * 100;
+              
+              // Update transform origin only when zooming in
+              img.style.transformOrigin = `${zoomState.clickXPercent}% ${zoomState.clickYPercent}%`;
+              
+              img.style.cursor = 'zoom-out';
+            }
+            
+            // Apply transform: smooth scale animation (origin stays the same)
+            img.style.transform = `scale(${zoomState.zoomLevel})`;
+          });
+          
+          modalInner.appendChild(img);
+          modal.style.display = 'flex';
+          document.body.style.overflow = 'hidden';
+        }
+        function closeImageModal() {
+          if (!modal || !modalInner) return;
+          modal.style.display = 'none';
+          modalInner.innerHTML = '';
+          document.body.style.overflow = '';
+        }
+        if (modalClose) modalClose.addEventListener('click', closeImageModal);
+        if (modal) modal.addEventListener('click', (e) => { if (e.target === modal) closeImageModal(); });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeImageModal(); });
       }
 
       // Initialize on page load

@@ -244,6 +244,45 @@ a:focus {
   margin: 5px 0;
 }
 
+/* Full-width art layout (used by fine-art page) */
+.art-item.fullwidth {
+  display: block;
+  padding: 0 0 30px 0;
+}
+.art-item.fullwidth .one {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.art-item.fullwidth .two {
+  position: absolute;
+  inset: 0;
+}
+.art-item.fullwidth .art-image img,
+.art-item.fullwidth .art-image video {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+.art-item.fullwidth .art-image {
+  /* full-bleed with configurable gutters so image doesn't touch viewport edges */
+  --page-gutter: 96px; /* adjustable gutter */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: calc(-50vw + var(--page-gutter));
+  margin-right: calc(-50vw + var(--page-gutter));
+  width: calc(100vw - (2 * var(--page-gutter)));
+  max-width: 100vw;
+  box-sizing: border-box;
+  padding-left: 0;
+  padding-right: 0;
+}
+.art-item.fullwidth .art-content {
+  padding: 12px 0;
+}
+
 /* Music item styling */
 .music-item {
   display: flex;
@@ -301,6 +340,13 @@ a:focus {
 
   .art-image {
     width: 100%;
+  }
+
+  /* On small screens, reduce gutter so image has small margins rather than large offsets */
+  .art-item.fullwidth .art-image {
+    margin-left: calc(-50vw + 12px);
+    margin-right: calc(-50vw + 12px);
+    width: calc(100vw - 24px);
   }
 
   .music-item {
