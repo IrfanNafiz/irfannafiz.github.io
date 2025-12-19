@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z9EYDP3095"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-Z9EYDP3095');
+    </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Leadership & Organizing - Irfan Nafiz Shahan</title>
+
+    <meta name="author" content="Irfan Nafiz">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="components.css">    
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="hero-section">
+        <div class="hero-content">
+          <p class="name" style="text-align: center;">
+            Leadership & Organizing
+          </p>
+          <p style="text-align: center; font-style: italic; color: #666;">
+            Leadership initiatives, organizing experiences, and community engagement.
+          </p>
+          <p style="text-align: center; margin-top: 20px;">
+            <a href="index.html">← Back to Main Portfolio</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="section-header"></div>
+
+      <div style="padding: 20px;">
+        <h3>Leadership Activities & Experiences</h3>
+      </div>
+
+      <div id="leadership-container"></div>
+
+      <div class="footer-section">
+        <p style="text-align:right;font-size:small;">
+          <a href="index.html">← Back to Main Portfolio</a>
+        </p>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      // Leadership and organizing activities
+      const leadershipActivities = [
+        {
+          id: 'lead1',
+          title: 'Activity Title',
+          role: 'Your Role',
+          organization: 'Organization Name',
+          period: '2023 - Present',
+          description: 'Description of the leadership activity, what you organized, and the impact you made.',
+          achievements: [
+            'Key achievement or outcome',
+            'Another important result'
+          ],
+          impact: 'Quantifiable impact or recognition'
+        }
+        // Add more leadership activities here
+      ];
+
+      // Render leadership item
+      function renderLeadership(activity) {
+        const achievementsList = activity.achievements && activity.achievements.length > 0 
+          ? `<ul>${activity.achievements.map(ach => `<li>${ach}</li>`).join('')}</ul>`
+          : '';
+        
+        const html = `
+        <div class="leadership-item" data-activity-id="${activity.id}">
+          <div class="leadership-content">
+            <span class="papertitle">${activity.title}</span>
+            <br>
+            <strong>${activity.organization}</strong> &nbsp;|&nbsp; ${activity.period}
+            <br>
+            <em>${activity.role}</em>
+            <p>${activity.description}</p>
+            ${achievementsList}
+            ${activity.impact ? `<p><strong>Impact:</strong> ${activity.impact}</p>` : ''}
+          </div>
+        </div>`;
+        
+        return { html, activity };
+      }
+
+      // Render all leadership activities
+      function renderAllActivities() {
+        const container = document.getElementById('leadership-container');
+        let html = '';
+        leadershipActivities.forEach(activity => {
+          const result = renderLeadership(activity);
+          html += result.html;
+        });
+        container.innerHTML = html;
+      }
+
+      // Initialize on page load
+      document.addEventListener('DOMContentLoaded', renderAllActivities);
+    </script>
+  </body>
+</html>

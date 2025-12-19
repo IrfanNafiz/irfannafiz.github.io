@@ -12,9 +12,10 @@
     </script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <title>Irfan Nafiz Shahan</title>
+    <title>Irfan Nafiz Shahan - Portfolio</title>
 
     <meta name="author" content="Irfan Nafiz">
+    <meta name="description" content="Irfan Nafiz Shahan's portfolio - Electrical engineer specializing in Computer Vision, Robotics, and Wearables">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="stylesheet.css">
@@ -22,8 +23,9 @@
     <link rel="stylesheet" href="components.css">    
   </head>
 
-  <body>
-    <div class="container">
+  <body role="application" aria-label="Irfan Nafiz Shahan Portfolio Website">
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <div id="main" class="container">
       <div class="hero-section">
         <div class="hero-content">
           <p class="name" style="text-align: center;">
@@ -34,6 +36,10 @@
           <p>
             I enjoy tackling complex open ended problems by combining algorithms with practical hardware solutions, from 3D perception and point cloud processing to wearable assistive technologies.  
           </p>
+          <p>
+            I also love fine arts, instrumental music (singing occasionally) and old hardware. Do check out the rest of my pages in the portfolio!
+          </p>
+
           <h2><strong>Currently Serving As:</strong></h2>
           <p>
             <strong>Research Assistant, EEE, SUST:</strong> Working under the supervision of <a href="https://www.sust.edu/departments/eee/faculty/mrased-eee@sust.edu">Dr. Md. Rasedujjaman</a>, Shahjalal University of Science and Technology.   <br> 
@@ -43,28 +49,34 @@
           </p>
         </div>
         <div class="hero-image">
-          <a href="images/IrfanNafiz4.png"><img alt="profile photo" src="images/IrfanNafiz4.png" class="hoverZoomLink"></a>
+          <a href="images/IrfanNafiz4.png" aria-label="View full size profile photo"><img alt="Irfan Nafiz Shahan - Profile Photo" src="images/IrfanNafiz4.png" class="hoverZoomLink"></a>
         </div>
       </div>
 
       <div class="links-section">
-        <p class="hero-links">
-          <a href="mailto:irfannafizislive@gmail.com">Email</a> &nbsp;/&nbsp;
-          <a href="data/CV_IrfanNafizShahan.pdf">CV</a> &nbsp;/&nbsp;
-          <a href="https://scholar.google.com/citations?hl=en&view_op=list_works&gmla=AL3_ziiU19tz5cFcYaM-E0gqjnUq2CDiovoAaM75hebB-B0msJr0r1rDIHmGbORg-JfEAYlgwRqbQVRnmjn6bw&user=dyStXy0AAAAJ">Google Scholar</a> &nbsp;/&nbsp;
-          <a href="https://github.com/irfannafiz/">Github</a> &nbsp;/&nbsp;
-          <a href="https://www.linkedin.com/in/irfannafizshahan/">LinkedIn</a>
+        <p class="hero-links" role="navigation" aria-label="Contact and social links">
+          <a href="mailto:irfannafizislive@gmail.com" aria-label="Email">Email</a> &nbsp;/&nbsp;
+          <a href="data/CV_IrfanNafizShahan.pdf" aria-label="Download CV">CV</a> &nbsp;/&nbsp;
+          <a href="https://scholar.google.com/citations?hl=en&view_op=list_works&gmla=AL3_ziiU19tz5cFcYaM-E0gqjnUq2CDiovoAaM75hebB-B0msJr0r1rDIHmGbORg-JfEAYlgwRqbQVRnmjn6bw&user=dyStXy0AAAAJ" aria-label="Google Scholar Profile">Google Scholar</a> &nbsp;/&nbsp;
+          <a href="https://github.com/irfannafiz/" aria-label="GitHub Profile">Github</a> &nbsp;/&nbsp;
+          <a href="https://www.linkedin.com/in/irfannafizshahan/" aria-label="LinkedIn Profile">LinkedIn</a>
         </p>
-        <p class="hero-portfolio-links">
-          <a href="fine-art.html">Fine Art</a> &nbsp;/&nbsp;
-          <a href="instrumental-music.html">Instrumental Music</a>
+        <p class="hero-portfolio-links" role="navigation" aria-label="Portfolio sections">
+          <a href="#project-portfolio">Projects</a> &nbsp;/&nbsp;
+          <a href="fine-art.html" aria-label="Fine Art Portfolio">Fine Art</a> &nbsp;/&nbsp;
+          <a href="instrumental-music.html" aria-label="Instrumental Music Portfolio">Instrumental Music</a> &nbsp;/&nbsp;
+          <a href="leadership-organizing.html" aria-label="Leadership and Organizing">Leadership & Organizing</a>
         </p>
       </div>
 
       <div class="section-header"></div>
 
       <div style="padding: 20px;">
-        <h3>Project Portfolio</h3>
+        <h2 id="project-portfolio" class="portfolio-title">Project Portfolio</h2>
+        <p class="portfolio-hint">💡 Hover over projects with your cursor to view full descriptions!</p>
+        <!-- <div class="hover-controls">
+          <button id="toggleHoverFilter" class="hover-toggle" aria-pressed="false">Toggle hover image filter</button>
+        </div> -->
       </div>
       <section id="category-assistive" class="project-category">
         <div style="padding: 20px;"><h2>Assistive Devices and Wearables</h2></div>
@@ -119,9 +131,90 @@
         </div>
       </div>
 
+      <div class="news-section" aria-live="polite">
+        <div style="padding: 20px;">
+          <h2>News & Updates</h2>
+        </div>
+
+      
+      <div class="news-item">
+        <div class="news-date">June 2025</div>
+        <div class="news-content">
+          <h3>BSc. in Electrical and Electronics Engineering</h3>
+          <p>Graduated top of class.</p>
+        </div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-date">Apr 2025</div>
+        <div class="news-content">
+          <h3>Rice360 Global Health Design Competition — DEI Award</h3>
+          <p>Received DEI Award (USD 1000) for TinyML assistive device research at Rice University, USA.</p>
+        </div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-date">Jan 2025</div>
+        <div class="news-content">
+          <h3>Undergraduate Thesis Preprint Released on CARLASnowScenes</h3>
+          <p>Released preprint on synthetic snow weather dataset generation for autonomous driving evaluation.</p>
+        </div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-date">Dec 2024</div>
+        <div class="news-content">
+          <h3>Ranked 1st in Industrial Training (TICI, Bangladesh)</h3>
+          <p>Secured top rank among 60 trainees in PLC, DCS, and SCADA-based factory automation training.</p>
+        </div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-date">Oct 2024</div>
+        <div class="news-content">
+          <h3>Led SignTalk TinyML Project with US Universities</h3>
+          <p>Team Lead for SignTalk — a TinyML inertial glove for sign language translation, supervised by HTU and TSU faculty.</p>
+        </div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-date">Aug 2024</div>
+        <div class="news-content">
+          <h3>SUST STEM Professor Guaranga Deb Roy Memorial Scholarship Scholarship Recipient</h3>
+          <p>Awarded Professor Guaranga Deb Roy Memorial Scholarship (Merit) for academic excellence.</p>
+        </div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-date">2023</div>
+        <div class="news-content">
+          <h3>2nd Runner Up — JAXA Kibo Robot Programming Challenge</h3>
+          <p>Achieved 2nd Runner Up in international ISS robotics challenge organized by JAXA.</p>
+        </div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-date">Aug 2023</div>
+        <div class="news-content">
+          <h3>SUST STEM EEE (Merit) Scholarship Recipient</h3>
+          <p>Awarded for academic, extracurricular, and STEM excellence.</p>
+        </div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-date">2017</div>
+        <div class="news-content">
+          <h3>Country Highest — IGCSE Fine Arts</h3>
+          <p>Awarded Country Highest in Art & Design (Fine Arts), International GCSE Examinations.</p>
+        </div>
+      </div>
+
+        <!-- Add more news items here -->
+      </div>
+
       <div class="footer-section">
         <p style="text-align:right;font-size:small;">
-          Feel free to steal this website's <a href="https://github.com/jonbarron/jonbarron_website">source code</a>. <strong>Do not</strong> scrape the HTML from this page itself, as it includes analytics tags that you do not want on your own website &mdash; use the github code instead. Also, consider using <a href="https://leonidk.com/">Leonid Keselman</a>'s <a href="https://github.com/leonidk/new_website">Jekyll fork</a> of this page.
+          This website is a HEAVILY modified fork of <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron's website</a>. <strong>Do not</strong> scrape the HTML from this page itself, as it includes analytics tags that you do not want on your own website &mdash; use the github code instead. Also, consider using <a href="https://leonidk.com/">Leonid Keselman</a>'s <a href="https://github.com/leonidk/new_website">Jekyll fork</a> of this page.
         </p>
       </div>
     </div>
@@ -134,11 +227,14 @@
             id: 'signtalk',
             title: 'SignTalk: A TinyML Inertial Glove for Sign Language Translation',
             authors: 'Irfan Nafiz Shahan, Team SignTalk',
-            image: 'images/placeholder.svg',
-            imageHover: 'images/placeholder.svg',
+            image: 'data/images/signtalk/SignTalkLogo.png',
+            imageHover: 'data/images/signtalk/signtalk2.jpg',
             summary: 'TinyML-based inertial glove to translate sign language to text/speech.',
-            description: 'Role: Concept, implementation and evaluation of embedded TinyML pipeline for sign-to-text translation.\n Interesting / Innovative: Lightweight inference on wearable IMU data; designed for local deployment in disability-support settings.',
-            links: [ { text: 'Poster (CV)', url: 'data/CV_IrfanNafizShahan.pdf' } ]
+            description: 'Role: Lead, concept, implementation and evaluation of embedded TinyML pipeline for sign-to-text translation. \nInteresting / Innovative: Lightweight inference on wearable IMU data with TinyML; designed for local deployment for low-income disability-support, as well as mitigating privacy concerns.',
+            links: [
+              { text: 'Video (9 minutes)', url: 'https://www.youtube.com/watch?v=6yaSWFr0ooQ&t=1s' },
+              { text: 'Poster', url: 'https://drive.google.com/file/d/1pDmHaXvJypfHb2IBiSvZ-8pinWSqiqIv/view?usp=sharing' }
+            ]
           },
           {
             id: 'ibraille',
@@ -148,9 +244,9 @@
             imageHover: 'data/images/ibraille/ibraille.mp4',
             isVideo: true,
             summary: 'Cost-effective braille display built from first principles with 400x cost reduction.',
-            description: 'A braille display built from first principles, utilizing off the shelf available materials and a novel design - leading to a cost reduction of 400x than that of commercial displays. Received 10,000 USD funding from Bangladesh ICT Division through a rigorous 4-stage selection process among 1000+ industry and academic teams.\nRole: Lead on design and implementation; actuator testing and prototyping.\nInteresting/Innovative: Ultra-low-cost mechanical design + OCR and Bengali->Braille pipeline for affordable accessibility.',
+            description: 'A braille display built from first principles, utilizing off the shelf available materials - leading to a cost reduction of 40x than that of commercial displays. \n\nAchievement: Received 10,000 USD grant funding from University Grants Commision of Bangladesh through a rigorous 4-stage selection process in IC4IR among 1000+ industry and academic teams.\n\nRole: Team Lead, Design and Implementation; actuator testing and prototyping.\nInteresting/Innovative: Ultra-low-cost mechanical design + OCR and Bengali-to-Braille pipeline for affordable accessibility. Designed for scalability and local manufacturing in Bangladesh. There is no other solution (to our knowledge) that comes close to this cost point worldwide.',
             links: [
-              { text: 'Video', url: 'https://youtu.be/zLcugmqH1eI' },
+              { text: 'Video (2.5 minutes)', url: 'https://youtu.be/zLcugmqH1eI' },
               { text: 'Poster', url: 'https://drive.google.com/file/d/1M7lurM46UO5TReKo-ptPx65gR0cr4zWJ/view?usp=sharing' }
             ]
           }
@@ -164,7 +260,7 @@
             image: 'data/images/iqa/iqa1.png',
             imageHover: 'data/images/iqa/iqa2.png',
             summary: 'Comprehensive robustness evaluation of no-reference image quality assessment (NR-IQA) models.',
-            description: 'Conducted a comprehensive robustness evaluation of no-reference image quality assessment (NR-IQA) models under MOS-stratified perturbations. Developed metrics and testing strategies to measure performance across varying image distortions and subjective quality strata. Demonstrated insights on model stability and reliability for real-world applications in computer vision and multimedia analytics.\nRole: Implementation and evaluation.\nInteresting/Innovative: MOS-stratified perturbation analysis for robustness.',
+            description: 'Conducted a comprehensive robustness evaluation of no-reference image quality assessment (NR-IQA) models under MOS-stratified perturbations. Developed metrics and testing strategies to measure performance across varying image distortions and subjective quality strata. Demonstrated insights on model stability and reliability for real-world applications in computer vision and multimedia analytics.\n\nRole: Qualitative analysis implementation and evaluation of noise characteristics.\nInteresting/Innovative: IQA based MOS-stratified perturbation analysis for robustness is an open field. Very few works have explored this area. Our work implements a patch-based noise pattern generation that maximizes our custom IQA image quality metric degradation (and upgradation) under different subjective quality strata. The patch-based approach allows for localized perturbations that better simulate real-world distortions, while also mimicing noise generation algorithms such as Perlin noise.',
             links: []
           },
           {
@@ -174,7 +270,7 @@
             image: 'data/images/lidar/lidar1.png',
             imageHover: 'data/images/lidar/lidar2.png',
             summary: 'Raycasting-free LiDAR point generation pipeline using spherical projection and GPU shaders.',
-            description: 'Developed a raycasting-free LiDAR point generation pipeline using spherical projection and GPU vertex–raster shaders. Implemented geometry-based LiDAR point generation with mesh and vector computation, enabling high-speed simulation for static and dynamic environments. Built the computational geometry logic for vertex and raster shaders, achieving accurate point cloud generation for autonomous driving and synthetic sensor datasets.\nRole: Concept and implementation of simulation pipeline.\nInteresting/Innovative: Raycasting-free generation using GPU shaders for high-speed synthetic LiDAR.',
+            description: 'Developed a raycasting-free LiDAR point generation pipeline using spherical projection and GPU vertex–raster shaders. Implemented geometry-based LiDAR point generation with mesh and vector computation, enabling high-speed simulation for static and dynamic environments. Built the computational geometry logic for vertex and raster shaders, achieving accurate point cloud generation for autonomous driving and synthetic sensor datasets.\n\nRole: Concept and implementation of computer vision pipeline.\nInteresting/Innovative: Raycasting-free generation using GPU shaders for high-speed synthetic LiDAR. Our initial CPU (Not GPU) testing showed a remarkable generation of 300,000 points in about 6 seconds.  This is a significant improvement over traditional raycasting methods, which can be computationally intensive and slower, especially in complex environments. Porting to CUDA algorithms are currently underway.',
             links: []
           },
           {
@@ -185,18 +281,11 @@
             imageHover: 'data/images/CSS/css.mp4',
             isVideo: true,
             summary: 'Synthetic snow weather for autonomous vehicle training and testing.',
-            description: 'Creating synthetic, dynamic snow weather for autonomous vehicle training and testing in adverse weather conditions. Aimed at bridging the sim2real gap for snow weather autonomous driving.\nRole: Thesis concept, implementation and dataset creation.\nInteresting/Innovative: Implemented accumulation and snowfall shaders for CARLA; produced deterministic large-scale snow dataset.',
-            links: [ { text: 'Poster (CV)', url: 'data/CV_IrfanNafizShahan.pdf' } ]
-          },
-          {
-            id: 'speakerid',
-            title: 'Towards Speaker Identification with Minimal Dataset',
-            authors: 'Irfan Nafiz Shahan',
-            image: 'images/placeholder.svg',
-            imageHover: 'images/placeholder.svg',
-            summary: 'Lightweight 1D-model approaches for speaker identification on constrained hardware.',
-            description: 'Role: Concept and implementation of 1D CNN-based speaker identification with constrained resources.\nInteresting / Innovative: Focused on minimal dataset training and resource-efficient model design suitable for edge devices.',
-            links: [ { text: 'CV (details)', url: 'data/CV_IrfanNafizShahan.pdf' } ]
+            description: 'Creating synthetic, dynamic snow weather for autonomous vehicle training and testing in adverse weather conditions. Aimed at bridging the sim2real gap for snow weather autonomous driving (AD).\nRole: Thesis concept, implementation and dataset creation.\nInteresting/Innovative: Implemented the first ever accumulation and snowfall shaders for CARLA Simulator in order to support the AD community; produced deterministic large-scale snow dataset of about 64k images, sensor captures (IMU, GPS, LiDAR) and metadata necessary for complete AD benchmarking tool.',
+            links: [ 
+              { text: 'Poster', url: 'https://drive.google.com/file/d/1hVpdgSeRnvnTsvv_OWBLsWuVOiAaAZjW/view?usp=sharing' } ,
+              { text: 'Thesis Article', url: 'https://drive.google.com/file/d/1hVpdgSeRnvnTsvv_OWBLsWuVOiAaAZjW/view?usp=sharing' }
+            ]
           }
         ],
 
@@ -208,7 +297,18 @@
             image: 'data/images/sustsat/sustsat.png',
             imageHover: 'data/images/sustsat/sustsat.png',
             summary: 'SUST\'s first amateur cubesat for FSK, POCSAG and SSTV transmission.',
-            description: 'SUST\'s very first amateur cubesat, built for FSK, POCSAG and SSTV transmission of an assortment of sensor data.\nRole: Hardware and systems integration for payload and communications.\nInteresting/Innovative: Low-cost Raspberry Pi-based multifunctional payload for amateur satellite telemetry and experiments.',
+            description: 'SUST\'s very first amateur cubesat, built for FSK, POCSAG and SSTV transmission of an assortment of sensor data.\n\nRole: Project Lead. Hardware and systems integration for payload and communications.\nInteresting/Innovative: Low-cost Raspberry Pi-based multifunctional payload for amateur satellite telemetry and experiments. Complete ground station setup for data reception and decoding.',
+            links: []
+          },
+          {
+            id: 'krpc',
+            title: 'A ROS based simulation of NASA\'s Astrobee for ISS ammonia leak repairs',
+            authors: 'Irfan Nafiz Shahan, Al-Mubin Nabil, A. Abrar, A. Hossain, S. Sakib',
+            image: 'data/images/krpc/krpc.jpg',
+            imageHover: 'data/images/krpc/krpc.mp4',
+            isVideo: true,
+            summary: 'Autonomous space robot navigation using Floyd-Warshall algorithm.',
+            description: 'Shortest Path Raytracing Algorithm (Floyd-Warshall algorithm) with Keep in Zone (KIZ) and Keep out Zone (KOZ) padding was used to navigate autonomously in a simulated ISS environment - repairing simulated ammonia leaks.\n\nRole: Team Lead. Autonomy stack development and simulation deployment. Made the computer vision stack for AR tag detection and decoding. \nInteresting/Innovative: Integrating adaptive shortest-path algorithms into ROS-based ISS simulation for maintenance tasks. Cost function design for obstacle avoidance in confined spaces.',
             links: []
           },
           {
@@ -217,8 +317,8 @@
             authors: 'Md. Rasedujjaman, Irfan Nafiz Shahan, N. Rakhaine, I. Ahmed',
             image: 'data/images/RFID/rfid_box1.png',
             imageHover: 'data/images/RFID/rfid_box1.png',
-            summary: 'Secure and scalable RFID data logging system with internal server architecture.',
-            description: 'A ground up RFID data logging system that is secure, cost effective and scalable for large institutions with internal server architecture. We compare and consider existing information security systems, showcasing current device advantages and limitations.\nRole: System design and implementation.\nInteresting/Innovative: Internal server architecture for privacy and scalability in institutional settings.',
+            summary: 'Decentralized and scalable RFID data logging system with internal server architecture for Rural Areas',
+            description: 'A ground up RFID data logging system that is secure, cost effective and scalable. Built for implementation in rural areas where internet connectivity and power are limited.\n\nRole: System design and implementation, structural design, 3D printing and testing.\nInteresting/Innovative: Internal server architecture for privacy and scalability in institutional settings. Decentralized edge device network for data logging. Power optimization for rural deployments targetting SDG goals.',
             links: []
           },
           {
@@ -228,30 +328,8 @@
             image: 'data/images/TR/tr1.png',
             imageHover: 'data/images/TR/tr_data.png',
             summary: 'Low-investment trash segregation using embedded machine learning for developing countries.',
-            description: 'We propose a prototype for a low-investment trash segregation mechanism that uses embedded machine learning using tensorflow lite for microcontrollers. The system is designed to be low cost, low power and scalable using IoT architectures for developing countries.\nRole: Dataset collection, model compression and embedded deployment.\nInteresting/Innovative: TinyML model optimizations to run on low-memory microcontrollers for real-world waste sorting.',
+            description: 'We propose a prototype for a low-investment trash segregation mechanism that uses embedded machine learning using tensorflow lite for microcontrollers. The system is designed to be low cost, low power and scalable using IoT architectures for developing countries.\n\nRole: Dataset collection, model compression and embedded deployment.\nInteresting/Innovative: TinyML model optimizations to run on low-memory microcontrollers for real-world waste sorting.',
             links: []
-          },
-          {
-            id: 'krpc',
-            title: 'A ROS based simulation of NASA\'s Astrobee for ISS ammonia leak repairs',
-            authors: 'Irfan Nafiz Shahan, Al-Mubin Nabil, A. Abrar, A. Hossain, S. Sakib',
-            image: 'data/images/ibraille/mouse_full.png',
-            imageHover: 'data/images/krpc/krpc.mp4',
-            isVideo: true,
-            summary: 'Autonomous space robot navigation using Floyd-Warshall algorithm.',
-            description: 'Shortest Path Raytracing Algorithm (Floyd-Warshall algorithm) with Keep in Zone (KIZ) and Keep out Zone (KOZ) padding was used to navigate autonomously in a simulated ISS environment - repairing simulated ammonia leaks.\nRole: Autonomy stack development and simulation deployment.\nInteresting/Innovative: Integrating classical shortest-path algorithms into ROS-based ISS simulation for maintenance tasks.',
-            links: []
-          }
-          ,
-          {
-            id: 'attendance_iot',
-            title: 'Scalable Embedded IoT Device for Secure RFID & Fingerprint Attendance',
-            authors: 'Irfan Nafiz Shahan, Pulok Ahmed Auvi',
-            image: 'images/placeholder.svg',
-            imageHover: 'images/placeholder.svg',
-            summary: 'Raspberry Pi based embedded IoT attendance and logging system for institutions.',
-            description: 'Role: Design and implementation (hardware + firmware) of a secure, low-cost attendance logging system.\n Interesting / Innovative: Combined RFID with fingerprint for multi-factor local logging and internal server architecture for privacy.',
-            links: [ { text: 'CV (details)', url: 'data/CV_IrfanNafizShahan.pdf' } ]
           }
         ],
 
@@ -264,7 +342,7 @@
             imageHover: 'data/images/icarus/nsac22.mp4',
             isVideo: true,
             summary: 'Virtual Reality N-Body Simulator Experience of the Parker Solar Probe.',
-            description: 'A Virtual Reality N-Body Simulator Experience made with Unity Engine, detailing the journey of the Parker Solar Probe.\nRole: Lead developer and simulation integrator.\n Interesting/Innovative: Educational VR experience combining N-body physics with immersive storytelling.',
+            description: 'A Virtual Reality N-Body Simulator Experience made with Unity Engine, detailing the journey of the Parker Solar Probe.\n\nRole: Lead developer and simulation integrator.\n Interesting/Innovative: Educational VR experience combining N-body physics with immersive storytelling.',
             links: []
           },
           {
@@ -275,12 +353,33 @@
             imageHover: 'data/images/perseverence/nsac23.mp4',
             isVideo: true,
             summary: 'VR Recreation of Perseverance Rover Launch, Landing and Deployment.',
-            description: 'A VR Based Recreation Perseverance Rover Launch, Landing and Deployment in Mars Terrain developed on Unity Engine.\nRole: Developer and content lead.\nInteresting/Innovative: Recreating complex mission phases in VR for outreach and educational demonstration.',
+            description: 'A VR Based Recreation Perseverance Rover Launch, Landing and Deployment in Mars Terrain developed on Unity Engine.\n\nRole: Developer and content lead.\nInteresting/Innovative: Recreating complex mission phases in VR for outreach and educational demonstration.',
             links: []
           }
         ],
 
         miscellaneous: [
+        {
+            id: 'buckboost',
+            title: 'A Buck-Boost Converter for Solar PV Applications in SmallSat Systems',
+            authors: 'Irfan Nafiz Shahan, et al.',
+            image: 'images/placeholder.svg',
+            imageHover: 'images/placeholder.svg',
+            isVideo: false,
+            summary: 'Smallsats require efficient power management for solar PV systems. A battery management system is often inefficient in handling wide input voltage ranges from solar panels. A buck-boost converter can help regulate voltage levels effectively.',
+            description: 'Designs were performed in LTSpice, with further simulation with voltage regulators performed. KiCAD was used to create the veroboard layout. Lab testing of threshold voltage, input frequency sensitivity were performed. \n\nRole: Lead engineer and simulation integrator.\nInteresting/Innovative: Utilized timer circuit and registry hacks to produce extremely high frequency clock at the cost of low clock resolution. This led to minimization of active components such as capacitors and inductors.',
+            links: []
+        },
+        {
+            id: 'speakerid',
+            title: 'Towards Speaker Identification with Minimal Dataset',
+            authors: 'Irfan Nafiz Shahan',
+            image: 'images/placeholder.svg',
+            imageHover: 'images/placeholder.svg',
+            summary: 'Lightweight 1D-model approaches for speaker identification on constrained hardware.',
+            description: 'Role: Concept and implementation of 1D CNN-based speaker identification with constrained resources. A software UI was developed for training data acquisition as well as inference and testing.\nInteresting / Innovative: Focused on minimal dataset training and resource-efficient model design suitable for edge devices. Explored data augementation with noise injection and time-shifting to improve model robustness.',
+            links: [ { text: 'Arxiv Preprint', url: 'https://arxiv.org/abs/2411.15082' } ]
+          },
           {
             id: 'dengue_ts',
             title: 'Expeditions on Time-Series ML Architectures for Dengue Outbreak Prediction',
@@ -288,7 +387,7 @@
             image: 'images/placeholder.svg',
             imageHover: 'images/placeholder.svg',
             summary: 'Time-series ML work for epidemiological forecasting in Bangladesh.',
-            description: 'Role: Implementation and evaluation of time-series ML models for dengue outbreak prediction.\nInteresting / Innovative: Applied ML architectures to public-health datasets with feature engineering for seasonal effects.',
+            description: 'Role: Implementation and evaluation of time-series ML models for dengue outbreak prediction.\nInteresting / Innovative: Applied ML architectures to public-health datasets with feature engineering for seasonal effects. Statistical analysis was performed on epidemiological data to identify key predictors of outbreaks.',
             links: [ { text: 'CV (details)', url: 'data/CV_IrfanNafizShahan.pdf' } ]
           }
         ]
@@ -300,11 +399,13 @@
         if (!imageDiv) return;
 
         if (isVideo) {
-          imageDiv.innerHTML = `<video width=100% muted autoplay loop><source src="${imageUrl}" type="video/mp4">Your browser does not support the video tag.</video>`;
+          imageDiv.innerHTML = `<video playsinline muted autoplay loop preload="metadata" style="width:100%;height:100%;display:block;object-fit:cover;"><source src="${imageUrl}" type="video/mp4">Your browser does not support the video tag.</video>`;
         } else {
-          imageDiv.innerHTML = `<img src="${imageUrl}" width=100%>`;
+          imageDiv.innerHTML = `<img src="${imageUrl}" alt="" style="width:100%;height:100%;display:block;object-fit:cover;">`;
         }
 
+        // hint to browser this element will change opacity to encourage compositing
+        imageDiv.style.willChange = 'opacity';
         imageDiv.style.opacity = "0";
       }
 
@@ -315,10 +416,14 @@
 
         projectItem.addEventListener('mouseenter', () => {
           imageDiv.style.opacity = "1";
+          const video = imageDiv.querySelector('video');
+          if (video) video.play();
         });
 
         projectItem.addEventListener('mouseleave', () => {
           imageDiv.style.opacity = "0";
+          const video = imageDiv.querySelector('video');
+          if (video) video.pause();
         });
       }
 
@@ -336,7 +441,7 @@
         }
 
         const html = `
-        <div class="project-item" data-project-id="${project.id}">
+        <div class="project-item" data-project-id="${project.id}" tabindex="0" role="button" aria-expanded="false">
           <div class="project-image">
             <div class="one">
               <div class="two" id="${hoverImageId}"></div>
@@ -351,7 +456,13 @@
             ${linksHtml}
             <p>${project.summary}</p>
             <div class="project-description-full">
-              <p>${project.description.replace(/\n/g, '<br>')}</p>
+              <p>${project.description
+                .replace(/Role:/g, '<strong>Role:</strong>')
+                .replace(/Achievement:/g, '<strong>Achievement:</strong>')
+
+                .replace(/Interesting \/ Innovative:/g, '<strong>Interesting / Innovative:</strong>')
+                .replace(/Interesting\/Innovative:/g, '<strong>Interesting / Innovative:</strong>')
+                .replace(/\n/g, '<br>')}</p>
             </div>
           </div>
         </div>`;
@@ -390,8 +501,51 @@
         renderCategory('projects-misc', projects.miscellaneous);
       }
 
+      // Toggle hover filter state and persist
+      function toggleHoverFilter(enabled) {
+        document.body.classList.toggle('hover-filter', enabled);
+        try { localStorage.setItem('hoverFilter', enabled ? '1' : '0'); } catch (e) {}
+        const btn = document.getElementById('toggleHoverFilter');
+        if (btn) btn.setAttribute('aria-pressed', enabled ? 'true' : 'false');
+      }
+
+      // Enable keyboard interactions for project items
+      function enableKeyboardProjectToggle() {
+        document.querySelectorAll('.project-item').forEach(item => {
+          item.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              const isOpen = item.classList.toggle('focus');
+              item.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            }
+          });
+          item.addEventListener('click', () => {
+            const isOpen = item.classList.toggle('focus');
+            item.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          });
+        });
+      }
+
       // Initialize on page load
-      document.addEventListener('DOMContentLoaded', renderAllProjects);
+      document.addEventListener('DOMContentLoaded', () => {
+        renderAllProjects();
+        // Setup keyboard handlers after render
+        enableKeyboardProjectToggle();
+
+        // Hook up hover filter toggle button
+        const btn = document.getElementById('toggleHoverFilter');
+        if (btn) {
+          btn.addEventListener('click', () => {
+            const enabled = !document.body.classList.contains('hover-filter');
+            toggleHoverFilter(enabled);
+          });
+        }
+
+        // Initialize hover filter state from storage
+        let initial = false;
+        try { initial = localStorage.getItem('hoverFilter') === '1'; } catch (e) { initial = false; }
+        toggleHoverFilter(initial);
+      });
     </script>
   </body>
 </html>

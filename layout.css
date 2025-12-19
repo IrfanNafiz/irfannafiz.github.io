@@ -1,7 +1,7 @@
 
 .papertitle {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 700;
 }
 
@@ -10,6 +10,14 @@
   margin: 0;
   font-size: var(--text-xlarge);
   font-weight: 700;
+}
+
+/* Category headers */
+.project-category h2 {
+  font-size: 1.4em;
+  margin: 0;
+  font-weight: 700;
+  color: #222;
 }
 
 .container {
@@ -58,6 +66,110 @@
   font-size: small;
 }
 
+/* Portfolio section styling */
+.portfolio-title {
+  font-size: 2.4em;
+  font-weight: 700;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.portfolio-hint {
+  font-size: 0.95em;
+  color: #666;
+  font-style: italic;
+  margin: 5px 0 0 0;
+}
+
+/* Skip link for keyboard users */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 8px 12px;
+  background: #000;
+  color: #fff;
+  z-index: 9999;
+  border-radius: 4px;
+}
+
+/* Hover control button */
+.hover-controls {
+  margin-top: 8px;
+}
+.hover-toggle {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95em;
+}
+.hover-toggle:hover,
+.hover-toggle:focus {
+  background: #f5f5f5;
+  outline: none;
+}
+
+/* News section styling */
+.news-section {
+  width: 100%;
+  margin: 40px 0 20px 0;
+  padding: 20px;
+  background: linear-gradient(135deg, #f9f9f9 0%, #fafafa 100%);
+  /* border-left: 4px solid var(--color-leftborder); */
+  border-radius: 4px;
+}
+
+.news-section h2 {
+  margin-top: 0;
+  font-size: 1.8em;
+  color: #333;
+}
+
+.news-item {
+  display: flex;
+  gap: 20px;
+  padding: 15px;
+  margin-bottom: 15px;
+  background: white;
+  border-radius: 6px;
+  border-left: 3px solid var(--color-leftborder);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.news-item:hover {
+  transform: translateX(4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.news-date {
+  flex-shrink: 0;
+  font-weight: 600;
+  color: var(--color-link);
+  min-width: 120px;
+  font-size: 0.9em;
+}
+
+.news-content h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.1em;
+}
+
+.news-content p {
+  margin: 5px 0 0 0;
+  color: #666;
+  font-size: 0.95em;
+}
+
 /* Links section - full width centered */
 .links-section {
   width: 100%;
@@ -102,6 +214,7 @@
 .hero-portfolio-links a {
   display: inline;
   transition: all 0.2s ease;
+  font-size: 1.25em;
   font-weight: 500;
 }
 

@@ -1,6 +1,9 @@
 /* ================================
    GLOBAL DESIGN TOKENS
    ================================ */
+html {
+  scroll-behavior: smooth;
+}
 
 :root {
   --font-main: 'Lato', Verdana, Helvetica, sans-serif;
@@ -13,6 +16,8 @@
   --color-link: #1772d0;
   --color-link-hover: #f09228;
   --color-highlight: #ffffd0;
+
+  --color-leftborder: #aaaaaa;
 }
 
 
