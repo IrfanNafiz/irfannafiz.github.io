@@ -34,13 +34,23 @@
         aspect-ratio: 16 / 9;
         background: #000;
       }
+      .carousel-slide {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
       .carousel-img {
         position: absolute;
+        inset: 0;
         width: 100%;
         height: 100%;
         opacity: 0;
         transition: opacity 0.4s ease;
-        object-fit: cover;
+        object-fit: contain;
+        object-position: center;
+        background: #000;
       }
       .carousel-img.active {
         opacity: 1;
@@ -81,6 +91,24 @@
       }
       .dot.active {
         background: #333;
+      }
+      .carousel-caption {
+        position: absolute;
+        bottom: 12px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0,0,0,0.6);
+        color: #fff;
+        padding: 6px 10px;
+        border-radius: 6px;
+        font-size: 0.95em;
+        max-width: 90%;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+      }
+      .carousel-slide.active .carousel-caption {
+        opacity: 1;
       }
     </style>
   </head>
@@ -131,14 +159,19 @@
             'Collaborated with HerWILL Inc. (US) to provide workshops on NLP and Semantic Analysis'
           ],
           images: [
-            'data/leadership/datadrive_1.jpg',
-            'data/leadership/datadrive_2.jpg',
-            'data/leadership/datadrive_3.jpg'
-          ]
+            { src: 'org/images/nsdc/2ec.jpg', caption: '2nd Executive Committee of NSDC SUST!' },
+            { src: 'org/images/nsdc/dd3.jpg', caption: 'DATADRIVE 1.0 — 2-Month Long Flagship Workshop and Lecture Series!' },
+            { src: 'org/images/nsdc/dd2.jpg', caption: 'House full!' },
+            { src: 'org/images/nsdc/ba1.jpg', caption: 'Representing Bangladesh at Global NSDC Bi-Annual Meeting!' },
+            { src: 'org/images/nsdc/ba3.jpg', caption: 'At another Global NSDC Bi-Annual Meeting!' },
+            { src: 'org/images/nsdc/nsdc2.jpg', caption: 'Collaboration with DataCamp Donates to provide free education to SUST students!' },
+            { src: 'org/images/nsdc/nlp2.jpg', caption: 'Collaborating with HerWill Inc. as a Judge for the NLP Data Forge Competition!' }
+
+        ]
         },
         {
           id: 'lead2',
-          title: 'ATZG Bangladesh Lead',
+          title: 'JAXA Asian Try Zero Gravity Bangladesh Lead',
           role: 'Project Lead / JAXA Liaison',
           organization: 'STEMX-365 / JAXA',
           location: 'Tokyo, Japan',
@@ -146,9 +179,14 @@
           achievements: [
             'Mentored and assisted students on ATZG project submissions with space engineering and sciences',
             'Ensured to be a mode of communication with JAXA ATZG team for validation of student work',
-            'Coordinated with Mizanul Haq Chowdhury (MIT Space Systems Lab) as Project Coordinator'
+            'Developed an Automation stack for ROS based simulations on the Kibo module of the ISS'
           ],
-          images: []
+          images: [
+            { src: 'org/images/stemx/stemx2_krpc.jpg', caption: 'Bangladesh Regional JAXA KRPC Kicks off!' },
+            { src: 'org/images/stemx/stemx1.jpg', caption: 'Award ceremony of Bangladeshi Regional Winners of JAXA KRPC' },
+            { src: 'org/images/stemx/stemx2.jpg', caption: 'Hosting the event.' },
+            { src: 'org/images/stemx/stemx3_atzg.jpg', caption: 'A picture I captured of my student, Zakia Sultana, who won JAXA ATZG 2023!' },
+          ]
         },
         {
           id: 'lead3',
@@ -161,7 +199,12 @@
             'Led multiple robotics teams to startup and national robotics contests',
             'Conducted educational workshops on robotics and engineering fundamentals'
           ],
-          images: []
+          images: [
+            { src: 'org/images/robosust/tent.jpg', caption: 'Tent for our flagship event Mythical RoboSUST Month!' },
+            { src: 'org/images/robosust/agp2.jpg', caption: 'Hosting the robotics contest Auto Grand Prix 7.0' },
+            { src: 'org/images/robosust/agp1.jpg', caption: 'The AGP 7.0 participants and organizers' },
+            { src: 'org/images/robosust/sp1.jpg', caption: 'At a primary school program, teaching students introductory robotics' },
+          ]
         },
         {
           id: 'lead4',
@@ -174,7 +217,11 @@
             'Promoted several conferences (BECITHON 2024, ICCIT 2024, RAAICon 2024)',
             'Served as an advisor on contests such as Robo Tech Olympiad 2024'
           ],
-          images: []
+          images: [
+            { src: 'org/images/ieee/1.jpg', caption: 'Organized a seminar on Electric Field Mapping of Wide Bandgap Semiconductors' },
+            { src: 'org/images/ieee/2.jpg', caption: 'Organizing a webinar on Road to Higher Study' },
+
+          ]
         },
         {
           id: 'lead5',
@@ -187,7 +234,17 @@
             'Led a Cyber Security Competition and Workshop "Introduction to CTFs 1.0"',
             'Ranked 14th in 2022 throughout Bangladesh in ctftime.org'
           ],
-          images: []
+          images: [
+            { src: 'org/images/nmoss/2.png', caption: 'Hosting SUST\'s first CTF workshop!' },
+            { src: 'org/images/nmoss/Intro to EH.png', caption: 'My ethical hacking lecture at Intro to Cyber Workshop.' },
+            { src: 'org/images/nmoss/Forensics, Crypto, Hardware.png', caption: 'Lecturing on Forensics, Crypto, and Hardware challenges.' },
+            { src: 'org/images/nmoss/CA24 Session 1.png', caption: 'An online session on getting into CTFs through HacktheBox CyberApocalypse 2024.' }
+            
+          ]
+          // Cyber101 Slides: https://www.canva.com/design/DAF-c8VoA30/FCzyDadmyaAMx8_E3J56fA/edit?utm_content=DAF-c8VoA30&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+          // CTF categories slide: https://www.canva.com/design/DAFLN8iuY44/FOr9tuaBSqalDWGn8JKOOQ/edit?utm_content=DAFLN8iuY44&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+          // EH slide: https://www.canva.com/design/DAFLNnRK690/KExxqct8rIj0LGO8Wbw3Og/edit?utm_content=DAFLNnRK690&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
         }
       ];
 
@@ -201,7 +258,15 @@
         const carousel = hasImages ? `
           <div class="leadership-carousel" data-carousel-id="${activity.id}">
             <div class="carousel-inner">
-              ${activity.images.map((img, idx) => `<img class="carousel-img ${idx === 0 ? 'active' : ''}" src="${img}" alt="Leadership image ${idx + 1}">`).join('')}
+              ${activity.images.map((imgEntry, idx) => {
+                const src = (typeof imgEntry === 'string') ? imgEntry : imgEntry.src;
+                const caption = (typeof imgEntry === 'string') ? '' : (imgEntry.caption || '');
+                return `
+                  <div class="carousel-slide ${idx === 0 ? 'active' : ''}">
+                    <img class="carousel-img ${idx === 0 ? 'active' : ''}" src="${src}" alt="Leadership image ${idx + 1}">
+                    ${caption ? `<div class="carousel-caption">${caption}</div>` : ''}
+                  </div>`;
+              }).join('')}
               ${activity.images.length > 1 ? `
                 <button class="carousel-btn carousel-btn-prev" onclick="carouselPrev('${activity.id}')">‹</button>
                 <button class="carousel-btn carousel-btn-next" onclick="carouselNext('${activity.id}')">›</button>
@@ -269,7 +334,10 @@
         if (!carousel) return;
         const currentIdx = carouselState[activityId].currentIndex;
         
-        // Update images
+        // Update slides and images
+        carousel.querySelectorAll('.carousel-slide').forEach((slide, idx) => {
+          slide.classList.toggle('active', idx === currentIdx);
+        });
         carousel.querySelectorAll('.carousel-img').forEach((img, idx) => {
           img.classList.toggle('active', idx === currentIdx);
         });

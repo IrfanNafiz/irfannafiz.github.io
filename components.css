@@ -267,7 +267,7 @@ a:focus {
 }
 .art-item.fullwidth .art-image {
   /* full-bleed with configurable gutters so image doesn't touch viewport edges */
-  --page-gutter: 96px; /* adjustable gutter */
+  --page-gutter: 220px; /* adjustable gutter */
   position: relative;
   left: 50%;
   right: 50%;

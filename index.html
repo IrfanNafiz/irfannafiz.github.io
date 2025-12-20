@@ -20,11 +20,86 @@
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="layout.css">
-    <link rel="stylesheet" href="components.css">    
+    <link rel="stylesheet" href="components.css">
+    <style>
+      /* Sticky top navigation bar */
+      .top-navbar {
+        position: sticky;
+        top: 0;
+        background: #fff;
+        border-bottom: 1px solid #e0e0e0;
+        z-index: 100;
+        padding: 10px 20px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+      }
+      .navbar-content {
+        max-width: 800px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+        font-size: 0.95em;
+      }
+      .navbar-links, .navbar-portfolio {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      .navbar-links a, .navbar-portfolio a {
+        color: var(--color-link);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.2s;
+      }
+      .navbar-links a:hover, .navbar-portfolio a:hover {
+        color: var(--color-link-hover);
+        text-decoration: underline;
+      }
+      .navbar-sep {
+        color: #ccc;
+      }
+      @media (max-width: 768px) {
+        .navbar-content {
+          gap: 10px;
+          justify-content: center;
+        }
+        .navbar-links, .navbar-portfolio {
+          gap: 8px;
+          font-size: 0.9em;
+        }
+      }
+    </style>
   </head>
 
   <body role="application" aria-label="Irfan Nafiz Shahan Portfolio Website">
     <a href="#main" class="skip-link">Skip to main content</a>
+    
+    <!-- Sticky top navigation bar -->
+    <nav class="top-navbar" aria-label="Main navigation">
+      <div class="navbar-content">
+        <div class="navbar-links">
+          <a href="mailto:irfannafizislive@gmail.com">Email</a>
+          <span class="navbar-sep">/</span>
+          <a href="data/CV_IrfanNafizShahan.pdf">CV</a>
+          <span class="navbar-sep">/</span>
+          <a href="https://github.com/irfannafiz/">GitHub</a>
+          <span class="navbar-sep">/</span>
+          <a href="https://www.linkedin.com/in/irfannafizshahan/">LinkedIn</a>
+        </div>
+        <div class="navbar-portfolio">
+          <a href="#project-portfolio">Projects</a>
+          <span class="navbar-sep">/</span>
+          <a href="fine-art.html">Fine Art</a>
+          <span class="navbar-sep">/</span>
+          <a href="instrumental-music.html">Music</a>
+          <span class="navbar-sep">/</span>
+          <a href="leadership-organizing.html">Leadership</a>
+        </div>
+      </div>
+    </nav>
+    
     <div id="main" class="container">
       <div class="hero-section">
         <div class="hero-content">
