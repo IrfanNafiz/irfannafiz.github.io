@@ -19,7 +19,70 @@
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="layout.css">
-    <link rel="stylesheet" href="components.css">    
+    <link rel="stylesheet" href="components.css">
+    <style>
+      .leadership-carousel {
+        position: relative;
+        background: #f9f9f9;
+        border-radius: 8px;
+        overflow: hidden;
+        margin: 15px 0;
+      }
+      .carousel-inner {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        background: #000;
+      }
+      .carousel-img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        object-fit: cover;
+      }
+      .carousel-img.active {
+        opacity: 1;
+      }
+      .carousel-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0,0,0,0.6);
+        color: #fff;
+        border: none;
+        padding: 10px 14px;
+        cursor: pointer;
+        font-size: 18px;
+        z-index: 10;
+        border-radius: 4px;
+        transition: background 0.2s;
+      }
+      .carousel-btn:hover {
+        background: rgba(0,0,0,0.9);
+      }
+      .carousel-btn-prev { left: 8px; }
+      .carousel-btn-next { right: 8px; }
+      .carousel-dots {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        padding: 10px;
+        background: #f0f0f0;
+      }
+      .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #ccc;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      .dot.active {
+        background: #333;
+      }
+    </style>
   </head>
 
   <body>
@@ -58,18 +121,74 @@
       const leadershipActivities = [
         {
           id: 'lead1',
-          title: 'Activity Title',
-          role: 'Your Role',
-          organization: 'Organization Name',
-          period: '2023 - Present',
-          description: 'Description of the leadership activity, what you organized, and the impact you made.',
+          title: 'Founder and President',
+          role: 'Founder & President',
+          organization: 'NSDC SUST, Columbia University, NEBD Hub',
+          location: 'New York, US',
+          period: 'Jul 2023 – Present',
           achievements: [
-            'Key achievement or outcome',
-            'Another important result'
+            'Pioneered a 2-month long event "DATADRIVE 1.0 - A Speedrun to Advanced Machine Learning"',
+            'Collaborated with HerWILL Inc. (US) to provide workshops on NLP and Semantic Analysis'
           ],
-          impact: 'Quantifiable impact or recognition'
+          images: [
+            'data/leadership/datadrive_1.jpg',
+            'data/leadership/datadrive_2.jpg',
+            'data/leadership/datadrive_3.jpg'
+          ]
+        },
+        {
+          id: 'lead2',
+          title: 'ATZG Bangladesh Lead',
+          role: 'Project Lead / JAXA Liaison',
+          organization: 'STEMX-365 / JAXA',
+          location: 'Tokyo, Japan',
+          period: 'Dec 2024 – Present',
+          achievements: [
+            'Mentored and assisted students on ATZG project submissions with space engineering and sciences',
+            'Ensured to be a mode of communication with JAXA ATZG team for validation of student work',
+            'Coordinated with Mizanul Haq Chowdhury (MIT Space Systems Lab) as Project Coordinator'
+          ],
+          images: []
+        },
+        {
+          id: 'lead3',
+          title: 'Director of Robotics',
+          role: 'Director & Team Lead',
+          organization: 'RoboSUST, SUST',
+          location: 'Sylhet, Bangladesh',
+          period: 'Jul 2021 – Jun 2025',
+          achievements: [
+            'Led multiple robotics teams to startup and national robotics contests',
+            'Conducted educational workshops on robotics and engineering fundamentals'
+          ],
+          images: []
+        },
+        {
+          id: 'lead4',
+          title: 'Vice Chair',
+          role: 'Vice Chair',
+          organization: 'IEEE SUST Student Branch',
+          location: 'Sylhet, Bangladesh',
+          period: 'Jan 2023 – Jun 2025',
+          achievements: [
+            'Promoted several conferences (BECITHON 2024, ICCIT 2024, RAAICon 2024)',
+            'Served as an advisor on contests such as Robo Tech Olympiad 2024'
+          ],
+          images: []
+        },
+        {
+          id: 'lead5',
+          title: 'Co-Founder, CTF Lead',
+          role: 'Co-Founder & Cybersecurity Lead',
+          organization: 'NMOSS Independent Cybersecurity Research Group, SUST',
+          location: 'Sylhet, Bangladesh',
+          period: 'Jan 2022 – Jan 2024',
+          achievements: [
+            'Led a Cyber Security Competition and Workshop "Introduction to CTFs 1.0"',
+            'Ranked 14th in 2022 throughout Bangladesh in ctftime.org'
+          ],
+          images: []
         }
-        // Add more leadership activities here
       ];
 
       // Render leadership item
@@ -78,21 +197,87 @@
           ? `<ul>${activity.achievements.map(ach => `<li>${ach}</li>`).join('')}</ul>`
           : '';
         
+        const hasImages = activity.images && activity.images.length > 0;
+        const carousel = hasImages ? `
+          <div class="leadership-carousel" data-carousel-id="${activity.id}">
+            <div class="carousel-inner">
+              ${activity.images.map((img, idx) => `<img class="carousel-img ${idx === 0 ? 'active' : ''}" src="${img}" alt="Leadership image ${idx + 1}">`).join('')}
+              ${activity.images.length > 1 ? `
+                <button class="carousel-btn carousel-btn-prev" onclick="carouselPrev('${activity.id}')">‹</button>
+                <button class="carousel-btn carousel-btn-next" onclick="carouselNext('${activity.id}')">›</button>
+              ` : ''}
+            </div>
+            ${activity.images.length > 1 ? `
+              <div class="carousel-dots">
+                ${activity.images.map((_, idx) => `<span class="dot ${idx === 0 ? 'active' : ''}" onclick="carouselGoto('${activity.id}', ${idx})"></span>`).join('')}
+              </div>
+            ` : ''}
+          </div>
+        ` : '';
+        
         const html = `
         <div class="leadership-item" data-activity-id="${activity.id}">
           <div class="leadership-content">
             <span class="papertitle">${activity.title}</span>
             <br>
-            <strong>${activity.organization}</strong> &nbsp;|&nbsp; ${activity.period}
+            <strong>${activity.organization}</strong> &nbsp;|&nbsp; <em>${activity.location}</em>
             <br>
-            <em>${activity.role}</em>
-            <p>${activity.description}</p>
+            <strong>${activity.period}</strong>
+            <br>
+            <em>Role: ${activity.role}</em>
+            ${carousel}
             ${achievementsList}
-            ${activity.impact ? `<p><strong>Impact:</strong> ${activity.impact}</p>` : ''}
           </div>
         </div>`;
         
         return { html, activity };
+      }
+
+      // Carousel functionality
+      let carouselState = {};
+
+      function initCarousel(activityId) {
+        if (!carouselState[activityId]) {
+          carouselState[activityId] = { currentIndex: 0 };
+        }
+      }
+
+      function carouselPrev(activityId) {
+        const activity = leadershipActivities.find(a => a.id === activityId);
+        if (!activity || !activity.images || activity.images.length === 0) return;
+        initCarousel(activityId);
+        carouselState[activityId].currentIndex = (carouselState[activityId].currentIndex - 1 + activity.images.length) % activity.images.length;
+        updateCarousel(activityId);
+      }
+
+      function carouselNext(activityId) {
+        const activity = leadershipActivities.find(a => a.id === activityId);
+        if (!activity || !activity.images || activity.images.length === 0) return;
+        initCarousel(activityId);
+        carouselState[activityId].currentIndex = (carouselState[activityId].currentIndex + 1) % activity.images.length;
+        updateCarousel(activityId);
+      }
+
+      function carouselGoto(activityId, index) {
+        initCarousel(activityId);
+        carouselState[activityId].currentIndex = index;
+        updateCarousel(activityId);
+      }
+
+      function updateCarousel(activityId) {
+        const carousel = document.querySelector(`[data-carousel-id="${activityId}"]`);
+        if (!carousel) return;
+        const currentIdx = carouselState[activityId].currentIndex;
+        
+        // Update images
+        carousel.querySelectorAll('.carousel-img').forEach((img, idx) => {
+          img.classList.toggle('active', idx === currentIdx);
+        });
+        
+        // Update dots
+        carousel.querySelectorAll('.dot').forEach((dot, idx) => {
+          dot.classList.toggle('active', idx === currentIdx);
+        });
       }
 
       // Render all leadership activities

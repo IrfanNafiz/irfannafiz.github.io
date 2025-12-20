@@ -19,7 +19,7 @@
         </div>
       </div>
 
-      <div style="padding:20px;"><h3>Recordings</h3></div>
+      <!-- <div style="padding:20px;"><h3>Recordings</h3></div> -->
 
       <div id="music-container"></div>
 
@@ -37,47 +37,53 @@
       const musicPieces = [
         {
           id: 'm1',
-          title: 'Moonlight Reverie',
-          year: 2021,
-          image: 'data/music/moonlight_cover.jpg',
-          thumb: 'data/music/thumbs/moonlight_800.jpg',
-          audio: 'data/music/moonlight_reverie_320.mp3',
-          duration: '3:24',
-          description: 'Solo piano piece exploring nocturnal textures.'
+          title: 'Drifting - Andy Mckee (Cover)',
+          year: 2018,
+          youtubeUrl: 'https://www.youtube.com/embed/Fah2zoxWfGQ',
+          description: 'Fingerstyle acoustic cover of Andy McKee\'s Drifting. This is my first attempt at a percussive guitar track by one of the greats. Definitely one of the most challenging pieces of music I managed to learn. Percussive guitar is a style where the guitar is used as a rhythmic instrument as well as a melodic one.'
         },
         {
           id: 'm2',
-          title: 'Rain on Tin Roofs',
-          year: 2022,
-          image: 'data/music/rain_cover.jpg',
-          thumb: 'data/music/thumbs/rain_800.jpg',
-          audio: 'data/music/rain_on_tin_320.mp3',
-          duration: '4:02',
-          description: 'Ambient guitar loop with subtle field recordings.'
+          title: 'The Verve - Bitter Sweet Symphony (Acoustic Cover)',
+          year: 2024,
+          youtubeUrl: 'https://www.youtube.com/embed/sw8yu9ES9Ws',
+          description: 'Acoustic rendition of this classic track.'
+        },
+        {
+          id: 'm3',
+          title: 'Moonlike Smile - Yu Peng Chen (Genshin Impact Fingerstyle Cover)',
+          year: 2025,
+          youtubeUrl: 'https://www.youtube.com/embed/x_45xkiBVSM',
+          description: 'Fingerstyle acoustic cover inspired by Genshin Impact.'
         }
       ];
 
       function renderPiece(p) {
-        const full = p.image || p.thumb || 'images/placeholder.svg';
-        const thumb = p.thumb || p.image || 'images/placeholder.svg';
+        const videoPlayer = p.youtubeUrl ? `
+          <div class="video-container">
+            <iframe width="100%" height="315" src="${p.youtubeUrl}" 
+              title="YouTube video player" frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen></iframe>
+          </div>
+        ` : '';
+        
+        const audioPlayer = p.audio ? `
+          <div class="audio-container">
+            <audio controls preload="none" src="${p.audio}">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        ` : '';
+        
         return `
         <div class="art-item fullwidth music-item" data-music-id="${p.id}">
-          <div class="art-image">
-            <div class="one">
-              <a class="art-view" href="${full}" data-full="${full}" role="button" tabindex="0" aria-label="View full cover for ${p.title}">
-                <img src="${thumb}" loading="lazy" alt="${p.title} cover">
-              </a>
-            </div>
-          </div>
           <div class="art-content music-content">
             <span class="papertitle">${p.title}</span><br>
-            <strong>${p.year} • ${p.duration}</strong>
+            <strong>${p.year}${p.duration ? ' • ' + p.duration : ''}</strong>
             <p>${p.description || ''}</p>
-            <div class="audio-container">
-              <audio controls preload="none" src="${p.audio}">
-                Your browser does not support the audio element.
-              </audio>
-            </div>
+            ${videoPlayer}
+            ${audioPlayer}
           </div>
         </div>`;
       }

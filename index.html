@@ -254,26 +254,6 @@
 
         cv_autonomous: [
           {
-            id: 'iqa',
-            title: 'Holistic Robustness Evaluation for NR-IQA Models under MOS-Stratified Perturbations',
-            authors: 'R. Hassan, A. Nabil, I. Shahan, I. Rahman',
-            image: 'data/images/iqa/iqa1.png',
-            imageHover: 'data/images/iqa/iqa2.png',
-            summary: 'Comprehensive robustness evaluation of no-reference image quality assessment (NR-IQA) models.',
-            description: 'Conducted a comprehensive robustness evaluation of no-reference image quality assessment (NR-IQA) models under MOS-stratified perturbations. Developed metrics and testing strategies to measure performance across varying image distortions and subjective quality strata. Demonstrated insights on model stability and reliability for real-world applications in computer vision and multimedia analytics.\n\nRole: Qualitative analysis implementation and evaluation of noise characteristics.\nInteresting/Innovative: IQA based MOS-stratified perturbation analysis for robustness is an open field. Very few works have explored this area. Our work implements a patch-based noise pattern generation that maximizes our custom IQA image quality metric degradation (and upgradation) under different subjective quality strata. The patch-based approach allows for localized perturbations that better simulate real-world distortions, while also mimicing noise generation algorithms such as Perlin noise.',
-            links: []
-          },
-          {
-            id: 'lidar',
-            title: 'LiDAR Point Generation without Raycasting in Simulation',
-            authors: 'Irfan Nafiz Shahan, A. Nabil, A. Kusari',
-            image: 'data/images/lidar/lidar1.png',
-            imageHover: 'data/images/lidar/lidar2.png',
-            summary: 'Raycasting-free LiDAR point generation pipeline using spherical projection and GPU shaders.',
-            description: 'Developed a raycasting-free LiDAR point generation pipeline using spherical projection and GPU vertex–raster shaders. Implemented geometry-based LiDAR point generation with mesh and vector computation, enabling high-speed simulation for static and dynamic environments. Built the computational geometry logic for vertex and raster shaders, achieving accurate point cloud generation for autonomous driving and synthetic sensor datasets.\n\nRole: Concept and implementation of computer vision pipeline.\nInteresting/Innovative: Raycasting-free generation using GPU shaders for high-speed synthetic LiDAR. Our initial CPU (Not GPU) testing showed a remarkable generation of 300,000 points in about 6 seconds.  This is a significant improvement over traditional raycasting methods, which can be computationally intensive and slower, especially in complex environments. Porting to CUDA algorithms are currently underway.',
-            links: []
-          },
-          {
             id: 'css',
             title: 'CARLASnowScenes: Towards Solving Adverse Weather Driving',
             authors: 'Irfan Nafiz Shahan, Pulok Ahmed Auvi, Md. Rasedujjaman',
@@ -286,20 +266,31 @@
               { text: 'Poster', url: 'https://drive.google.com/file/d/1hVpdgSeRnvnTsvv_OWBLsWuVOiAaAZjW/view?usp=sharing' } ,
               { text: 'Thesis Article', url: 'https://drive.google.com/file/d/1hVpdgSeRnvnTsvv_OWBLsWuVOiAaAZjW/view?usp=sharing' }
             ]
-          }
-        ],
-
-        embedded_robotics: [
-          {
-            id: 'sustsat',
-            title: 'SUSTsat-1: A Low Cost, High Efficiency Raspberry Pi based Multifunctional SmallSat',
-            authors: 'Irfan Nafiz Shahan, Pulok Ahmed Auvi',
-            image: 'data/images/sustsat/sustsat.png',
-            imageHover: 'data/images/sustsat/sustsat.png',
-            summary: 'SUST\'s first amateur cubesat for FSK, POCSAG and SSTV transmission.',
-            description: 'SUST\'s very first amateur cubesat, built for FSK, POCSAG and SSTV transmission of an assortment of sensor data.\n\nRole: Project Lead. Hardware and systems integration for payload and communications.\nInteresting/Innovative: Low-cost Raspberry Pi-based multifunctional payload for amateur satellite telemetry and experiments. Complete ground station setup for data reception and decoding.',
+          },
+                    {
+            id: 'lidar',
+            title: 'LiDAR Point Generation without Raycasting in Simulation',
+            authors: 'Irfan Nafiz Shahan, A. Nabil, A. Kusari',
+            image: 'data/images/lidar/lidar1.png',
+            imageHover: 'data/images/lidar/lidar2.png',
+            summary: 'Raycasting-free LiDAR point generation pipeline using spherical projection and GPU shaders.',
+            description: 'Developed a raycasting-free LiDAR point generation pipeline using spherical projection and GPU vertex–raster shaders. Implemented geometry-based LiDAR point generation with mesh and vector computation, enabling high-speed simulation for static and dynamic environments. Built the computational geometry logic for vertex and raster shaders, achieving accurate point cloud generation for autonomous driving and synthetic sensor datasets.\n\nRole: Concept and implementation of computer vision pipeline.\nInteresting/Innovative: Raycasting-free generation using GPU shaders for high-speed synthetic LiDAR. Our initial CPU (Not GPU) testing showed a remarkable generation of 300,000 points in about 6 seconds.  This is a significant improvement over traditional raycasting methods, which can be computationally intensive and slower, especially in complex environments. Porting to CUDA algorithms are currently underway.',
             links: []
           },
+          {
+            id: 'iqa',
+            title: 'Holistic Robustness Evaluation for NR-IQA Models under MOS-Stratified Perturbations',
+            authors: 'R. Hassan, A. Nabil, I. Shahan, I. Rahman',
+            image: 'data/images/iqa/iqa1.png',
+            imageHover: 'data/images/iqa/iqa2.png',
+            summary: 'Comprehensive robustness evaluation of no-reference image quality assessment (NR-IQA) models.',
+            description: 'Conducted a comprehensive robustness evaluation of no-reference image quality assessment (NR-IQA) models under MOS-stratified perturbations. Developed metrics and testing strategies to measure performance across varying image distortions and subjective quality strata. Demonstrated insights on model stability and reliability for real-world applications in computer vision and multimedia analytics.\n\nRole: Qualitative analysis implementation and evaluation of noise characteristics.\nInteresting/Innovative: IQA based MOS-stratified perturbation analysis for robustness is an open field. Very few works have explored this area. Our work implements a patch-based noise pattern generation that maximizes our custom IQA image quality metric degradation (and upgradation) under different subjective quality strata. The patch-based approach allows for localized perturbations that better simulate real-world distortions, while also mimicing noise generation algorithms such as Perlin noise.',
+            links: []
+          },
+        ],
+        
+
+        embedded_robotics: [
           {
             id: 'krpc',
             title: 'A ROS based simulation of NASA\'s Astrobee for ISS ammonia leak repairs',
@@ -309,7 +300,21 @@
             isVideo: true,
             summary: 'Autonomous space robot navigation using Floyd-Warshall algorithm.',
             description: 'Shortest Path Raytracing Algorithm (Floyd-Warshall algorithm) with Keep in Zone (KIZ) and Keep out Zone (KOZ) padding was used to navigate autonomously in a simulated ISS environment - repairing simulated ammonia leaks.\n\nRole: Team Lead. Autonomy stack development and simulation deployment. Made the computer vision stack for AR tag detection and decoding. \nInteresting/Innovative: Integrating adaptive shortest-path algorithms into ROS-based ISS simulation for maintenance tasks. Cost function design for obstacle avoidance in confined spaces.',
-            links: []
+            links: [ 
+              {text: "Simulation Run (3 minutes)", url: 'https://www.youtube.com/watch?v=-4TJ-iDzwXc'}
+            ]
+          },
+          {
+            id: 'sustsat',
+            title: 'SUSTsat-1: A Low Cost, High Efficiency Raspberry Pi based Multifunctional SmallSat',
+            authors: 'Irfan Nafiz Shahan, Pulok Ahmed Auvi',
+            image: 'data/images/sustsat/sustsat.png',
+            imageHover: 'data/images/sustsat/sustsat.png',
+            summary: 'SUST\'s first amateur cubesat for FSK, POCSAG and SSTV transmission.',
+            description: 'SUST\'s very first amateur cubesat, built for FSK, POCSAG and SSTV transmission of an assortment of sensor data.\n\nRole: Project Lead. Hardware and systems integration for payload and communications.\nInteresting/Innovative: Low-cost Raspberry Pi-based multifunctional payload for amateur satellite telemetry and experiments. Complete ground station setup for data reception and decoding.',
+            links: [
+              { text: 'Documentation', url: 'https://drive.google.com/drive/u/0/my-drive' } 
+            ] 
           },
           {
             id: 'rfid',
@@ -329,21 +334,27 @@
             imageHover: 'data/images/TR/tr_data.png',
             summary: 'Low-investment trash segregation using embedded machine learning for developing countries.',
             description: 'We propose a prototype for a low-investment trash segregation mechanism that uses embedded machine learning using tensorflow lite for microcontrollers. The system is designed to be low cost, low power and scalable using IoT architectures for developing countries.\n\nRole: Dataset collection, model compression and embedded deployment.\nInteresting/Innovative: TinyML model optimizations to run on low-memory microcontrollers for real-world waste sorting.',
-            links: []
+            links: [
+              { text: 'Documentation', url: 'https://drive.google.com/drive/u/0/folders/1D8X3sZigUuciR2cFcEOg34bTgg4PXQTe' } 
+
+            ]
           }
         ],
 
         vr_simulations: [
           {
             id: 'nsac22',
-            title: 'Project Icarus - A VR Experience of the Parker Solar Probe',
+            title: 'Project Icarus - A Space Experience of the Parker Solar Probe',
             authors: 'Irfan Nafiz Shahan, Al-Mubin Nabil, A. Hossain, S. Sakib, S. Rahman, F. Reefat',
             image: 'data/images/icarus/nsac22_image.png',
             imageHover: 'data/images/icarus/nsac22.mp4',
             isVideo: true,
-            summary: 'Virtual Reality N-Body Simulator Experience of the Parker Solar Probe.',
-            description: 'A Virtual Reality N-Body Simulator Experience made with Unity Engine, detailing the journey of the Parker Solar Probe.\n\nRole: Lead developer and simulation integrator.\n Interesting/Innovative: Educational VR experience combining N-body physics with immersive storytelling.',
-            links: []
+            summary: 'An N-Body Space Simulator Experience of the Parker Solar Probe.',
+            description: 'A N-Body Simulator Experience made with Unity Engine, utilizing accurate gravity physics, detailing the journey of the Parker Solar Probe.\n\nRole: Lead developer and simulation integrator.\n Interesting/Innovative: Educational experience combining N-body physics with immersive storytelling.',
+            links: [ 
+              { text: "Video (30 sec)", url: "https://www.youtube.com/watch?v=_Yc1IiDZc7k&pp=0gcJCTwKAYcqIYzv"},
+              { text: "NASA Documentation", url: "https://2022.spaceappschallenge.org/challenges/2022-challenges/on-the-way-to-the-sun/teams/team-icarus/project/"}
+            ]
           },
           {
             id: 'nsac23',
@@ -354,7 +365,10 @@
             isVideo: true,
             summary: 'VR Recreation of Perseverance Rover Launch, Landing and Deployment.',
             description: 'A VR Based Recreation Perseverance Rover Launch, Landing and Deployment in Mars Terrain developed on Unity Engine.\n\nRole: Developer and content lead.\nInteresting/Innovative: Recreating complex mission phases in VR for outreach and educational demonstration.',
-            links: []
+            links: [ 
+              { text: "Video (30 second)", url: "https://www.youtube.com/watch?v=B7MgwQso1jU"},
+              { text: "Project Website (Deprecated)", url: "https://teamicarus.netlify.app/"}
+            ]
           }
         ],
 
@@ -368,7 +382,7 @@
             isVideo: false,
             summary: 'Smallsats require efficient power management for solar PV systems. A battery management system is often inefficient in handling wide input voltage ranges from solar panels. A buck-boost converter can help regulate voltage levels effectively.',
             description: 'Designs were performed in LTSpice, with further simulation with voltage regulators performed. KiCAD was used to create the veroboard layout. Lab testing of threshold voltage, input frequency sensitivity were performed. \n\nRole: Lead engineer and simulation integrator.\nInteresting/Innovative: Utilized timer circuit and registry hacks to produce extremely high frequency clock at the cost of low clock resolution. This led to minimization of active components such as capacitors and inductors.',
-            links: []
+            links: [ {text: 'Documentation', url: 'https://drive.google.com/file/d/1d2QlfUJ0LVNan6thJnhrZrByK3cR5Xbu/view?usp=sharing'}]
         },
         {
             id: 'speakerid',
@@ -386,9 +400,9 @@
             authors: 'Irfan Nafiz Shahan, Supervisor: Dr. Pabel Shahrear',
             image: 'images/placeholder.svg',
             imageHover: 'images/placeholder.svg',
-            summary: 'Time-series ML work for epidemiological forecasting in Bangladesh.',
-            description: 'Role: Implementation and evaluation of time-series ML models for dengue outbreak prediction.\nInteresting / Innovative: Applied ML architectures to public-health datasets with feature engineering for seasonal effects. Statistical analysis was performed on epidemiological data to identify key predictors of outbreaks.',
-            links: [ { text: 'CV (details)', url: 'data/CV_IrfanNafizShahan.pdf' } ]
+            summary: 'Time-series ML experiments for epidemiological forecasting in Bangladesh.',
+            description: 'Data Provided by Institute of Epidemiology Disease Control And Research (IEDCR), Bangladesh. Role: Implementation and evaluation of time-series ML models for dengue outbreak prediction.\nInteresting / Innovative: Applied foundational and custom ML architectures to a public-health dataset with feature engineering for seasonal effects. Statistical analysis was performed on epidemiological data to identify key predictors of outbreaks, such as temperature, humidity, and rainfall patterns.',
+            links: [{ text: "Project Notebook", url: "https://gist.github.com/IrfanNafiz/e00cc6e63a4d9b9429a0c3a521cb4ae0" }]
           }
         ]
       };
