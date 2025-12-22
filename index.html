@@ -26,13 +26,14 @@
       .top-navbar {
         position: sticky;
         top: 0;
-        background: #ffffff;
+        background: #e9f7f5;
         border: 2px solid var(--accent-color, #2b7a78);
         border-radius: 8px;
         z-index: 100;
         padding: 8px 18px;
         box-shadow: 0 6px 18px rgba(43,122,120,0.06);
         margin: 12px 0; /* gives breathing room from top of page */
+        /* font-size: 18px; */
       }
       .navbar-content {
         max-width: 1100px;
@@ -41,7 +42,7 @@
         justify-content: flex-start;
         align-items: center;
         gap: 18px;
-        font-size: 0.95em;
+        /* font-size: 2em; */
       }
       .navbar-portfolio {
         display: flex;
@@ -52,7 +53,8 @@
       .navbar-portfolio a {
         color: var(--color-link);
         text-decoration: none;
-        font-weight: 600;
+        font-size: 1.2rem;
+        font-weight: 650;
         padding: 6px 8px;
         border-radius: 6px;
         transition: color 0.15s, background 0.15s, transform 0.06s;
@@ -76,16 +78,52 @@
       @media (max-width: 768px) {
         .top-navbar { margin: 8px 0; padding: 8px 12px; }
         .navbar-content { justify-content: center; gap: 10px; }
-        .navbar-portfolio { gap: 8px; font-size: 0.92em; }
-        .navbar-portfolio a + a::before { display: none; }
+        .navbar-portfolio {gap: 8px;}
+        .navbar-portfolio a {font-size: 0.9rem;}
+        .navbar-portfolio a + a::before {display: none;}
       }
 
       /* Contact section styles */
       .contact-section { border-top: 1px solid #eee; padding: 28px 0; background: #fff; }
-      .contact-section .contact-links { display: flex; gap: 18px; align-items: center; }
-      .contact-icon { display:inline-flex; align-items:center; justify-content:center; width:40px; height:40px; border-radius:8px; text-decoration:none; color:var(--color-link); }
-      .contact-icon svg { width:24px; height:24px; display:block; fill:currentColor; transition: transform 0.12s, color 0.12s; }
-      .contact-icon:hover { color: var(--accent-color, #2b7a78); transform: translateY(-3px); }
+      /* Right-align the inner container */
+      .contact-section > div {
+        margin-left: auto;
+        margin-right: 0;
+        text-align: right;
+      }
+
+      /* Push icons to the right */
+      .contact-section .contact-links {
+        display: flex;
+        gap: 18px;
+        align-items: center;
+        justify-content: flex-end;
+      }
+
+      /* Icon styling (unchanged behavior) */
+      .contact-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        text-decoration: none;
+        color: var(--color-link);
+      }
+
+      .contact-icon svg {
+        width: 24px;
+        height: 24px;
+        display: block;
+        fill: currentColor;
+        transition: transform 0.12s, color 0.12s;
+      }
+
+      .contact-icon:hover {
+        color: var(--accent-color, #2b7a78);
+        transform: translateY(-3px);
+      }
       .sr-only { position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden; }
     </style>
   </head>
@@ -294,10 +332,59 @@
           <h3>Country Highest — IGCSE Fine Arts</h3>
           <p>Awarded Country Highest in Art & Design (Fine Arts), International GCSE Examinations.</p>
         </div>
+      
       </div>
-
         <!-- Add more news items here -->
       </div>
+
+        <!-- Contact section -->
+      <section class="contact-section" id="contact" aria-label="Contact">
+        <div style="padding:0 20px; max-width:1100px; margin:0 auto;">
+          <h2>Contact</h2>
+          <p>Reach me or view my CV and profiles:</p>
+          <div class="contact-links">
+            <a class="contact-icon" href="mailto:irfannafizislive@gmail.com" aria-label="Email">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/></svg>
+              <span class="sr-only">Email</span>
+            </a>
+            <a class="contact-icon" href="data/CV_IrfanNafizShahan.pdf" aria-label="Download CV">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <!-- Document shape -->
+                <path
+                  d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+
+                <!-- CV text -->
+                <text
+                  x="50%"
+                  y="55%"
+                  text-anchor="middle"
+                  dominant-baseline="middle"
+                  font-size="8"
+                  font-weight="700"
+                  fill="currentColor"
+                  style="letter-spacing: 0.5px;"
+                >
+                  CV
+                </text>
+              </svg>
+
+              <span class="sr-only">Download CV</span>
+            </a>
+            <a class="contact-icon" href="https://github.com/irfannafiz/" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.9.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.47-3.88-1.47-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.5 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.71 5.4-5.29 5.68.42.36.8 1.08.8 2.17 0 1.56-.01 2.82-.01 3.2 0 .31.21.68.8.56C20.71 21.38 24 17.08 24 12c0-6.35-5.15-11.5-12-11.5z"/></svg>
+              <span class="sr-only">GitHub</span>
+            </a>
+            <a class="contact-icon" href="https://www.linkedin.com/in/irfannafizshahan/" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 24h5V7H0v17zM7 7h4.8v2.4h.1c.7-1.2 2.5-2.4 5.1-2.4 5.5 0 6.5 3.6 6.5 8.3V24h-5v-7.7c0-1.8 0-4.1-2.5-4.1-2.5 0-2.9 2-2.9 4v7.8H7V7z"/></svg>
+              <span class="sr-only">LinkedIn</span>
+            </a>
+          </div>
+        </div>
+      </section>
 
       <div class="footer-section">
         <p style="text-align:right;font-size:small;">
@@ -305,55 +392,6 @@
         </p>
       </div>
       </div>
-
-    <!-- Contact section -->
-    <section class="contact-section" id="contact" aria-label="Contact">
-      <div style="padding:0 20px; max-width:1100px; margin:0 auto;">
-        <h2>Contact</h2>
-        <p>Reach me or view my CV and profiles:</p>
-        <div class="contact-links">
-          <a class="contact-icon" href="mailto:irfannafizislive@gmail.com" aria-label="Email">
-            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/></svg>
-            <span class="sr-only">Email</span>
-          </a>
-          <a class="contact-icon" href="data/CV_IrfanNafizShahan.pdf" aria-label="Download CV">
-  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-    <!-- Document shape -->
-    <path
-      d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="1.5"
-    />
-
-    <!-- CV text -->
-    <text
-      x="50%"
-      y="55%"
-      text-anchor="middle"
-      dominant-baseline="middle"
-      font-size="6"
-      font-weight="700"
-      fill="currentColor"
-      style="letter-spacing: 0.5px;"
-    >
-      CV
-    </text>
-  </svg>
-
-  <span class="sr-only">Download CV</span>
-</a>
-          <a class="contact-icon" href="https://github.com/irfannafiz/" aria-label="GitHub">
-            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.9.58.11.79-.25.79-.56 0-.28-.01-1.02-.02-2-3.2.7-3.88-1.47-3.88-1.47-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.11-.75.41-1.27.75-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.5 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.84 1.19 3.1 0 4.43-2.71 5.4-5.29 5.68.42.36.8 1.08.8 2.17 0 1.56-.01 2.82-.01 3.2 0 .31.21.68.8.56C20.71 21.38 24 17.08 24 12c0-6.35-5.15-11.5-12-11.5z"/></svg>
-            <span class="sr-only">GitHub</span>
-          </a>
-          <a class="contact-icon" href="https://www.linkedin.com/in/irfannafizshahan/" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 24h5V7H0v17zM7 7h4.8v2.4h.1c.7-1.2 2.5-2.4 5.1-2.4 5.5 0 6.5 3.6 6.5 8.3V24h-5v-7.7c0-1.8 0-4.1-2.5-4.1-2.5 0-2.9 2-2.9 4v7.8H7V7z"/></svg>
-            <span class="sr-only">LinkedIn</span>
-          </a>
-        </div>
-      </div>
-    </section>
 
     <script type="text/javascript">
       // Project template system - categorized
