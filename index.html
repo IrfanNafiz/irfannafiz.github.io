@@ -14,9 +14,8 @@ TODO:
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z9EYDP3095"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      function gtag(){dataLayer.push(arguments);} 
       gtag('js', new Date());
-
       gtag('config', 'G-Z9EYDP3095');
     </script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -30,111 +29,6 @@ TODO:
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="layout.css">
     <link rel="stylesheet" href="components.css">
-    <style>
-      /* Sticky top navigation bar (accented) */
-      .top-navbar {
-        position: sticky;
-        top: 0;
-        background: #e9f7f5;
-        border: 2px solid var(--accent-color, #2b7a78);
-        border-radius: 8px;
-        z-index: 100;
-        padding: 8px 18px;
-        box-shadow: 0 6px 18px rgba(43,122,120,0.06);
-        margin: 12px 0; /* gives breathing room from top of page */
-        /* font-size: 18px; */
-      }
-      .navbar-content {
-        max-width: 1100px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 18px;
-        /* font-size: 2em; */
-      }
-      .navbar-portfolio {
-        display: flex;
-        gap: 12px;
-        flex-wrap: wrap;
-        align-items: center;
-      }
-      .navbar-portfolio a {
-        color: var(--color-link);
-        text-decoration: none;
-        font-size: 1.2rem;
-        font-weight: 650;
-        padding: 6px 8px;
-        border-radius: 6px;
-        transition: color 0.15s, background 0.15s, transform 0.06s;
-      }
-      .navbar-portfolio a:hover {
-        color: var(--color-link-hover);
-        background: rgba(43,122,120,0.06);
-        transform: translateY(-1px);
-      }
-      /* Decorative divider between items (subtle vertical line) */
-      .navbar-portfolio a + a::before {
-        content: '';
-        display: inline-block;
-        width: 1px;
-        height: 16px;
-        background: rgba(43,122,120,0.18);
-        margin: 0 10px 0 10px;
-        vertical-align: middle;
-        border-radius: 1px;
-      }
-      @media (max-width: 768px) {
-        .top-navbar { margin: 8px 0; padding: 8px 12px; }
-        .navbar-content { justify-content: center; gap: 10px; }
-        .navbar-portfolio {gap: 8px;}
-        .navbar-portfolio a {font-size: 0.9rem;}
-        .navbar-portfolio a + a::before {display: none;}
-      }
-
-      /* Contact section styles */
-      .contact-section { border-top: 1px solid #eee; padding: 28px 0; background: #fff; }
-      /* Right-align the inner container */
-      .contact-section > div {
-        margin-left: auto;
-        margin-right: 0;
-        text-align: right;
-      }
-
-      /* Push icons to the right */
-      .contact-section .contact-links {
-        display: flex;
-        gap: 18px;
-        align-items: center;
-        justify-content: flex-end;
-      }
-
-      /* Icon styling (unchanged behavior) */
-      .contact-icon {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 40px;
-        height: 40px;
-        border-radius: 8px;
-        text-decoration: none;
-        color: var(--color-link);
-      }
-
-      .contact-icon svg {
-        width: 24px;
-        height: 24px;
-        display: block;
-        fill: currentColor;
-        transition: transform 0.12s, color 0.12s;
-      }
-
-      .contact-icon:hover {
-        color: var(--accent-color, #2b7a78);
-        transform: translateY(-3px);
-      }
-      .sr-only { position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden; }
-    </style>
   </head>
 
   <body role="application" aria-label="Irfan Nafiz Shahan Portfolio Website">
@@ -236,7 +130,7 @@ TODO:
 
       <div class="miscellaneous-section">
         <div style="padding: 20px;">
-          <h2>Miscellaneous</h2>
+          <h2 class="portfolio-title">Synergistic Activities</h2>
         </div>
 
         <div class="misc-item">
@@ -254,7 +148,7 @@ TODO:
 
         <div class="misc-item">
           <div class="misc-title">
-            <h3>Professional Service</h3>
+            <h3>Conference Support</h3>
           </div>
           <div class="misc-content">
             <a href="https://htu.edu/steme-conference-hosted-by-huston-tillotson-university-drew-participants-from-around-the-globe/">Technical Student Asst. in International Science, Technology, Engineering, Mathematics and Education Conference 2023, Huston-Tillotson University, TX, USA</a>
@@ -265,7 +159,7 @@ TODO:
       <div id="news"></div>
       <div class="news-section" aria-live="polite">
         <div style="padding: 20px;">
-          <h2>News & Updates</h2>
+          <h2 class="portfolio-title">News and Updates</h2>
           
 
         </div>
@@ -346,6 +240,19 @@ TODO:
         <!-- Add more news items here -->
       </div>
 
+      <!-- Other Pages Filmroll Section (moved above Contact) -->
+      <section class="other-pages-section">
+        <div class="other-pages-container">
+          <div class="other-pages-title">
+            <h2>Check Out My Other Work</h2>
+            <p>Click an image to visit the page</p>
+          </div>
+          <div class="filmroll-container" id="filmroll-container" aria-label="Other work previews">
+            <div class="filmroll-track" id="filmroll-track"></div>
+          </div>
+        </div>
+      </section>
+
         <!-- Contact section -->
       <section class="contact-section" id="contact" aria-label="Contact">
         <div style="padding:0 20px; max-width:1100px; margin:0 auto;">
@@ -358,15 +265,12 @@ TODO:
             </a>
             <a class="contact-icon" href="data/CV_IrfanNafizShahan.pdf" aria-label="Download CV">
               <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <!-- Document shape -->
                 <path
                   d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"
                   fill="none"
                   stroke="currentColor"
                   stroke-width="1.5"
                 />
-
-                <!-- CV text -->
                 <text
                   x="50%"
                   y="55%"
@@ -380,7 +284,6 @@ TODO:
                   CV
                 </text>
               </svg>
-
               <span class="sr-only">Download CV</span>
             </a>
             <a class="contact-icon" href="https://github.com/irfannafiz/" aria-label="GitHub">
@@ -742,7 +645,118 @@ TODO:
         let initial = false;
         try { initial = localStorage.getItem('hoverFilter') === '1'; } catch (e) { initial = false; }
         toggleHoverFilter(initial);
+
+        // Initialize horizontal film roll
+        initializeFilmroll();
       });
+
+      // Filmroll data (reusing former carousel data)
+      const carouselData = [
+        { image: 'data/arts/igcse/p3.png', page: 'fine-art.html', title: 'Paintings' },
+        { image: 'org/images/nsdc/2ec.jpg', page: 'leadership-organizing.html', title: 'Work with NSDC SUST' },
+        { image: 'data/music/1.png', page: 'instrumental-music.html', title: 'Instrumentals' },
+        { image: 'org/images/stemx/stemx1.jpg', page: 'leadership-organizing.html', title: 'Work with STEMX-365' }
+      ];
+      // Filmroll functionality
+      let filmrollRaf = null;
+      let filmOffset = 0;
+
+      function createFilmrollItem(item) {
+        const a = document.createElement('a');
+        a.className = 'filmroll-item';
+        a.href = item.page;
+        a.setAttribute('aria-label', item.title);
+        a.innerHTML = `
+          <img src="${item.image}" alt="${item.title}">
+          <div class="filmroll-caption">${item.title}</div>
+        `;
+        return a;
+      }
+
+      function initializeFilmroll() {
+        const container = document.getElementById('filmroll-container');
+        const track = document.getElementById('filmroll-track');
+        if (!container || !track) return;
+
+        const items = carouselData.map(createFilmrollItem);
+        items.forEach(el => track.appendChild(el));
+        // duplicate items for seamless looping
+        items.forEach(el => track.appendChild(el.cloneNode(true)));
+
+        container.addEventListener('mouseenter', pauseFilmrollAutoScroll);
+        container.addEventListener('mouseleave', resumeFilmrollAutoScroll);
+
+        // ensure start at left
+        filmOffset = 0;
+        track.style.transform = 'translateX(0px)';
+        updateFilmrollShading();
+        startFilmrollAutoScroll();
+      }
+
+      function startFilmrollAutoScroll() {
+        const container = document.getElementById('filmroll-container');
+        const track = document.getElementById('filmroll-track');
+        if (!container || !track) return;
+
+        const speedPxPerMs = 0.12; // tune for desired speed
+        let last = performance.now();
+
+        function step(now) {
+          const delta = now - last;
+          last = now;
+          filmOffset += speedPxPerMs * delta;
+
+          const sequenceWidth = track.scrollWidth / 2; // content duplicated once
+          filmOffset = filmOffset % sequenceWidth; // seamless wrap
+
+          track.style.transform = `translate3d(-${filmOffset}px, 0, 0)`;
+          updateFilmrollShading();
+          filmrollRaf = requestAnimationFrame(step);
+        }
+        filmrollRaf = requestAnimationFrame(step);
+      }
+
+      function pauseFilmrollAutoScroll() {
+        if (filmrollRaf) cancelAnimationFrame(filmrollRaf);
+        filmrollRaf = null;
+      }
+
+      function resumeFilmrollAutoScroll() {
+        if (!filmrollRaf) startFilmrollAutoScroll();
+      }
+
+      function updateFilmrollShading() {
+        const container = document.getElementById('filmroll-container');
+        const track = document.getElementById('filmroll-track');
+        if (!container || !track) return;
+
+        const items = track.querySelectorAll('.filmroll-item');
+        if (!items.length) return;
+
+        const crect = container.getBoundingClientRect();
+        const centerX = crect.left + crect.width / 2;
+
+        let minIdx = 0;
+        let minDist = Infinity;
+
+        const centers = [];
+        items.forEach((el, i) => {
+          const r = el.getBoundingClientRect();
+          const cx = r.left + r.width / 2;
+          centers[i] = cx;
+          const d = Math.abs(cx - centerX);
+          if (d < minDist) { minDist = d; minIdx = i; }
+        });
+
+        items.forEach((el, i) => {
+          el.classList.remove('center', 'dim');
+          if (i === minIdx) {
+            el.classList.add('center');
+          } else {
+            el.classList.add('dim');
+          }
+        });
+      }
     </script>
   </body>
 </html>
